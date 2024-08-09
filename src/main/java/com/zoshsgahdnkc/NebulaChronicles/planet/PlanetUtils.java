@@ -33,10 +33,7 @@ public class PlanetUtils {
         return ySpeed < 0 ? 1.33 * (1 - Mth.sqrt((float) ((ySpeed / -3.4) + 0.08))) : 1;
     }
     public static Planet getPlanet(Level level) {
-        if (planets.containsKey(level.dimension().location())) {
-            return planets.get(level.dimension().location());
-        }
-        else return null;
+        return planets.getOrDefault(level.dimension().location(), null);
     }
 
     public static Planet getPlanet(Entity entity) {
