@@ -1,0 +1,25 @@
+{
+  "feature": "nch:strange_fern",
+  "placement": [
+    {
+      "type": "minecraft:noise_threshold_count",
+      "above_noise": 10,
+      "below_noise": 2,
+      "noise_level": 1.0
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 10
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "WORLD_SURFACE_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    }
+  ]
+}

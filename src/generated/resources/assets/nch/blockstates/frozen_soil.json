@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "nch:block/frozen_soil_1"
+      },
+      {
+        "model": "nch:block/frozen_soil_2"
+      }
+    ]
+  }
+}

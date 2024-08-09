@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "nch:block/aether_root_top",
+    "side": "nch:block/aether_root"
+  }
+}

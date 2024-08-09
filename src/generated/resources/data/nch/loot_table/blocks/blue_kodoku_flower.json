@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "nch:blue_kodoku_flower"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "nch:blocks/blue_kodoku_flower"
+}

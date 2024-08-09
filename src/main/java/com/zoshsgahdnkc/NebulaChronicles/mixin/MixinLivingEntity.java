@@ -40,7 +40,7 @@ public abstract class MixinLivingEntity {
         LivingEntity entity = (LivingEntity) (Object) this;
         Planet planet = PlanetUtils.getPlanet(entity);
         if (planet != null) {
-            modifier *= getGravityRatio(planet) * 1.5;
+            modifier *= getGravityRatio(planet) * 1.5f;
         }
         return modifier;
     }

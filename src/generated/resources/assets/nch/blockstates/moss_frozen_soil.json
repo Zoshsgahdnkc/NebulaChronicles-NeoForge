@@ -1,0 +1,44 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "nch:block/moss_frozen_soil_1",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_frozen_soil_2",
+        "weight": 12
+      },
+      {
+        "model": "nch:block/moss_frozen_soil_3",
+        "weight": 2
+      },
+      {
+        "model": "nch:block/moss_frozen_soil_4",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_frozen_soil_5"
+      },
+      {
+        "model": "nch:block/moss_frozen_soil_6",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_frozen_soil_7",
+        "weight": 12
+      },
+      {
+        "model": "nch:block/moss_frozen_soil_8",
+        "weight": 2
+      },
+      {
+        "model": "nch:block/moss_frozen_soil_9",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_frozen_soil_10"
+      }
+    ]
+  }
+}

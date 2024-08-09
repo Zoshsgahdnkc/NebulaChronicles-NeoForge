@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "nch:block/iron_bricks_slab",
+    "side": "nch:block/iron_bricks_slab"
+  }
+}

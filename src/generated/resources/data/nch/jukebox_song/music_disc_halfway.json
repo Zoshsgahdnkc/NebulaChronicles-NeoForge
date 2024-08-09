@@ -1,0 +1,8 @@
+{
+  "comparator_output": 8,
+  "description": {
+    "translate": "music_disc.nch.music_disc_halfway"
+  },
+  "length_in_seconds": 204.0,
+  "sound_event": "nch:music_disc_halfway"
+}

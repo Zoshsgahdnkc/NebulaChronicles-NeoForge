@@ -1,0 +1,64 @@
+{
+  "type": "minecraft:add",
+  "argument1": 0,
+  "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 0.9,
+    "argument2": {
+      "type": "minecraft:range_choice",
+      "input": {
+        "type": "minecraft:noise",
+        "noise": "nch:simple_continent",
+        "xz_scale": 1,
+        "y_scale": 0
+      },
+      "min_inclusive": -10,
+      "max_exclusive": -1,
+      "when_in_range": {
+        "type": "minecraft:add",
+        "argument1": -0.5,
+        "argument2": {
+          "type": "minecraft:mul",
+          "argument1": 0.5,
+          "argument2": {
+            "type": "minecraft:noise",
+            "noise": "nch:simple_continent",
+            "xz_scale": 1,
+            "y_scale": 0
+          }
+        }
+      },
+      "when_out_of_range": {
+        "type": "minecraft:range_choice",
+        "input": {
+          "type": "minecraft:noise",
+          "noise": "nch:simple_continent",
+          "xz_scale": 1,
+          "y_scale": 0
+        },
+        "min_inclusive": 1,
+        "max_exclusive": 10,
+        "when_in_range": {
+          "type": "minecraft:add",
+          "argument1": 0.5,
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": 0.5,
+            "argument2": {
+              "type": "minecraft:noise",
+              "noise": "nch:simple_continent",
+              "xz_scale": 1,
+              "y_scale": 0
+            }
+          }
+        },
+        "when_out_of_range": {
+          "type": "minecraft:noise",
+          "noise": "nch:simple_continent",
+          "xz_scale": 1,
+          "y_scale": 0
+        }
+      }
+    }
+  }
+}

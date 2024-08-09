@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "nch:block/wall_paper_end",
+    "side": "nch:block/wall_paper_middle"
+  }
+}

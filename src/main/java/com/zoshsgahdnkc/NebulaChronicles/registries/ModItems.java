@@ -3,24 +3,15 @@ package com.zoshsgahdnkc.NebulaChronicles.registries;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.item.LemonItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.JukeboxSongs;
 import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.RecordItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.ForgeRegistries;
-import net.neoforged.neoforge.registries.RegistryObject;
 import net.neoforged.neoforge.registries.DeferredItem;
-import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModItems {
    public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(NebulaChronicles.MODID);
-    public static final DeferredItem<Item> MUSIC_DISC_HALFWAY =
-            ITEMS.register("music_disc_halfway", () -> new (6,
-                    ModSounds.MUSIC_DISC_HALFWAY,new Item.Properties().stacksTo(1)
-                    .rarity(Rarity.RARE),4080));
     public static final DeferredItem<Item> MUSIC_DISC_HALFWAY = ITEMS.register(
-            "music_disc_13", new J(new Item.Properties().stacksTo(1)
-                    .rarity(Rarity.RARE).jukeboxPlayable(JukeboxSongs.THIRTEEN))
+            "music_disc_halfway",() -> new Item(new Item.Properties().stacksTo(1)
+                    .rarity(Rarity.RARE).jukeboxPlayable(ModJukeboxSongs.MUSIC_DISC_HALFWAY))
     );
 
     public static final DeferredItem<Item> RAW_NICKEL = ITEMS.registerSimpleItem("raw_nickel", new Item.Properties());

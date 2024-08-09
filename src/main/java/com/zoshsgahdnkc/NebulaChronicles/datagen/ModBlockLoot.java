@@ -3,6 +3,7 @@ package com.zoshsgahdnkc.NebulaChronicles.datagen;
 import com.google.common.collect.ImmutableSet;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModItems;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
 import net.minecraft.world.level.block.Block;
@@ -12,17 +13,17 @@ import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.BinomialDistributionGenerator;
 import net.minecraft.world.level.storage.loot.providers.number.ConstantValue;
-import net.minecraftforge.registries.RegistryObject;
+import net.neoforged.neoforge.registries.DeferredHolder;
 
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class ModBlockLoot extends BlockLootSubProvider {
 
-    public ModBlockLoot() {
-        super(Set.of(), FeatureFlags.REGISTRY.allFlags());
+    public ModBlockLoot(HolderLookup.Provider provider) {
+        super(Set.of(), FeatureFlags.REGISTRY.allFlags(), provider);
     }
-    private static final Set<RegistryObject<Block>> IGNORES = ImmutableSet.of(
+    private static final ImmutableSet<DeferredHolder<Block, Block>> IGNORES = ImmutableSet.of(
             ModBlocks.FORTRESS_DOOR,
             ModBlocks.COARSE_CACTUS_DOOR,
             ModBlocks.CARGO_BOX,
@@ -31,7 +32,7 @@ public class ModBlockLoot extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        ModBlocks.BLOCKS.getEntries().stream().filter(e -> !IGNORES.contains(e)).map(RegistryObject::get).forEach(this::dropSelf);
+        ModBlocks.BLOCKS.getEntries().stream().filter(e -> !IGNORES.contains(e)).map(DeferredHolder::get).forEach(this::dropSelf);
 
         add(ModBlocks.FORTRESS_DOOR.get(), (this::createDoorTable));
         add(ModBlocks.COARSE_CACTUS_DOOR.get(), (this::createDoorTable));
@@ -45,6 +46,6 @@ public class ModBlockLoot extends BlockLootSubProvider {
 
     @Override
     protected Iterable<Block> getKnownBlocks() {
-        return ModBlocks.BLOCKS.getEntries().stream().map(RegistryObject::get).collect(Collectors.toList());
+        return ModBlocks.BLOCKS.getEntries().stream().map(DeferredHolder::get).collect(Collectors.toList());
     }
 }

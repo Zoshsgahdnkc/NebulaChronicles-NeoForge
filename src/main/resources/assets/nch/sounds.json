@@ -1,0 +1,55 @@
+{
+  "tech_block_hit": {
+    "subtitle": "subtitles.block.generic.hit",
+    "sounds": [
+      "nch:techblock_hit1",
+      "nch:techblock_hit2",
+      "nch:techblock_hit3",
+      "nch:techblock_hit4"
+    ]
+  },
+  "tech_block_place": {
+    "subtitle": "subtitles.block.generic.place",
+    "sounds": [
+      "nch:techblock_place1",
+      "nch:techblock_place2",
+      "nch:techblock_place3",
+      "nch:techblock_place4"
+    ]
+  },
+  "tech_block_break": {
+    "subtitle": "subtitles.block.generic.break",
+    "sounds": [
+      "nch:techblock_break1",
+      "nch:techblock_break2",
+      "nch:techblock_break3",
+      "nch:techblock_break4"
+    ]
+  },
+  "tech_block_step": {
+    "subtitle": "subtitles.block.generic.footsteps",
+    "sounds": [
+      "nch:techblock_step1",
+      "nch:techblock_step2",
+      "nch:techblock_step3",
+      "nch:techblock_step4",
+      "nch:techblock_step5",
+      "nch:techblock_step6"
+  ]
+  },
+  "tech_block_fall": {
+    "subtitle": "subtitles.entity.generic.big_fall",
+    "sounds": [
+      "nch:techblock_fall1",
+      "nch:techblock_fall2"
+    ]
+  },
+  "music_disc_halfway": {
+    "sounds": [
+      {
+        "name": "nch:music_disc_halfway",
+        "stream": true
+      }
+    ]
+  }
+}

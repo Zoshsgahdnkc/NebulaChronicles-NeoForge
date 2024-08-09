@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:add",
+  "argument1": {
+    "type": "minecraft:add",
+    "argument1": -0.19,
+    "argument2": {
+      "type": "minecraft:y_clamped_gradient",
+      "from_y": -48,
+      "to_y": 240,
+      "from_value": 1.7,
+      "to_value": -1.5
+    }
+  },
+  "argument2": {
+    "type": "minecraft:mul",
+    "argument1": 0.75,
+    "argument2": "nch:sb_jaggedness"
+  }
+}

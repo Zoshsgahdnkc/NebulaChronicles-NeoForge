@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nch:thulium_188_ingot_from_thulium_188_nugget"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_thulium_188_nugget": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nch:thulium_188_nugget"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_thulium_188_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nch:thulium_188_ingot_from_thulium_188_nugget"
+    ]
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "down=false,up=false": {
+      "model": "nch:block/wall_paper_double"
+    },
+    "down=false,up=true": {
+      "model": "nch:block/wall_paper_bottom"
+    },
+    "down=true,up=false": {
+      "model": "nch:block/wall_paper_top"
+    },
+    "down=true,up=true": {
+      "model": "nch:block/wall_paper_middle"
+    }
+  }
+}

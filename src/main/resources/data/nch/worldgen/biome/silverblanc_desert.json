@@ -1,0 +1,65 @@
+{
+  "temperature": 2,
+  "downfall": 0,
+  "has_precipitation": false,
+  "effects": {
+    "sky_color": 10341858,
+    "fog_color": 10529722,
+    "water_color": 6528417,
+    "water_fog_color": 5404312,
+    "grass_color": 9629122,
+    "foliage_color": 6205555,
+    "mood_sound": {
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000,
+      "block_search_extent": 8,
+      "offset": 2
+    },
+    "music": {
+      "sound": "minecraft:music.overworld.desert",
+      "min_delay": 12000,
+      "max_delay": 24000,
+      "replace_current_music": false
+    }
+  },
+  "spawners": {},
+  "spawn_costs": {},
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "nch:sb_ore_frozen_soil",
+      "nch:sb_ore_calcite",
+      "nch:sb_ore_diorite",
+      "nch:sb_ore_cosmic_sand",
+      "nch:sb_ore_copper",
+      "nch:sb_ore_copper_large",
+      "nch:sb_ore_iron",
+      "nch:sb_ore_iron_upper",
+      "nch:sb_ore_nickel",
+      "nch:sb_ore_gold",
+      "nch:sb_ore_gold_large"
+    ],
+    [],
+    [],
+    [
+      "minecraft:glow_lichen",
+      "minecraft:patch_dead_bush_2",
+      "nch:coarse_cactus"
+    ],
+    [
+      "minecraft:freeze_top_layer"
+    ]
+  ]
+}

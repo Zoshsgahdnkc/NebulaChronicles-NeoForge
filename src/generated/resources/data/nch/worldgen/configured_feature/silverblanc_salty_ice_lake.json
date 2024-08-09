@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:lake",
+  "config": {
+    "barrier": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "nch:silverblanc_stone"
+      }
+    },
+    "fluid": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "nch:salty_ice"
+      }
+    }
+  }
+}

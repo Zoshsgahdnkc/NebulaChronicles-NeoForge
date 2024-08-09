@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "nch:block/bunker_bricks_1"
+      },
+      {
+        "model": "nch:block/bunker_bricks_2"
+      },
+      {
+        "model": "nch:block/bunker_bricks_3"
+      }
+    ]
+  }
+}

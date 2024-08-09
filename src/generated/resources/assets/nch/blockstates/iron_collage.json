@@ -1,0 +1,15 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "nch:block/iron_collage_1"
+      },
+      {
+        "model": "nch:block/iron_collage_2"
+      },
+      {
+        "model": "nch:block/iron_collage_3"
+      }
+    ]
+  }
+}

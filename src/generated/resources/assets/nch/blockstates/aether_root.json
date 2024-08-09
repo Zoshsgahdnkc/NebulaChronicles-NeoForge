@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "nch:block/aether_root_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "nch:block/aether_root"
+    },
+    "axis=z": {
+      "model": "nch:block/aether_root_horizontal",
+      "x": 90
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "display": {
+    "icon": {
+      "item": "nch:lemon"
+    },
+    "title": {
+      "translate": "advancement.nch.lemon.title"
+    },
+    "description": {
+      "translate": "advancement.nch.lemon.desc"
+    },
+    "background": "nch:textures/block/dark_tile.png",
+    "frame": "challenge",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "lemon": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "nch:lemon"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "lemon"
+    ]
+  ]
+}

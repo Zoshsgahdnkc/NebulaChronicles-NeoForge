@@ -2,6 +2,7 @@ package com.zoshsgahdnkc.NebulaChronicles.block.blockentity;
 
 import com.zoshsgahdnkc.NebulaChronicles.block.entityblock.NickelsteelPlasticContainerBlock;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -89,18 +90,18 @@ public class NickelsteelPlasticContainerBlockEntity extends RandomizableContaine
         }
 
     }
-    protected void saveAdditional(CompoundTag nbt) {
-        super.saveAdditional(nbt);
+    protected void saveAdditional(CompoundTag nbt, HolderLookup.Provider provider) {
+        super.saveAdditional(nbt, provider);
         if (!this.trySaveLootTable(nbt)) {
-            ContainerHelper.saveAllItems(nbt, this.items);
+            ContainerHelper.saveAllItems(nbt, this.items, provider);
         }
 
     }
-    public void load(CompoundTag nbt) {
-        super.load(nbt);
+    public void loadAdditional(CompoundTag nbt, HolderLookup.Provider provider) {
+        super.loadAdditional(nbt, provider);
         this.items = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
         if (!this.tryLoadLootTable(nbt)) {
-            ContainerHelper.loadAllItems(nbt, this.items);
+            ContainerHelper.loadAllItems(nbt, this.items, provider);
         }
     }
 

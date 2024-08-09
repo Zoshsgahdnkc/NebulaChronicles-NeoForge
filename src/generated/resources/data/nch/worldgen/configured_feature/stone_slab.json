@@ -1,0 +1,18 @@
+{
+  "type": "nch:stone_slab",
+  "config": {
+    "target": {
+      "state": {
+        "Name": "minecraft:stone_slab",
+        "Properties": {
+          "type": "bottom",
+          "waterlogged": "false"
+        }
+      },
+      "target": {
+        "block": "minecraft:stone",
+        "predicate_type": "minecraft:block_match"
+      }
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "feature": "nch:disk_frozen_soil",
+  "placement": [
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR_WG"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:rarity_filter",
+      "chance": 2
+    }
+  ]
+}

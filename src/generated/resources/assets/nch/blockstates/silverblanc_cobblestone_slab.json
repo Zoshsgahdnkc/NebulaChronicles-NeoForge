@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nch:block/silverblanc_cobblestone_slab"
+    },
+    "type=double": {
+      "model": "nch:block/silverblanc_cobblestone"
+    },
+    "type=top": {
+      "model": "nch:block/silverblanc_cobblestone_slab_top"
+    }
+  }
+}

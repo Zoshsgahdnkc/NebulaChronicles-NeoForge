@@ -1,0 +1,25 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "nch:block/moss_silverblanc_stone_1",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_silverblanc_stone_2",
+        "weight": 12
+      },
+      {
+        "model": "nch:block/moss_silverblanc_stone_3",
+        "weight": 2
+      },
+      {
+        "model": "nch:block/moss_silverblanc_stone_4",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_silverblanc_stone_5"
+      }
+    ]
+  }
+}

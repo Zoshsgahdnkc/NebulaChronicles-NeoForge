@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "nch:block/tech_tile_with_sign",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "nch:block/tech_tile_with_sign"
+    },
+    "facing=south": {
+      "model": "nch:block/tech_tile_with_sign",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "nch:block/tech_tile_with_sign",
+      "y": 270
+    }
+  }
+}

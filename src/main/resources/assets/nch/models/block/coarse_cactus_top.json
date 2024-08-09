@@ -1,0 +1,24 @@
+{
+	"credit": "Made with Blockbench",
+	"textures": {
+		"0": "nch:block/coarse_cactus_side_1",
+		"1": "nch:block/coarse_cactus_end",
+		"2": "nch:block/coarse_cactus_side_top",
+		"particle": "nch:block/coarse_cactus_side_1"
+	},
+	"elements": [
+		{
+			"from": [2, 0, 2],
+			"to": [14, 8, 14],
+			"faces": {
+				"north": {"uv": [2, 8, 14, 16], "texture": "#0"},
+				"east": {"uv": [2, 8, 14, 16], "texture": "#0"},
+				"south": {"uv": [2, 8, 14, 16], "texture": "#0"},
+				"west": {"uv": [2, 8, 14, 16], "texture": "#0"},
+				"up": {"uv": [2, 2, 14, 14], "texture": "#2"},
+				"down": {"uv": [0, 0, 14, 14], "texture": "#1"}
+			}
+		}
+	],
+	"display": {}
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "nch:block/iron_bricks_slab"
+    },
+    "type=double": {
+      "model": "nch:block/iron_bricks_slab_double"
+    },
+    "type=top": {
+      "model": "nch:block/iron_bricks_slab_top"
+    }
+  }
+}

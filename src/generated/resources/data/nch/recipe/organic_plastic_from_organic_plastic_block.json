@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "nch:organic_plastic_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "nch:organic_plastic"
+  }
+}

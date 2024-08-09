@@ -1,0 +1,99 @@
+{
+  "variants": {
+    "top=false": [
+      {
+        "model": "nch:block/coarse_cactus_1"
+      },
+      {
+        "model": "nch:block/coarse_cactus_1",
+        "y": 90
+      },
+      {
+        "model": "nch:block/coarse_cactus_1",
+        "y": 180
+      },
+      {
+        "model": "nch:block/coarse_cactus_1",
+        "y": 270
+      },
+      {
+        "model": "nch:block/coarse_cactus_2"
+      },
+      {
+        "model": "nch:block/coarse_cactus_2",
+        "y": 90
+      },
+      {
+        "model": "nch:block/coarse_cactus_2",
+        "y": 180
+      },
+      {
+        "model": "nch:block/coarse_cactus_2",
+        "y": 270
+      },
+      {
+        "model": "nch:block/coarse_cactus_3"
+      },
+      {
+        "model": "nch:block/coarse_cactus_3",
+        "y": 90
+      },
+      {
+        "model": "nch:block/coarse_cactus_3",
+        "y": 180
+      },
+      {
+        "model": "nch:block/coarse_cactus_3",
+        "y": 270
+      },
+      {
+        "model": "nch:block/coarse_cactus_4"
+      },
+      {
+        "model": "nch:block/coarse_cactus_4",
+        "y": 90
+      },
+      {
+        "model": "nch:block/coarse_cactus_4",
+        "y": 180
+      },
+      {
+        "model": "nch:block/coarse_cactus_4",
+        "y": 270
+      },
+      {
+        "model": "nch:block/coarse_cactus_5"
+      },
+      {
+        "model": "nch:block/coarse_cactus_5",
+        "y": 90
+      },
+      {
+        "model": "nch:block/coarse_cactus_5",
+        "y": 180
+      },
+      {
+        "model": "nch:block/coarse_cactus_5",
+        "y": 270
+      },
+      {
+        "model": "nch:block/coarse_cactus_6"
+      },
+      {
+        "model": "nch:block/coarse_cactus_6",
+        "y": 90
+      },
+      {
+        "model": "nch:block/coarse_cactus_6",
+        "y": 180
+      },
+      {
+        "model": "nch:block/coarse_cactus_6",
+        "y": 270
+      }
+    ],
+    "top=true": {
+      "model": "nch:block/coarse_cactus_top"
+    }
+  }
+}

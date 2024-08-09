@@ -1,0 +1,135 @@
+{
+  "type": "nch:silverblanc_type",
+  "generator": {
+    "type": "minecraft:noise",
+    "settings": "nch:silverblanc",
+    "biome_source": {
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "nch:silverblanc_plateau",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": [
+              0.75,
+              1
+            ],
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": -1.4,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "nch:silverblanc_hills",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": [
+              0.75,
+              0.8
+            ],
+            "erosion": [
+              -0.25,
+              0.75
+            ],
+            "weirdness": 0,
+            "depth": -1.4,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "nch:silverblanc_desert",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": [
+              -1,
+              -0.3
+            ],
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": -1.4,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "nch:silverblanc_barrens",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": [
+              0.5,
+              0.9
+            ],
+            "erosion": 0.8,
+            "weirdness": 0,
+            "depth": -1.4,
+            "offset": 0.35
+          }
+        },
+        {
+          "biome": "nch:silverblanc_lowland",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": [
+              -0.3,
+              0.2
+            ],
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": -1.4,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "nch:salty_marsh",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": [
+              -0.1,
+              0
+            ],
+            "erosion": 0,
+            "weirdness": 0,
+            "depth": -1.4,
+            "offset": 0.25
+          }
+        },
+        {
+          "biome": "nch:silverblanc_cave",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": [
+              -0.3,
+              1
+            ],
+            "weirdness": 0,
+            "depth": 1.9,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "nch:frost_cave",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0.25,
+            "erosion": [
+              -1,
+              0.3
+            ],
+            "weirdness": 0,
+            "depth": 1.9,
+            "offset": 0
+          }
+        }
+      ]
+    }
+  }
+}

@@ -6,12 +6,15 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import static com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles.MODID;
 
-@Mod.EventBusSubscriber(modid = MODID, bus = Mod.EventBusSubscriber.Bus.MOD)
+
 public class ModTabs {
 
     public static final DeferredRegister<CreativeModeTab> TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
@@ -92,7 +95,7 @@ public class ModTabs {
                 accept(tab, ModBlocks.LEMURIUM_BLOCK);
             })
             .build());
-    public static final RegistryObject<CreativeModeTab> TAB_LEMON = TABS.register("tab_lemon", () -> CreativeModeTab.builder()
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_LEMON = TABS.register("tab_lemon", () -> CreativeModeTab.builder()
             .title(Component.translatable("item_Group."+ MODID +".tab_lemon"))
             .icon(() -> new ItemStack(ModItems.LEMON.get()))
             .withTabsBefore(TAB_INDUSTRY.getId())
@@ -138,7 +141,10 @@ public class ModTabs {
                 accept(tab, ModBlocks.AETHER_ROOT_HAIR);
             }})
             .build());
-    private static void accept(CreativeModeTab.Output tab, RegistryObject<? extends ItemLike> object) {
+    private static void accept(CreativeModeTab.Output tab, DeferredItem<? extends ItemLike> object) {
+        tab.accept(object.get());
+    }
+    private static void accept(CreativeModeTab.Output tab, DeferredBlock<? extends ItemLike> object) {
         tab.accept(object.get());
     }
 

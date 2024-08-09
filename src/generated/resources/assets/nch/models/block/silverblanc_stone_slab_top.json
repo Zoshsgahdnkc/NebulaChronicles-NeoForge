@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "nch:block/silverblanc_stone",
+    "side": "nch:block/silverblanc_stone",
+    "top": "nch:block/silverblanc_stone"
+  }
+}

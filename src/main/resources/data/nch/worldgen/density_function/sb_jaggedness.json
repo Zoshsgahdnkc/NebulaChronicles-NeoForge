@@ -1,0 +1,105 @@
+{
+  "type": "minecraft:flat_cache",
+  "argument": {
+    "type": "minecraft:cache_2d",
+    "argument": {
+      "type": "minecraft:add",
+      "argument1": 0,
+      "argument2": {
+        "type": "minecraft:range_choice",
+        "input": "nch:sb_continentalness",
+        "min_inclusive": -1.5,
+        "max_exclusive": -0.35,
+        "when_in_range": {
+          "type": "minecraft:add",
+          "argument1": -0.1275,
+          "argument2": {
+            "type": "minecraft:mul",
+            "argument1": 0.7,
+            "argument2": "nch:sb_continentalness"
+          }
+        },
+        "when_out_of_range": {
+          "type": "minecraft:range_choice",
+          "input": "nch:sb_continentalness",
+          "min_inclusive": -0.35,
+          "max_exclusive": -0.25,
+          "when_in_range": {
+            "type": "minecraft:add",
+            "argument1": 0.7225,
+            "argument2": {
+              "type": "minecraft:mul",
+              "argument1": 3,
+              "argument2": "nch:sb_continentalness"
+            }
+          },
+          "when_out_of_range": {
+            "type": "minecraft:range_choice",
+            "input": "nch:sb_continentalness",
+            "min_inclusive": -0.25,
+            "max_exclusive": 0.25,
+            "when_in_range": {
+              "type": "minecraft:add",
+              "argument1": 0.11,
+              "argument2": {
+                "type": "minecraft:mul",
+                "argument1": 0.55,
+                "argument2": "nch:sb_continentalness"
+              }
+            },
+            "when_out_of_range": {
+              "type": "minecraft:range_choice",
+              "input": "nch:sb_continentalness",
+              "min_inclusive": 0.25,
+              "max_exclusive": 0.45,
+              "when_in_range": {
+                "type": "minecraft:add",
+                "argument1": {
+                  "type": "minecraft:add",
+                  "argument1": 0.11,
+                  "argument2": {
+                    "type": "minecraft:mul",
+                    "argument1": 0.55,
+                    "argument2": "nch:sb_continentalness"
+                  }
+                },
+                "argument2": {
+                  "type": "minecraft:range_choice",
+                  "input": "nch:sb_chaos",
+                  "min_inclusive": 0.5,
+                  "max_exclusive": 1.5,
+                  "when_in_range": "nch:sb_monster_hill",
+                  "when_out_of_range": 0
+                }
+              },
+              "when_out_of_range": {
+                "type": "minecraft:range_choice",
+                "input": "nch:sb_continentalness",
+                "min_inclusive": 0.45,
+                "max_exclusive": 0.55,
+                "when_in_range": {
+                  "type": "minecraft:add",
+                  "argument1": -1.4425,
+                  "argument2": {
+                    "type": "minecraft:mul",
+                    "argument1": 4,
+                    "argument2": "nch:sb_continentalness"
+                  }
+                },
+                "when_out_of_range": {
+                  "type": "minecraft:add",
+                  "argument1": 0.5305,
+                  "argument2": {
+                    "type": "minecraft:mul",
+                    "argument1": 0.4,
+                    "argument2": "nch:sb_continentalness"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

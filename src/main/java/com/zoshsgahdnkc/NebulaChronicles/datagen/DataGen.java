@@ -1,7 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles.datagen;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
-import com.zoshsgahdnkc.NebulaChronicles.registries.ModDatapckRegistries;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModDatapackRegistries;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -21,10 +21,10 @@ public class DataGen {
         ExistingFileHelper helper = e.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
 
-        generator.addProvider(true, new ModRecipeProvider(output));
-        generator.addProvider(true, ModLootProvider.add(output));
+        generator.addProvider(true, new ModRecipeProvider(output, lookupProvider));
+        generator.addProvider(true, ModLootProvider.add(output, lookupProvider));
         generator.addProvider(true, new ModBlockStateProvider(output, helper));
         generator.addProvider(true, new ModItemModelProvider(output, helper));
-        generator.addProvider(e.includeServer(), new ModDatapckRegistries(output, lookupProvider));
+        generator.addProvider(e.includeServer(), new ModDatapackRegistries(output, lookupProvider));
     }
 }

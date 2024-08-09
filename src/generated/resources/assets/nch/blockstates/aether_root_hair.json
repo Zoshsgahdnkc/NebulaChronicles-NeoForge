@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "down=false": {
+      "model": "nch:block/aether_root_hair"
+    },
+    "down=true": {
+      "model": "nch:block/aether_root_hair_end"
+    }
+  }
+}

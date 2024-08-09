@@ -1,0 +1,30 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "conditions": [
+            {
+              "block": "nch:coarse_cactus_door",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
+          "name": "nch:coarse_cactus_door"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "nch:blocks/coarse_cactus_door"
+}

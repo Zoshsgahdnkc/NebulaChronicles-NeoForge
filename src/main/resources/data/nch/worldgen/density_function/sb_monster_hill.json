@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:quarter_negative",
+  "argument": {
+    "type": "minecraft:mul",
+    "argument1": 0.012,
+    "argument2": {
+      "type": "minecraft:add",
+      "argument1": 0.05,
+      "argument2": {
+        "type": "minecraft:cache_2d",
+        "argument": {
+          "type": "minecraft:noise",
+          "noise": "nch:monster",
+          "xz_scale": 1,
+          "y_scale": 1
+        }
+      }
+    }
+  }
+}

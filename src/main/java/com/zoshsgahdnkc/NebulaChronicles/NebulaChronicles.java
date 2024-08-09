@@ -20,7 +20,9 @@ import org.slf4j.Logger;
 public class NebulaChronicles {
     public static final String MODID = "nch";
     private static final Logger LOGGER = LogUtils.getLogger();
-    public NebulaChronicles(IEventBus modEventBus, ModContainer modContainer) {
+    public NebulaChronicles(IEventBus modEventBus, Dist dist, ModContainer modContainer) {
+
+        modEventBus.addListener(this::commonSetup);
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModSounds.SOUND_EVENT.register(modEventBus);
@@ -28,7 +30,7 @@ public class NebulaChronicles {
         ModTabs.TABS.register(modEventBus);
         ModFeatures.FEATURES.register(modEventBus);
 
-        NeoForge.EVENT_BUS.register(this);
+//        NeoForge.EVENT_BUS.register(this);
 
     }
 
@@ -39,6 +41,7 @@ public class NebulaChronicles {
 
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
+
     }
 
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)

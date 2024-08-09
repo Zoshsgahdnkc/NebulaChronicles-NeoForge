@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "nch:block/iron_bricks",
+    "side": "nch:block/iron_bricks",
+    "top": "nch:block/iron_bricks"
+  }
+}
