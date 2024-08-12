@@ -1,8 +1,8 @@
-// 1.21	2024-08-12T15:42:06.8626734	Registries
+// 1.21	2024-08-12T15:56:08.6809725	Registries
 687cb96f4c7877ac0a9e7933a73a5ac1ca98dffd data/nch/dimension/silverblanc.json
 799001782d072f10ffd7fbb6f09ab2f548acc521 data/nch/dimension_type/silverblanc.json
 97601e335bbe59ee308d6515e937dcc0062ac5bd data/nch/jukebox_song/music_disc_halfway.json
-01e7a8cbc27ad11560850d23ee22d56a0d7628d5 data/nch/worldgen/biome/frost_cave.json
+10e58bef33235e66c30da14a35b3198bdd865160 data/nch/worldgen/biome/frost_cave.json
 77b6f3bf9e5ee85419e768ecb94d951ecb2b60bf data/nch/worldgen/biome/salty_marsh.json
 109298bf869846b0b5286a52ba6ed1e676938d0a data/nch/worldgen/biome/silverblanc_barrens.json
 c9ef73eee006494d66062c9c3eddb95fc88dfbe0 data/nch/worldgen/biome/silverblanc_cave.json
