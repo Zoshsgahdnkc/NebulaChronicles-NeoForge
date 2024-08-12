@@ -18,9 +18,10 @@ public class LemonItem extends Item {
     @Override
     public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand interactionHand) {
         if (level.isClientSide) return InteractionResultHolder.fail(player.getItemInHand(interactionHand));
-        Planet p = PlanetUtils.getPlanet(player);
-        float g = PlanetUtils.getGravityRatio(p);
-        player.sendSystemMessage(Component.literal(String.valueOf(PlanetUtils.getGravityDecreaseFactor(p, player.getDeltaMovement().y))));
+        String dim = player.level().dimension().location().getPath();
+        if (!dim.equals("silverblanc")) {
+        }
+        player.sendSystemMessage(Component.literal(""));
         return super.use(level, player, interactionHand);
     }
 }

@@ -1,4 +1,4 @@
-package com.zoshsgahdnkc.NebulaChronicles.worldgen.feature;
+package com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.core.BlockPos;

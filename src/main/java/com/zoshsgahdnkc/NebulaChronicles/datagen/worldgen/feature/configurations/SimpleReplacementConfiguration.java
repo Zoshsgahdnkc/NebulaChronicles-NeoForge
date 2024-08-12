@@ -1,4 +1,4 @@
-package com.zoshsgahdnkc.NebulaChronicles.worldgen.feature.configurations;
+package com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.configurations;
 
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;

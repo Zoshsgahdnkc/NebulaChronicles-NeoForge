@@ -1,0 +1,66 @@
+{
+  "carvers": {
+    "air": [
+      "minecraft:cave",
+      "minecraft:cave_extra_underground",
+      "minecraft:canyon"
+    ]
+  },
+  "downfall": 0.1,
+  "effects": {
+    "fog_color": 12638463,
+    "foliage_color": 3144081,
+    "grass_color": 4191135,
+    "mood_sound": {
+      "block_search_extent": 8,
+      "offset": 2.0,
+      "sound": "minecraft:ambient.cave",
+      "tick_delay": 6000
+    },
+    "sky_color": 7907327,
+    "water_color": 8185086,
+    "water_fog_color": 2124168
+  },
+  "features": [
+    [],
+    [],
+    [],
+    [],
+    [],
+    [],
+    [
+      "nch:sb_ore_frozen_soil",
+      "nch:sb_ore_diorite",
+      "nch:sb_ore_calcite",
+      "nch:sb_ore_cosmic_sand",
+      "nch:sb_ore_copper",
+      "nch:sb_ore_copper_large",
+      "nch:sb_ore_iron",
+      "nch:sb_ore_iron_upper",
+      "nch:sb_ore_nickel",
+      "nch:sb_ore_gold",
+      "nch:sb_ore_gold_large"
+    ],
+    [],
+    [],
+    [
+      "minecraft:glow_lichen",
+      "nch:place_white_bud",
+      "nch:place_silverblanc_flower",
+      "nch:place_strange_fern"
+    ]
+  ],
+  "has_precipitation": true,
+  "spawn_costs": {},
+  "spawners": {
+    "ambient": [],
+    "axolotls": [],
+    "creature": [],
+    "misc": [],
+    "monster": [],
+    "underground_water_creature": [],
+    "water_ambient": [],
+    "water_creature": []
+  },
+  "temperature": 0.25
+}

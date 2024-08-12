@@ -1,7 +1,7 @@
-package com.zoshsgahdnkc.NebulaChronicles.worldgen.feature;
+package com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature;
 
 import com.mojang.serialization.Codec;
-import com.zoshsgahdnkc.NebulaChronicles.worldgen.feature.configurations.SimpleReplacementConfiguration;
+import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.configurations.SimpleReplacementConfiguration;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.LevelReader;

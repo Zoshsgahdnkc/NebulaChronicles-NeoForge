@@ -1,7 +1,6 @@
 package com.zoshsgahdnkc.NebulaChronicles.datagen;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
-import com.zoshsgahdnkc.NebulaChronicles.registries.ModDatapackRegistries;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -25,6 +24,6 @@ public class DataGen {
         generator.addProvider(true, ModLootProvider.add(output, lookupProvider));
         generator.addProvider(true, new ModBlockStateProvider(output, helper));
         generator.addProvider(true, new ModItemModelProvider(output, helper));
-        generator.addProvider(e.includeServer(), new ModDatapackRegistries(output, lookupProvider));
+        generator.addProvider(e.includeServer(), new DatapackRegistries(output, lookupProvider));
     }
 }

@@ -1,4 +1,4 @@
-package com.zoshsgahdnkc.NebulaChronicles.worldgen;
+package com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import net.minecraft.core.Holder;

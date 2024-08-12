@@ -1,11 +1,11 @@
-package com.zoshsgahdnkc.NebulaChronicles.worldgen;
+package com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.block.CoarseCactusBlock;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModFeatures;
 import com.zoshsgahdnkc.NebulaChronicles.utils.ModBlockTags;
-import com.zoshsgahdnkc.NebulaChronicles.worldgen.feature.configurations.SimpleReplacementConfiguration;
+import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.configurations.SimpleReplacementConfiguration;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;

@@ -1,9 +1,9 @@
 package com.zoshsgahdnkc.NebulaChronicles.registries;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
-import com.zoshsgahdnkc.NebulaChronicles.worldgen.feature.CaveAmethystFeature;
-import com.zoshsgahdnkc.NebulaChronicles.worldgen.feature.StoneSlabFeature;
-import com.zoshsgahdnkc.NebulaChronicles.worldgen.feature.configurations.SimpleReplacementConfiguration;
+import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.CaveAmethystFeature;
+import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.StoneSlabFeature;
+import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.configurations.SimpleReplacementConfiguration;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
