@@ -3,6 +3,9 @@ package com.zoshsgahdnkc.NebulaChronicles;
 import com.mojang.logging.LogUtils;
 import com.zoshsgahdnkc.NebulaChronicles.block.blockentity.ModBlockEntities;
 import com.zoshsgahdnkc.NebulaChronicles.registries.*;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -29,6 +32,8 @@ public class NebulaChronicles {
         ModBlockEntities.BLOCK_ENTITIES.register(modEventBus);
         ModTabs.TABS.register(modEventBus);
         ModFeatures.FEATURES.register(modEventBus);
+        ModParticles.PARTICLE_TYPES.register(modEventBus);
+        ModEntities.ENTITIES.register(modEventBus);
 
 //        NeoForge.EVENT_BUS.register(this);
 
@@ -48,7 +53,7 @@ public class NebulaChronicles {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-
+            EntityRenderers.register(ModEntities.AETHER_ROOT_SPORE.get(), ThrownItemRenderer::new);
         }
     }
 }

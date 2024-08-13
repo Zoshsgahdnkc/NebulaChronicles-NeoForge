@@ -1,8 +1,12 @@
 package com.zoshsgahdnkc.NebulaChronicles.item;
 
+import com.google.common.collect.ImmutableList;
+import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.ModDimensions;
+import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.network.chat.Style;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
@@ -10,15 +14,22 @@ import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.Level;
 
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 public class LemonItem extends Item {
     public LemonItem(Properties properties) {
         super(properties);
+    }
+
+    @Override
+    public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
+        super.appendHoverText(pStack, pContext, ImmutableList.of(Component.translatable("tooltip." + NebulaChronicles.MODID + ".lemon").withStyle(ChatFormatting.LIGHT_PURPLE)), pTooltipFlag);
     }
 
     @Override

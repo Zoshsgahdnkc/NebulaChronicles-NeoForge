@@ -95,6 +95,8 @@
   "item.nch.cpu": "Crystal Processing Unit",
   "item.nch.rocket_fuel": "Rocket Fuel",
 
+  "tooltip.nch.lemon": "Debug Item\nCurrently Used To Teleport",
+
   "item_Group.nch.tab_misc": "Distant Fortress - Misc",
   "item_Group.nch.tab_industry": "Distant Fortress - Industry",
   "item_Group.nch.tab_lemon": "Distant Fortress - Lemons",

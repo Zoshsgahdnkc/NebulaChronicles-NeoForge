@@ -1,6 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles.registries;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
+import com.zoshsgahdnkc.NebulaChronicles.item.AethorRootSporeItem;
 import com.zoshsgahdnkc.NebulaChronicles.item.LemonItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -40,6 +41,6 @@ public class ModItems {
     public static final DeferredItem<Item> CPU = ITEMS.registerSimpleItem("cpu", new Item.Properties().stacksTo(16));
     public static final DeferredItem<Item> ROCKET_FUEL = ITEMS.registerSimpleItem("rocket_fuel", new Item.Properties());
     public static final DeferredItem<Item> LEMON = ITEMS.register("lemon", () -> new LemonItem(new Item.Properties()));
-    public static final DeferredItem<Item> AETHER_ROOT_SPORE = ITEMS.registerSimpleItem("aether_root_spore", new Item.Properties());
+    public static final DeferredItem<Item> AETHER_ROOT_SPORE = ITEMS.register("aether_root_spore", () -> new AethorRootSporeItem(new Item.Properties()));
 
 }

@@ -6,7 +6,6 @@ import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.ItemLike;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -95,11 +94,11 @@ public class ModTabs {
                 accept(tab, ModBlocks.LEMURIUM_BLOCK);
             })
             .build());
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_LEMON = TABS.register("tab_lemon", () -> CreativeModeTab.builder()
-            .title(Component.translatable("item_Group."+ MODID +".tab_lemon"))
+    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_WORLD = TABS.register("tab_world", () -> CreativeModeTab.builder()
+            .title(Component.translatable("item_Group."+ MODID +".tab_world"))
             .icon(() -> new ItemStack(ModItems.LEMON.get()))
             .withTabsBefore(TAB_INDUSTRY.getId())
-            .displayItems((param, tab) -> {if (true || param.hasPermissions()) {
+            .displayItems((param, tab) -> {
                 accept(tab, ModItems.LEMON);
                 accept(tab, ModItems.AETHER_ROOT_SPORE);
                 accept(tab, ModBlocks.ARCHEOVA_STONE);
@@ -139,7 +138,7 @@ public class ModTabs {
                 accept(tab, ModBlocks.WHITE_KODOKU_FLOWER);
                 accept(tab, ModBlocks.AETHER_ROOT);
                 accept(tab, ModBlocks.AETHER_ROOT_HAIR);
-            }})
+            })
             .build());
     private static void accept(CreativeModeTab.Output tab, DeferredItem<? extends ItemLike> object) {
         tab.accept(object.get());
