@@ -1,11 +1,11 @@
-// 1.21	2024-08-12T15:56:08.6809725	Registries
+// 1.21	2024-08-13T10:48:31.4740517	Registries
 687cb96f4c7877ac0a9e7933a73a5ac1ca98dffd data/nch/dimension/silverblanc.json
 799001782d072f10ffd7fbb6f09ab2f548acc521 data/nch/dimension_type/silverblanc.json
 97601e335bbe59ee308d6515e937dcc0062ac5bd data/nch/jukebox_song/music_disc_halfway.json
-10e58bef33235e66c30da14a35b3198bdd865160 data/nch/worldgen/biome/frost_cave.json
+08b853d44f030d27100382e6f4b563e6fab7ca73 data/nch/worldgen/biome/frost_cave.json
 77b6f3bf9e5ee85419e768ecb94d951ecb2b60bf data/nch/worldgen/biome/salty_marsh.json
 109298bf869846b0b5286a52ba6ed1e676938d0a data/nch/worldgen/biome/silverblanc_barrens.json
-c9ef73eee006494d66062c9c3eddb95fc88dfbe0 data/nch/worldgen/biome/silverblanc_cave.json
+6b689e487e397a969806de82db551ffe221565ed data/nch/worldgen/biome/silverblanc_cave.json
 9652516ee75bbbe8825559d8e21d362b0fe2a1d5 data/nch/worldgen/biome/silverblanc_desert.json
 74d5f03974b3ac0b3589e1a7588517b5dde33677 data/nch/worldgen/biome/silverblanc_hills.json
 c3fc193b7a09cb0d04237c9b90829447689d34b3 data/nch/worldgen/biome/silverblanc_lowland.json

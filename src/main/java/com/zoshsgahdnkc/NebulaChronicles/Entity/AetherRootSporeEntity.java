@@ -40,8 +40,8 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
     }
 
     public void die() {
-        this.level().setBlock(BlockPos.containing(position().x, position().y, position().z),
-                ModBlocks.AETHER_ROOT.get().defaultBlockState(), 3);
+        BlockPos pos = new BlockPos((int) position().x, (int) position().y, (int) position().z);
+        this.level().setBlock(pos, ModBlocks.AETHER_ROOT.get().defaultBlockState(), 3);
         this.discard();
     }
 

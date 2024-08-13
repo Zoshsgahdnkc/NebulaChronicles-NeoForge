@@ -19,6 +19,16 @@ public class WhiteBudBlock extends BushBlock {
     }
 
     @Override
+    protected float getMaxVerticalOffset() {
+        return super.getMaxVerticalOffset() * 0.5f;
+    }
+
+    @Override
+    protected float getMaxHorizontalOffset() {
+        return super.getMaxHorizontalOffset() * 0.5f;
+    }
+
+    @Override
     protected MapCodec<? extends BushBlock> codec() {
         return CODEC;
     }

@@ -21,6 +21,16 @@ public class AetherRootHairBlock extends Block {
     }
     public static BooleanProperty END = PipeBlock.DOWN;
 
+    @Override
+    protected float getMaxHorizontalOffset() {
+        return 0f;
+    }
+
+    @Override
+    protected float getMaxVerticalOffset() {
+        return 0f;
+    }
+
     @Nullable
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext context) {
