@@ -1,6 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles.block;
 
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModItems;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
@@ -15,6 +16,14 @@ import net.minecraft.world.level.block.state.BlockState;
 public class AetherRootBlock extends RotatedPillarBlock implements BonemealableBlock {
     public AetherRootBlock(Properties p_49795_) {
         super(p_49795_);
+    }
+
+    @Override
+    protected void randomTick(BlockState pState, ServerLevel pLevel, BlockPos pPos, RandomSource pRandom) {
+        super.randomTick(pState, pLevel, pPos, pRandom);
+        pLevel.sendParticles(ModParticles.AETHER_SPORE.get(),
+                pPos.getX(), pPos.getY() - 1, pPos.getZ(), 2,
+                1, 1.2, 1, 0.1);
     }
 
     @Override

@@ -47,7 +47,7 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
         super.tick();
         this.setDeltaMovement(getDeltaMovement().scale(0.94));
         spawnSpore();
-        age++;
+        if (age != -1) age++;
         if (age >= LIFETIME && !removing) {
             die();
         }
@@ -86,7 +86,7 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
         if (age % 2 == 0) {
             level().addParticle(ModParticles.AETHER_SPORE.get(),
                     getX(), getY(), getZ(),
-                    random.nextFloat() * 0.2, random.nextFloat() * 0.2 - 0.3, random.nextFloat() * 0.2);
+                    random.nextFloat() * 0.2, random.nextFloat() * 0.2 - 0.4, random.nextFloat() * 0.2);
         }
     }
 

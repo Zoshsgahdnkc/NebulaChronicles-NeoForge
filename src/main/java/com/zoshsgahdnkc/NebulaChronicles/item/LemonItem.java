@@ -29,7 +29,8 @@ public class LemonItem extends Item {
 
     @Override
     public void appendHoverText(ItemStack pStack, TooltipContext pContext, List<Component> pTooltipComponents, TooltipFlag pTooltipFlag) {
-        super.appendHoverText(pStack, pContext, ImmutableList.of(Component.translatable("tooltip." + NebulaChronicles.MODID + ".lemon").withStyle(ChatFormatting.LIGHT_PURPLE)), pTooltipFlag);
+        super.appendHoverText(pStack, pContext, pTooltipComponents, pTooltipFlag);
+        pTooltipComponents.add(Component.translatable("tooltip." + NebulaChronicles.MODID + ".lemon").withStyle(ChatFormatting.LIGHT_PURPLE));
     }
 
     @Override

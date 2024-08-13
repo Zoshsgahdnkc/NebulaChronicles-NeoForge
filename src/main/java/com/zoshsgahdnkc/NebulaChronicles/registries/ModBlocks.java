@@ -171,7 +171,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> COARSE_CACTUS = registerBlock("coarse_cactus",
             () -> new CoarseCactusBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.GRASS_BLOCK)));
     public static final DeferredBlock<Block> AETHER_ROOT = registerBlock("aether_root",
-            () -> new AetherRootBlock(BlockBehaviour.Properties.ofLegacyCopy(COARSE_CACTUS_PLANKS.get())));
+            () -> new AetherRootBlock(BlockBehaviour.Properties.ofLegacyCopy(COARSE_CACTUS_PLANKS.get()).randomTicks()));
     public static final DeferredBlock<Block> AETHER_ROOT_HAIR = registerBlock("aether_root_hair",
             () -> new AetherRootHairBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.HANGING_ROOTS)));
 
