@@ -1,6 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles.block.blockentity;
 
 import com.zoshsgahdnkc.NebulaChronicles.block.entityblock.NickelsteelPlasticContainerBlock;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.NonNullList;

@@ -1,10 +1,15 @@
 package com.zoshsgahdnkc.NebulaChronicles.Entity;
 
+import com.zoshsgahdnkc.NebulaChronicles.block.AetherRootBlock;
+import com.zoshsgahdnkc.NebulaChronicles.block.AetherRootHairBlock;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModEntities;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModItems;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModParticles;
 import net.minecraft.core.BlockPos;
+import net.minecraft.nbt.ByteTag;
+import net.minecraft.nbt.CompoundTag;
+import net.minecraft.nbt.IntTag;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.entity.EntityType;
@@ -13,6 +18,7 @@ import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.phys.Vec3;
 import org.jetbrains.annotations.NotNull;
 
 public class AetherRootSporeEntity extends ThrowableItemProjectile {
@@ -28,6 +34,7 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
     public static final int LIFETIME = 30;
     public int age = 0;
     public boolean removing = false;
+    public boolean isChild = false;
 
     @Override
     public void shoot(double pX, double pY, double pZ, float pVelocity, float pInaccuracy) {
@@ -36,20 +43,42 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
 
     @Override
     public void tick() {
+        if (removing) discard();
         super.tick();
         this.setDeltaMovement(getDeltaMovement().scale(0.94));
         spawnSpore();
         age++;
-        if (age >= LIFETIME) {
+        if (age >= LIFETIME && !removing) {
             die();
         }
     }
 
     @Override
     protected void onHitBlock(BlockHitResult pResult) {
-        BlockPos pos = new BlockPos((int) position().x, (int) position().y, (int) position().z);
+        if (age < 3) return;
+        if (removing) return;
+        BlockPos pos = pResult.getBlockPos();
         super.onHitBlock(pResult);
-        level().playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.NEUTRAL, 0.5f, 1f);
+        if (!isChild && level().getBlockState(pos).is(ModBlocks.AETHER_ROOT.get())) {
+            level().playSound(null, pos, SoundEvents.SHROOMLIGHT_BREAK, SoundSource.BLOCKS, 1f, 1.3f);
+            double startX = (pos.getX() + 0.5) * 2 - getX();
+            double startY = (pos.getY() + 0.5) * 2 - getY();
+            double startZ = (pos.getZ() + 0.5) * 2 - getZ();
+            double vecOffsetX = random.nextInt(-1, 3) * (0.06 + random.nextFloat() * 0.1);
+            double vecOffsetY = random.nextInt(-1, 3) * (0.06 + random.nextFloat() * 0.1);
+            double vecOffsetZ = random.nextInt(-1, 3) * (0.06 + random.nextFloat() * 0.1);
+            Vec3 vec3 = getDeltaMovement();
+            AetherRootSporeEntity Plus = new AetherRootSporeEntity(startX, startY, startZ, level());
+            Plus.setDeltaMovement(vec3.add(vecOffsetX, vecOffsetY, vecOffsetZ));
+            Plus.isChild = true;
+            AetherRootSporeEntity Minus = new AetherRootSporeEntity(startX, startY, startZ, level());
+            Minus.setDeltaMovement(vec3.add(-vecOffsetX, -vecOffsetY, -vecOffsetZ));
+            Minus.isChild = true;
+            level().addFreshEntity(Plus);
+            level().addFreshEntity(Minus);
+        } else {
+            level().playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.NEUTRAL, 0.5f, 1f);
+        }
         removing = true;
     }
 
@@ -62,12 +91,22 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
     }
 
     public void die() {
-        BlockPos pos = new BlockPos((int) position().x, (int) position().y, (int) position().z);
-        if (level().getBlockState(pos).isAir() && !removing) {
+        if (level().isClientSide()) return;
+        BlockPos pos = this.blockPosition();
+        if (level().getBlockState(pos).isAir()) {
+            this.level().playSound(null, pos, SoundEvents.SHROOMLIGHT_PLACE, SoundSource.BLOCKS);
             this.level().setBlock(pos, ModBlocks.AETHER_ROOT.get().defaultBlockState(), 3);
+            int span = 0;
+            for (int tries = 0; tries < 3; tries ++) {
+                if (random.nextFloat() > 0.2 + 0.3 * tries) span ++;
+            }
+            for (int i = 1; i < span + 2; i ++) {
+                if (!level().getBlockState(pos.below(i)).isAir()) break;
+                this.level().setBlock(pos.below(i), ModBlocks.AETHER_ROOT_HAIR.get().defaultBlockState(), 3);
+                this.level().updateNeighborsAt(pos, ModBlocks.AETHER_ROOT_HAIR.get());
+            }
             removing = true;
         }
-        this.discard();
     }
 
     @Override
@@ -77,5 +116,19 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
     @Override
     protected @NotNull Item getDefaultItem() {
         return ModItems.AETHER_ROOT_SPORE.get();
+    }
+
+    @Override
+    public void addAdditionalSaveData(CompoundTag nbt) {
+        super.addAdditionalSaveData(nbt);
+        nbt.put("age", IntTag.valueOf(age));
+        nbt.put("child", ByteTag.valueOf(isChild));
+    }
+
+    @Override
+    public void readAdditionalSaveData(CompoundTag nbt) {
+        super.readAdditionalSaveData(nbt);
+        age = nbt.getInt("age");
+        isChild = nbt.getBoolean("child");
     }
 }

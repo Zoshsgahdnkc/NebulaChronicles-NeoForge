@@ -1,8 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles;
 
 import com.mojang.logging.LogUtils;
-import com.zoshsgahdnkc.NebulaChronicles.block.blockentity.ModBlockEntities;
-import com.zoshsgahdnkc.NebulaChronicles.client.particle.AetherRootSporeRenderer;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlockEntities;
 import com.zoshsgahdnkc.NebulaChronicles.registries.*;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
