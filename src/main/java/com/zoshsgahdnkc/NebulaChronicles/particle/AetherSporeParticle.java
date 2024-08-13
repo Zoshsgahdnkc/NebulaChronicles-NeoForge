@@ -21,6 +21,7 @@ public class AetherSporeParticle extends TextureSheetParticle {
     @Override
     public void tick() {
         super.tick();
+        this.alpha = 1 - (float) age / lifetime;
     }
 
     @Override
