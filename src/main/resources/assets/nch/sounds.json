@@ -1,4 +1,24 @@
 {
+  "aether_root_spore_spread": {
+    "subtitle": "subtitles.nch.aether_root_spore_spread",
+    "sounds": [
+      "nch:aether_root_spore_spread1",
+      "nch:aether_root_spore_spread2"
+    ]
+  },
+  "aether_root_spore_inflate": {
+    "subtitle": "subtitles.nch.aether_root_spore_inflate",
+    "sounds": [
+      "nch:aether_root_spore_inflate"
+    ]
+  },
+  "aether_root_spore_fission": {
+    "subtitle": "subtitles.nch.aether_root_spore_fission",
+    "sounds": [
+      "nch:aether_root_spore_fission1",
+      "nch:aether_root_spore_fission2"
+    ]
+  },
   "tech_block_hit": {
     "subtitle": "subtitles.block.generic.hit",
     "sounds": [

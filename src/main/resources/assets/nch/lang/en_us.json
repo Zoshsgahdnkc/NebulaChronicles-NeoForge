@@ -47,6 +47,10 @@
   "block.nch.silverblanc_stone_stairs": "Silverblanc Stone Stair",
   "block.nch.silverblanc_stone_wall": "Silverblanc Stone Wall",
   "block.nch.moss_silverblanc_stone": "Moss Silverblanc Stone",
+  "block.nch.silverblanc_cobblestone": "Silverblanc Cobblestone",
+  "block.nch.silverblanc_cobblestone_stairs": "Silverblanc Cobblestone Stairs",
+  "block.nch.silverblanc_cobblestone_slab": "Silverblanc Cobblestone Slab",
+  "block.nch.silverblanc_cobblestone_wall": "Silverblanc Cobblestone Wall",
   "block.nch.silverblanc_stone_bricks": "Silverblanc Stone Bricks",
   "block.nch.silverblanc_stone_bricks_stairs": "Silverblanc Stone Bricks Stairs",
   "block.nch.silverblanc_stone_bricks_slab": "Silverblanc Stone Bricks Slab",
@@ -94,15 +98,20 @@
   "item.nch.calcite_casing": "Calcite Casing",
   "item.nch.cpu": "Crystal Processing Unit",
   "item.nch.rocket_fuel": "Rocket Fuel",
+  "item.nch.aether_root_spore": "Aether Root Spore",
 
   "tooltip.nch.lemon": "[Debug Item] Currently Used To Teleport",
 
-  "item_Group.nch.tab_misc": "Distant Fortress - Misc",
-  "item_Group.nch.tab_industry": "Distant Fortress - Industry",
-  "item_Group.nch.tab_lemon": "Distant Fortress - Lemons",
+  "item_Group.nch.tab_misc": "Nebula Chronicles - Misc",
+  "item_Group.nch.tab_industry": "Nebula Chronicles - Industry",
+  "item_Group.nch.tab_world": "Nebula Chronicles - World",
 
   "container.nch.nickelsteel_plastic_container": "Nickelsteel Plastic Container",
 
   "advancement.nch.lemon.title": "LEMON",
-  "advancement.nch.lemon.desc": "YOU HEARD IT RIGHT LEEEEEMOOOOON"
+  "advancement.nch.lemon.desc": "YOU HEARD IT RIGHT LEEEEEMOOOOON",
+
+  "subtitles.nch.aether_root_spore_spread": "Aether Root Spore Rang",
+  "subtitles.nch.aether_root_spore_inflate": "Aether Root Inflated",
+  "subtitles.nch.aether_root_spore_fission": "Aether Root Spore Split"
 }

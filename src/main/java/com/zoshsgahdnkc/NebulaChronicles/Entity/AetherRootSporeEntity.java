@@ -2,10 +2,7 @@ package com.zoshsgahdnkc.NebulaChronicles.Entity;
 
 import com.zoshsgahdnkc.NebulaChronicles.block.AetherRootBlock;
 import com.zoshsgahdnkc.NebulaChronicles.block.AetherRootHairBlock;
-import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
-import com.zoshsgahdnkc.NebulaChronicles.registries.ModEntities;
-import com.zoshsgahdnkc.NebulaChronicles.registries.ModItems;
-import com.zoshsgahdnkc.NebulaChronicles.registries.ModParticles;
+import com.zoshsgahdnkc.NebulaChronicles.registries.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.ByteTag;
 import net.minecraft.nbt.CompoundTag;
@@ -60,7 +57,7 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
         BlockPos pos = pResult.getBlockPos();
         super.onHitBlock(pResult);
         if (!isChild && level().getBlockState(pos).is(ModBlocks.AETHER_ROOT.get())) {
-            level().playSound(null, pos, SoundEvents.SHROOMLIGHT_BREAK, SoundSource.BLOCKS, 1f, 1.3f);
+            level().playSound(null, pos, ModSounds.AETHER_ROOT_SPORE_FISSION.get(), SoundSource.BLOCKS, 1f, 1f + 0.4f * random.nextFloat());
             double startX = (pos.getX() + 0.5) * 2 - getX();
             double startY = (pos.getY() + 0.5) * 2 - getY();
             double startZ = (pos.getZ() + 0.5) * 2 - getZ();
@@ -77,7 +74,7 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
             level().addFreshEntity(Plus);
             level().addFreshEntity(Minus);
         } else {
-            level().playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.NEUTRAL, 0.5f, 1f);
+            level().playSound(null, pos, SoundEvents.GRASS_FALL, SoundSource.NEUTRAL, 1f, 1f);
         }
         removing = true;
     }
@@ -88,13 +85,17 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
                     getX(), getY(), getZ(),
                     random.nextFloat() * 0.2, random.nextFloat() * 0.2 - 0.4, random.nextFloat() * 0.2);
         }
+        if (age % 6 == 0) {
+            level().playSound(null, getX(), getY(), getZ(),
+                    ModSounds.AETHER_ROOT_SPORE_SPREAD.get(), SoundSource.NEUTRAL, 0.2f + 0.1f * random.nextFloat(), 1.5f + 0.5f * random.nextFloat());
+        }
     }
 
     public void die() {
         if (level().isClientSide()) return;
         BlockPos pos = this.blockPosition();
         if (level().getBlockState(pos).isAir()) {
-            this.level().playSound(null, pos, SoundEvents.SHROOMLIGHT_PLACE, SoundSource.BLOCKS);
+            this.level().playSound(null, pos, ModSounds.AETHER_ROOT_SPORE_INFLATE.get(), SoundSource.BLOCKS, 1f, 0.8f + 0.4f * random.nextFloat());
             this.level().setBlock(pos, ModBlocks.AETHER_ROOT.get().defaultBlockState(), 3);
             int span = 0;
             for (int tries = 0; tries < 3; tries ++) {
