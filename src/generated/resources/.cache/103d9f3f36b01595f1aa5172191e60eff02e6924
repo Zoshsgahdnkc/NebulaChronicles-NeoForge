@@ -1,4 +1,4 @@
-// 1.21	2024-08-14T17:11:20.9370971	Registries
+// 1.21	2024-08-14T17:34:20.587036	Registries
 687cb96f4c7877ac0a9e7933a73a5ac1ca98dffd data/nch/dimension/silverblanc.json
 799001782d072f10ffd7fbb6f09ab2f548acc521 data/nch/dimension_type/silverblanc.json
 97601e335bbe59ee308d6515e937dcc0062ac5bd data/nch/jukebox_song/music_disc_halfway.json
@@ -19,6 +19,7 @@ bc67c5cc4777453d6e0c758adf524a81dc857363 data/nch/worldgen/configured_feature/or
 0d73297eb832cec066aa6d3c5d3e3c93c3fa6660 data/nch/worldgen/configured_feature/ore_copper_small.json
 611331d103b8e656c5119e5efb925c2f977e8329 data/nch/worldgen/configured_feature/ore_cosmic_sand.json
 1222270492384b885b6b66eeb68bf1164bf7f23b data/nch/worldgen/configured_feature/ore_cosmic_sandstone.json
+2ab108aef844264888deaa070beae77b277c7305 data/nch/worldgen/configured_feature/ore_crying_obsidian.json
 f3b0e693fae46bfd33f23e1950343e247e7fbbb3 data/nch/worldgen/configured_feature/ore_deepslate.json
 7667261b28e964cb8d7e9ff3afceb91c472b0b24 data/nch/worldgen/configured_feature/ore_diamond_large.json
 61e8de4562cb5fafbf11625072dee37acb137df2 data/nch/worldgen/configured_feature/ore_diamond_small.json

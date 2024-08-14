@@ -1,12 +1,11 @@
 {
   "values": [
+    "nch:silverblanc_stone",
     "minecraft:stone",
+    "minecraft:andesite",
     "minecraft:granite",
     "minecraft:diorite",
-    "minecraft:andesite",
     "minecraft:tuff",
-    "minecraft:deepslate",
-    "minecraft:calcite",
-    "nch:silverblanc_stone"
+    "minecraft:deepslate"
   ]
 }

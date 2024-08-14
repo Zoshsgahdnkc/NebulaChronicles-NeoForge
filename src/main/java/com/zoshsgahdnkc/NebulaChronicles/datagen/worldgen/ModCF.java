@@ -45,6 +45,8 @@ public class ModCF {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AMETHYST = createKey("amethyst");
     public static final ResourceKey<ConfiguredFeature<?, ?>> SILVERBLANC_SALTY_ICE_LAKE = createKey("silverblanc_salty_ice_lake");
     public static final ResourceKey<ConfiguredFeature<?, ?>> DISK_FROZEN_SOIL = createKey("disk_frozen_soil");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_OBSIDIAN = createKey("ore_obsidian");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_CRYING_OBSIDIAN = createKey("ore_crying_obsidian");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_FROZEN_SOIL = createKey("ore_frozen_soil");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_CALCITE = createKey("ore_calcite");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORE_COSMIC_SAND = createKey("ore_cosmic_sand");
@@ -108,7 +110,10 @@ public class ModCF {
         register(context, ORE_GOLD_LARGE, Feature.ORE, new OreConfiguration(OreMatch.GOLD_LIST, 10, 0.3F));
         register(context, ORE_DIAMOND_UPPER, Feature.ORE, new OreConfiguration(OreMatch.DIAMOND_LIST, 5));
         register(context, ORE_DIAMOND_LOWER, Feature.ORE, new OreConfiguration(OreMatch.DIAMOND_LIST, 8, 0.3F));
+//        register(context, ORE_LAPIS, Feature.ORE, new OreConfiguration(OreConfiguration.target(new TagMatchTest(ModBlockTags.BASE_STONE), Blocks.OBSIDIAN.defaultBlockState()), 7, 0.4F));
         register(context, ORE_LAPIS, Feature.ORE, new OreConfiguration(OreMatch.LAPIS_LIST, 7, 0.4F));
+        register(context, ORE_CRYING_OBSIDIAN, Feature.ORE, new OreConfiguration(OreMatch.LAPIS_LIST, 7, 0.4F));
+
         register(context, COARSE_CACTUS, Feature.BLOCK_COLUMN, new BlockColumnConfiguration(List.of(
                 new BlockColumnConfiguration.Layer(UniformInt.of(1, 5), BlockStateProvider.simple(ModBlocks.COARSE_CACTUS.get().defaultBlockState().setValue(CoarseCactusBlock.TOP, false))),
                 new BlockColumnConfiguration.Layer(ConstantInt.of(1), BlockStateProvider.simple(ModBlocks.COARSE_CACTUS.get().defaultBlockState().setValue(CoarseCactusBlock.TOP, true)))

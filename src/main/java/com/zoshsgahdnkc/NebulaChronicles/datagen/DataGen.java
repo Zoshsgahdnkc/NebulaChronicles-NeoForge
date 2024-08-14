@@ -20,6 +20,7 @@ public class DataGen {
         ExistingFileHelper helper = e.getExistingFileHelper();
         CompletableFuture<HolderLookup.Provider> lookupProvider = e.getLookupProvider();
 
+        generator.addProvider(true, new ModBlockTagsProvider(output, lookupProvider, helper));
         generator.addProvider(true, new ModRecipeProvider(output, lookupProvider));
         generator.addProvider(true, ModLootProvider.add(output, lookupProvider));
         generator.addProvider(true, new ModBlockStateProvider(output, helper));
