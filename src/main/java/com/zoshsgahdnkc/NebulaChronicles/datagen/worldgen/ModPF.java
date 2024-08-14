@@ -83,7 +83,7 @@ public class ModPF {
                 InSquarePlacement.spread(), HeightmapPlacement.onHeightmap(Heightmap.Types.OCEAN_FLOOR_WG),
                 BiomeFilter.biome(), RarityFilter.onAverageOnceEvery(2));
         register(context, PLACE_AETHER_ROOT, features.getOrThrow(ModCF.AETHER_ROOT),
-                CountPlacement.of(6), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(64)),
+                CountPlacement.of(8), HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(0), VerticalAnchor.absolute(64)),
                 InSquarePlacement.spread(), BiomeFilter.biome());
 
         register(context, SB_ORE_FROZEN_SOIL, features.getOrThrow(ModCF.ORE_FROZEN_SOIL),

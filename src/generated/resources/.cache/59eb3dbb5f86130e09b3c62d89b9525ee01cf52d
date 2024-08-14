@@ -1,4 +1,4 @@
-// 1.21	2024-08-09T15:43:10.5356838	Loot Tables
+// 1.21	2024-08-14T15:13:46.2408637	Loot Tables
 e926cc54acc27b825ed44d90a5095ef11dbee869 data/nch/loot_table/blocks/aether_root.json
 24d6fae293e6c26aa4962eb37e3cf64a57f6c5a6 data/nch/loot_table/blocks/aether_root_hair.json
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_table/blocks/archeova_stone.json
@@ -71,3 +71,4 @@ d6d07df2df642d0fd54b28c34919ee597dd07750 data/nch/loot_table/blocks/thulium_188_
 a4b85b33f7a24bbfa95c15cd1f2d9ae3978ae4b9 data/nch/loot_table/blocks/wall_paper.json
 40c53e1ab421ca46065a5fbfea1b29a51340115e data/nch/loot_table/blocks/white_bud.json
 63da023d8f07418af22d917ba779ca1ff9ee61b7 data/nch/loot_table/blocks/white_kodoku_flower.json
+ccf757cc14a1fc4ecde1f41514080a6d499d11cf data/nch/loot_table/chests/frost_bear_loot.json

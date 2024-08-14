@@ -23,7 +23,7 @@ public class AetherRootFeature extends Feature<NoneFeatureConfiguration> {
         super(p_65786_);
     }
 
-    private static final int DISTANCE = 6;
+    private static final int DISTANCE = 5;
 
     @Override
     public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> context) {
@@ -42,7 +42,7 @@ public class AetherRootFeature extends Feature<NoneFeatureConfiguration> {
         return false;
     }
     // detect block at 6 directions and around
-    // must have at least a distance of 6 blocks to generate
+    // must have at least a distance of 5 blocks to generate
     private boolean isSpaceEnough(WorldGenLevel level, BlockPos pos) {
         int[] corner = {-1, 1};
         for (int x: corner) {

@@ -1,4 +1,4 @@
-// 1.21	2024-08-14T12:01:31.8323337	Registries
+// 1.21	2024-08-14T17:11:20.9370971	Registries
 687cb96f4c7877ac0a9e7933a73a5ac1ca98dffd data/nch/dimension/silverblanc.json
 799001782d072f10ffd7fbb6f09ab2f548acc521 data/nch/dimension_type/silverblanc.json
 97601e335bbe59ee308d6515e937dcc0062ac5bd data/nch/jukebox_song/music_disc_halfway.json
@@ -38,7 +38,7 @@ a10d92c85246210708c3e2da9e6f34e1595ae040 data/nch/worldgen/configured_feature/st
 689e033da07c83949bf3309456bf0a8c46ec5c1b data/nch/worldgen/configured_feature/strange_fern.json
 f9e72d470c9b1c73bdefb455283a4f2b444e59c1 data/nch/worldgen/configured_feature/white_bud.json
 37f4d31169c03f2597e757fc1b569d8c8e912252 data/nch/worldgen/configured_feature/white_kodoku_flower.json
-d6463ff436057022614b313e0ed3b60e2b55b170 data/nch/worldgen/placed_feature/aether_root.json
+ec3ca9df9d40aca3147bd8ac98ad27dd37c4c730 data/nch/worldgen/placed_feature/aether_root.json
 7238b4ab95b17d23845534ab4d93dd07af8afcf8 data/nch/worldgen/placed_feature/coarse_cactus.json
 bbbab29657949ba2791feca4d7b244347cf675a0 data/nch/worldgen/placed_feature/place_cave_amethyst.json
 51fd249ce04b73f051da51968f39fc4d40ddf478 data/nch/worldgen/placed_feature/place_disk_frozen_soil.json
