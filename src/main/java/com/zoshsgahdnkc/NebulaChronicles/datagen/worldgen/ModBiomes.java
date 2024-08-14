@@ -3,7 +3,6 @@ package com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen;
 import com.google.common.collect.ImmutableList;
 import com.mojang.datafixers.util.Pair;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
-import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -158,7 +157,7 @@ public class ModBiomes {
                 .generationSettings(
                         genCarversSB(new BiomeGenerationSettings.Builder(featureGetter,carverGetter))
                                 .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, VegetationPlacements.PATCH_DEAD_BUSH)
-                                .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPF.COARSE_CACTUS)
+                                .addFeature(GenerationStep.Decoration.VEGETAL_DECORATION, ModPF.PLACE_COARSE_CACTUS)
                                 .build()
                 )
                 .build());
@@ -181,6 +180,7 @@ public class ModBiomes {
                                 .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModPF.PLACE_STONE_SLAB)
                                 .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModPF.PLACE_CAVE_AMETHYST)
                                 .addFeature(GenerationStep.Decoration.FLUID_SPRINGS, MiscOverworldPlacements.SPRING_WATER)
+                                .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModPF.PLACE_AETHER_ROOT)
                                 .build()
                 )
                 .build());
@@ -203,6 +203,7 @@ public class ModBiomes {
                                 .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModPF.PLACE_STONE_SLAB)
                                 .addFeature(GenerationStep.Decoration.FLUID_SPRINGS, MiscOverworldPlacements.SPRING_WATER)
                                 .addFeature(GenerationStep.Decoration.FLUID_SPRINGS, MiscOverworldPlacements.SPRING_LAVA_FROZEN)
+                                .addFeature(GenerationStep.Decoration.UNDERGROUND_DECORATION, ModPF.PLACE_AETHER_ROOT)
                                 .build()
                 )
                 .build());

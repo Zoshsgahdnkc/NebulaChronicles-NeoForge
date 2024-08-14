@@ -65,6 +65,9 @@ public class ModCF {
     public static final ResourceKey<ConfiguredFeature<?, ?>> SILVERBLANC_STONE_SLAB = createKey("silverblanc_stone_slab");
     public static final ResourceKey<ConfiguredFeature<?, ?>> STONE_SLAB = createKey("stone_slab");
     public static final ResourceKey<ConfiguredFeature<?, ?>> COARSE_CACTUS = createKey("coarse_cactus");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> AETHER_ROOT = createKey("aether_root");
+
+
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
         register(context, STRANGE_FERN, Feature.RANDOM_PATCH, grassPatch(ModBlocks.STRANGE_FERN.get(), 12));
         register(context, WHITE_BUD, Feature.RANDOM_PATCH, grassPatch(ModBlocks.WHITE_BUD.get(), 24));
@@ -110,6 +113,7 @@ public class ModCF {
                 new BlockColumnConfiguration.Layer(UniformInt.of(1, 5), BlockStateProvider.simple(ModBlocks.COARSE_CACTUS.get().defaultBlockState().setValue(CoarseCactusBlock.TOP, false))),
                 new BlockColumnConfiguration.Layer(ConstantInt.of(1), BlockStateProvider.simple(ModBlocks.COARSE_CACTUS.get().defaultBlockState().setValue(CoarseCactusBlock.TOP, true)))
         ), Direction.UP, BlockPredicate.ONLY_IN_AIR_PREDICATE, true));
+        register(context, AETHER_ROOT, ModFeatures.AETHER_ROOT.get(), new NoneFeatureConfiguration());
     }
     protected static <FC extends FeatureConfiguration, F extends Feature<FC>> void register(
             BootstrapContext<ConfiguredFeature<?, ?>> context, ResourceKey<ConfiguredFeature<?, ?>> resourceKey,

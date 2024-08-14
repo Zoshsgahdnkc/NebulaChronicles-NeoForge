@@ -1,15 +1,16 @@
-// 1.21	2024-08-13T10:48:31.4740517	Registries
+// 1.21	2024-08-14T12:01:31.8323337	Registries
 687cb96f4c7877ac0a9e7933a73a5ac1ca98dffd data/nch/dimension/silverblanc.json
 799001782d072f10ffd7fbb6f09ab2f548acc521 data/nch/dimension_type/silverblanc.json
 97601e335bbe59ee308d6515e937dcc0062ac5bd data/nch/jukebox_song/music_disc_halfway.json
-08b853d44f030d27100382e6f4b563e6fab7ca73 data/nch/worldgen/biome/frost_cave.json
+d3896bc6f6fe14a368203811ff7b5d91599099bf data/nch/worldgen/biome/frost_cave.json
 77b6f3bf9e5ee85419e768ecb94d951ecb2b60bf data/nch/worldgen/biome/salty_marsh.json
 109298bf869846b0b5286a52ba6ed1e676938d0a data/nch/worldgen/biome/silverblanc_barrens.json
-6b689e487e397a969806de82db551ffe221565ed data/nch/worldgen/biome/silverblanc_cave.json
+b0a42e9729fc6d11bb8ce34b627386935f27b0b3 data/nch/worldgen/biome/silverblanc_cave.json
 9652516ee75bbbe8825559d8e21d362b0fe2a1d5 data/nch/worldgen/biome/silverblanc_desert.json
 74d5f03974b3ac0b3589e1a7588517b5dde33677 data/nch/worldgen/biome/silverblanc_hills.json
 c3fc193b7a09cb0d04237c9b90829447689d34b3 data/nch/worldgen/biome/silverblanc_lowland.json
 edae847a32b8fa958346c7c8edf404cd0cf49d34 data/nch/worldgen/biome/silverblanc_plateau.json
+541774a392e883669dd6b58e908455c7dd0cfa2a data/nch/worldgen/configured_feature/aether_root.json
 2f3aa594ca20f0e6a147447c864d6cbf2e5ab553 data/nch/worldgen/configured_feature/amethyst.json
 642c752375e1c8d8f4782bce5843b76ab131eaf2 data/nch/worldgen/configured_feature/coarse_cactus.json
 a02b5e0165d757b4462cc29a15e190c17f86fbd0 data/nch/worldgen/configured_feature/disk_frozen_soil.json
@@ -37,6 +38,7 @@ a10d92c85246210708c3e2da9e6f34e1595ae040 data/nch/worldgen/configured_feature/st
 689e033da07c83949bf3309456bf0a8c46ec5c1b data/nch/worldgen/configured_feature/strange_fern.json
 f9e72d470c9b1c73bdefb455283a4f2b444e59c1 data/nch/worldgen/configured_feature/white_bud.json
 37f4d31169c03f2597e757fc1b569d8c8e912252 data/nch/worldgen/configured_feature/white_kodoku_flower.json
+d6463ff436057022614b313e0ed3b60e2b55b170 data/nch/worldgen/placed_feature/aether_root.json
 7238b4ab95b17d23845534ab4d93dd07af8afcf8 data/nch/worldgen/placed_feature/coarse_cactus.json
 bbbab29657949ba2791feca4d7b244347cf675a0 data/nch/worldgen/placed_feature/place_cave_amethyst.json
 51fd249ce04b73f051da51968f39fc4d40ddf478 data/nch/worldgen/placed_feature/place_disk_frozen_soil.json

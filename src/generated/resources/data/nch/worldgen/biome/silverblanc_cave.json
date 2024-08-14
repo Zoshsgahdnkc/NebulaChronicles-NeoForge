@@ -50,7 +50,8 @@
     [
       "nch:place_silverblanc_stone_slab",
       "nch:place_stone_slab",
-      "nch:place_cave_amethyst"
+      "nch:place_cave_amethyst",
+      "nch:aether_root"
     ],
     [
       "minecraft:spring_water"

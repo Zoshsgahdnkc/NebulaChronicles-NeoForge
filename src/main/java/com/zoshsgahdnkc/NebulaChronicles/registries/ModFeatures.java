@@ -1,6 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles.registries;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
+import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.AetherRootFeature;
 import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.CaveAmethystFeature;
 import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.StoneSlabFeature;
 import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.configurations.SimpleReplacementConfiguration;
@@ -15,5 +16,6 @@ public class ModFeatures {
             DeferredRegister.create(BuiltInRegistries.FEATURE, NebulaChronicles.MODID);
     public static final DeferredHolder<Feature<?>, Feature<NoneFeatureConfiguration>> CAVE_AMETHYST = FEATURES.register("cave_amethyst", () -> new CaveAmethystFeature(NoneFeatureConfiguration.CODEC));
     public static final DeferredHolder<Feature<?>, Feature<SimpleReplacementConfiguration>> STONE_SLAB = FEATURES.register("stone_slab", () -> new StoneSlabFeature(SimpleReplacementConfiguration.CODEC));
+    public static final DeferredHolder<Feature<?>, Feature<NoneFeatureConfiguration>> AETHER_ROOT = FEATURES.register("aether_root", () -> new AetherRootFeature(NoneFeatureConfiguration.CODEC));
 
 }
