@@ -1,4 +1,5 @@
 {
+  "BLOCKS >>>": "",
   "block.nch.bunker_bricks": "Bunker Bricks",
   "block.nch.dark_tile": "Dark Tile",
   "block.nch.eroded_dark_tile": "Eroded Dark Tile",
@@ -70,6 +71,7 @@
   "block.nch.dark_matter_render_panel": "Dark Matter Render Panel",
   "block.nch.wall_paper": "Wall Paper",
 
+  "ITEMS >>>": "",
   "item.nch.lemon": "LEMON",
   "item.nch.music_disc_halfway": "Music Disc",
   "item.nch.music_disc_halfway.desc": "Zoshsgahdnkc - Halfway",
@@ -99,18 +101,27 @@
   "item.nch.cpu": "Crystal Processing Unit",
   "item.nch.rocket_fuel": "Rocket Fuel",
   "item.nch.aether_root_spore": "Aether Root Spore",
+  "item.nch.verdhelm_beetle_spawn_egg": "Verdhelm Beetle Spawn Egg",
 
+  "TOOLTIPS >>>": "",
   "tooltip.nch.lemon": "[Debug Item] Currently Used To Teleport",
 
+  "TABS >>>": "",
   "item_Group.nch.tab_misc": "Nebula Chronicles - Misc",
   "item_Group.nch.tab_industry": "Nebula Chronicles - Industry",
   "item_Group.nch.tab_world": "Nebula Chronicles - World",
 
+  "UI_INFO >>>": "",
   "container.nch.nickelsteel_plastic_container": "Nickelsteel Plastic Container",
 
+  "ADVANCEMENTS >>>": "",
   "advancement.nch.lemon.title": "LEMON",
   "advancement.nch.lemon.desc": "YOU HEARD IT RIGHT LEEEEEMOOOOON",
 
+  "ENTITIES >>>": "",
+  "entity.nch.verdhelm_beetle": "Verdhelm Beetle",
+
+  "SUBTITLES >>>": "",
   "subtitles.nch.aether_root_spore_spread": "Aether Root Spore Rang",
   "subtitles.nch.aether_root_spore_inflate": "Aether Root Inflated",
   "subtitles.nch.aether_root_spore_fission": "Aether Root Spore Split"

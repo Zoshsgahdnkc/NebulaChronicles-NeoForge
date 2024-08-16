@@ -3,10 +3,12 @@ package com.zoshsgahdnkc.NebulaChronicles.Entity;
 import net.minecraft.util.Mth;
 import net.minecraft.world.entity.AnimationState;
 import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
+import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -28,7 +30,7 @@ public class VerdhelmBeetleEntity extends Monster{
         return AttributeSupplier.builder()
                 .add(Attributes.MAX_HEALTH, 10)
                 .add(Attributes.KNOCKBACK_RESISTANCE)
-                .add(Attributes.MOVEMENT_SPEED, 0.2)
+                .add(Attributes.MOVEMENT_SPEED, 0.4)
                 .add(Attributes.ARMOR, 8)
                 .add(Attributes.ARMOR_TOUGHNESS)
                 .add(Attributes.MAX_ABSORPTION)
@@ -50,17 +52,9 @@ public class VerdhelmBeetleEntity extends Monster{
                 .add(net.neoforged.neoforge.common.NeoForgeMod.NAMETAG_DISTANCE);
     }
 
-    @Override
-    protected void registerGoals() {
-        this.goalSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
-        this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 0.75f));
-        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8f));
-        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
-    }
     public boolean canSpawn() {
         return true;
     }
-
     @Override
     protected void updateWalkAnimation(float pPartialTick) {
         float f;
@@ -85,5 +79,14 @@ public class VerdhelmBeetleEntity extends Monster{
         } else {
             --idleTimeout;
         }
+    }
+
+    @Override
+    protected void registerGoals() {
+        this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1f, false));
+        this.goalSelector.addGoal(2, new NearestAttackableTargetGoal<>(this, Player.class, true));
+        this.goalSelector.addGoal(7, new WaterAvoidingRandomStrollGoal(this, 0.5f));
+        this.goalSelector.addGoal(8, new LookAtPlayerGoal(this, Player.class, 8f));
+        this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
     }
 }

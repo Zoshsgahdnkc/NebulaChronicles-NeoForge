@@ -1,4 +1,5 @@
 {
+  "BLOCKS >>>": "",
   "block.nch.bunker_bricks": "地堡砖",
   "block.nch.dark_tile": "深色瓷砖",
   "block.nch.eroded_dark_tile": "侵蚀深色瓷砖",
@@ -69,6 +70,8 @@
   "block.nch.tachyon_projection_panel": "快子投射板",
   "block.nch.dark_matter_render_panel": "暗物质渲染板",
   "block.nch.wall_paper": "墙纸",
+
+  "ITEMS >>>": "",
   "item.nch.lemon": "柠檬",
   "item.nch.music_disc_halfway": "音乐唱片",
   "item.nch.music_disc_halfway.desc": "Zoshsgahdnkc - Halfway",
@@ -98,13 +101,27 @@
   "item.nch.cpu": "水晶处理器",
   "item.nch.rocket_fuel": "火箭燃料",
   "item.nch.aether_root_spore": "以太根孢子",
+  "item.nch.verdhelm_beetle_spawn_egg": "青盔虫刷怪蛋",
+
+  "TOOLTIPS >>>": "",
   "tooltip.nch.lemon": "[调试物品] 目前用于传送",
+
+  "TABS >>>": "",
   "item_Group.nch.tab_misc": "星云纪事 - 杂项",
   "item_Group.nch.tab_industry": "星云纪事 - 工业",
   "item_Group.nch.tab_world": "星云纪事 - 世界",
+
+  "UI_INFO >>>": "",
   "container.nch.nickelsteel_plastic_container": "镍钢塑料容器",
+
+  "ADVANCEMENTS >>>": "",
   "advancement.nch.lemon.title": "LEMON",
   "advancement.nch.lemon.desc": "你没听错柠檬哦哦哦哦啊啊啊啊嗷嗷嗷嗷嗷哦哦",
+
+  "ENTITIES >>>": "",
+  "entity.nch.verdhelm_beetle": "青盔虫",
+
+  "SUBTITLES >>>": "",
   "subtitles.nch.aether_root_spore_spread": "以太根孢子：叮当",
   "subtitles.nch.aether_root_spore_inflate": "以太根：充气",
   "subtitles.nch.aether_root_spore_fission": "以太根孢子：分裂"
