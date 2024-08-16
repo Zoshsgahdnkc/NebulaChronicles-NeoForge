@@ -5,6 +5,8 @@ import com.zoshsgahdnkc.NebulaChronicles.item.AethorRootSporeItem;
 import com.zoshsgahdnkc.NebulaChronicles.item.LemonItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.item.SpawnEggItem;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredItem;
 
@@ -42,6 +44,7 @@ public class ModItems {
     public static final DeferredItem<Item> ROCKET_FUEL = ITEMS.registerSimpleItem("rocket_fuel");
     public static final DeferredItem<Item> LEMON = ITEMS.register("lemon", () -> new LemonItem(new Item.Properties()));
     public static final DeferredItem<Item> AETHER_ROOT_SPORE = ITEMS.register("aether_root_spore", () -> new AethorRootSporeItem(new Item.Properties()));
-    public static final DeferredItem<Item> AETHER_PARTICLE = ITEMS.registerSimpleItem("aether_particle");
+    public static final DeferredItem<Item> VERDHELM_BEETLE_SPAWN_EGG = ITEMS.registerItem("verdhelm_beetle_spawn_egg",
+            (properties) -> new DeferredSpawnEggItem(ModEntities.VERDHELM_BEETLE, 0x999999, 0x118877, properties));
 
 }

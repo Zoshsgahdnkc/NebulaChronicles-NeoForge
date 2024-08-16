@@ -1,5 +1,4 @@
-// 1.21	2024-08-13T10:48:31.4710624	Item Models: nch
-9c5232380f3a5f12d58afe36ec4ec5efb0b4ed38 assets/nch/models/item/aether_particle.json
+// 1.21	2024-08-17T01:41:15.2933645	Item Models: nch
 c1cc65e2e489f3a25ec0203ecebe385d75f29a50 assets/nch/models/item/aether_root_spore.json
 6d1d415fa845640c1fb1a21b73c2aa583a01eaed assets/nch/models/item/battery_waste.json
 0e7f7daec937f2266fefeed41b5d7cb44c01f052 assets/nch/models/item/calcite_casing.json
@@ -35,4 +34,5 @@ b29ecb18da8b8ea6bd5529ae9ef4e4e21340783a assets/nch/models/item/ultralloy_coil.j
 6f33405ed6481747374f1f248bcc5c50837367a1 assets/nch/models/item/ultralloy_ingot.json
 5be812d333b86e240aa55d7d6f57347bc47342d3 assets/nch/models/item/ultralloy_nugget.json
 2ee08ffa7841db36124c59cb770768cd87426e63 assets/nch/models/item/vacuum_tube.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/nch/models/item/verdhelm_beetle_spawn_egg.json
 4754eabd324dead1125da3746d35eb8fece2444a assets/nch/models/item/white_bud.json

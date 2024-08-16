@@ -101,6 +101,7 @@ public class ModTabs {
             .displayItems((param, tab) -> {
                 accept(tab, ModItems.LEMON);
                 accept(tab, ModItems.AETHER_ROOT_SPORE);
+                accept(tab, ModItems.VERDHELM_BEETLE_SPAWN_EGG);
                 accept(tab, ModBlocks.ARCHEOVA_STONE);
                 accept(tab, ModBlocks.COSMIC_SAND);
                 accept(tab, ModBlocks.COSMIC_SANDSTONE);
