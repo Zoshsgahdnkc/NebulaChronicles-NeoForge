@@ -53,7 +53,7 @@ public class VerdhelmBeetleModel<T extends Entity> extends HierarchicalModel<T> 
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
-		this.animate(((VerdhelmBeetleEntity) entity).idleState, VerdhelmBeetleAnimation.IDLE, ageInTicks, 1.5f);
+		this.animate(((VerdhelmBeetleEntity) entity).idleState, VerdhelmBeetleAnimation.IDLE, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {
