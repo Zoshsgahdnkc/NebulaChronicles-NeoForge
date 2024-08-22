@@ -4,6 +4,7 @@ import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.client.entity.VerdhelmBeetleModel;
 import com.zoshsgahdnkc.NebulaChronicles.client.entity.VerdhelmBeetleRenderer;
 import com.zoshsgahdnkc.NebulaChronicles.particle.AetherSporeParticle;
+import com.zoshsgahdnkc.NebulaChronicles.particle.MossClumpsParticle;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModEntities;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModParticles;
 import net.neoforged.api.distmarker.Dist;
@@ -19,6 +20,7 @@ public class ClientModEvents {
         // There are multiple ways to register providers, all differing in the functional type they provide in the
         // second parameter. For example, #registerSpriteSet represents a Function<SpriteSet, ParticleProvider<?>>:
         event.registerSpriteSet(ModParticles.AETHER_SPORE.get(), AetherSporeParticle.Provider::new);
+        event.registerSpriteSet(ModParticles.MOSS_CLUMPS.get(), MossClumpsParticle.Provider::new);
         // Other methods include #registerSprite, which is essentially a Supplier<TextureSheetParticle>,
         // and #registerSpecial, which maps to a Supplier<Particle>. See the source code of the event for further info.
     }

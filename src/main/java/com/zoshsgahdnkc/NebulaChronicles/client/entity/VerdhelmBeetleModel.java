@@ -6,9 +6,8 @@ package com.zoshsgahdnkc.NebulaChronicles.client.entity;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmBeetleEntity;
+import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmBeetle.VerdhelmBeetleEntity;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
-import net.minecraft.client.model.EntityModel;
 import net.minecraft.client.model.HierarchicalModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -54,6 +53,9 @@ public class VerdhelmBeetleModel<T extends Entity> extends HierarchicalModel<T> 
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 
 		this.animate(((VerdhelmBeetleEntity) entity).idleState, VerdhelmBeetleAnimation.IDLE, ageInTicks, 1f);
+		this.animate(((VerdhelmBeetleEntity) entity).rollUpState, VerdhelmBeetleAnimation.ROLL_UP, ageInTicks, 1f);
+		this.animate(((VerdhelmBeetleEntity) entity).hidingState, VerdhelmBeetleAnimation.PEEK, ageInTicks, 1f);
+		this.animate(((VerdhelmBeetleEntity) entity).rollOutState, VerdhelmBeetleAnimation.ROLL_OUT, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

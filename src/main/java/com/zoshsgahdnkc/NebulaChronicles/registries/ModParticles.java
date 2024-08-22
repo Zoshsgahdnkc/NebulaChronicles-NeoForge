@@ -12,4 +12,7 @@ public class ModParticles {
 
     public static final DeferredHolder<ParticleType<?>, SimpleParticleType> AETHER_SPORE =
             PARTICLE_TYPES.register("aether_spore", () -> new SimpleParticleType(true));
+
+    public static final DeferredHolder<ParticleType<?>, SimpleParticleType> MOSS_CLUMPS =
+            PARTICLE_TYPES.register("moss_clumps", () -> new SimpleParticleType(true));
 }

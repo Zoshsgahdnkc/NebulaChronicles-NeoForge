@@ -1,6 +1,6 @@
 package com.zoshsgahdnkc.NebulaChronicles.event;
 
-import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmBeetleEntity;
+import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmBeetle.VerdhelmBeetleEntity;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModEntities;
 import net.neoforged.bus.api.SubscribeEvent;

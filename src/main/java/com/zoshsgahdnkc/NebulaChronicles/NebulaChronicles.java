@@ -33,7 +33,8 @@ public class NebulaChronicles {
         ModParticles.PARTICLE_TYPES.register(modEventBus);
         ModAttributes.ATTRIBUTES.register(modEventBus);
         ModEntities.ENTITIES.register(modEventBus);
-
+        ModEntitySensors.SENSORS.register(modEventBus);
+        ModEntityDataSerializers.SERIALIZERS.register(modEventBus);
 //        NeoForge.EVENT_BUS.register(this);
 
     }
