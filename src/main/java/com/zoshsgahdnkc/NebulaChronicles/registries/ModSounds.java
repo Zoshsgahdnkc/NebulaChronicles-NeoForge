@@ -18,6 +18,12 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> AETHER_ROOT_SPORE_INFLATE = register("aether_root_spore_inflate");
     public static final DeferredHolder<SoundEvent, SoundEvent> AETHER_ROOT_SPORE_FISSION = register("aether_root_spore_fission");
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> VERDHELM_BEETLE_AMBIENT = register("verdhelm_beetle_ambient");
+    public static final DeferredHolder<SoundEvent, SoundEvent> VERDHELM_BEETLE_ROLL_UP = register("verdhelm_beetle_roll_up");
+    public static final DeferredHolder<SoundEvent, SoundEvent> VERDHELM_BEETLE_HURT = register("verdhelm_beetle_hurt");
+    public static final DeferredHolder<SoundEvent, SoundEvent> VERDHELM_BEETLE_HURT_REDUCED = register("verdhelm_beetle_hurt_reduced");
+    public static final DeferredHolder<SoundEvent, SoundEvent> VERDHELM_BEETLE_DEATH = register("verdhelm_beetle_death");
+
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLOCK_HIT = register("tech_block_hit");
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLOCK_BREAK = register("tech_block_break");
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLOCK_PLACE = register("tech_block_place");

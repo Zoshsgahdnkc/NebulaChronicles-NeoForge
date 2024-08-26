@@ -1,7 +1,5 @@
 package com.zoshsgahdnkc.NebulaChronicles.Entity;
 
-import com.zoshsgahdnkc.NebulaChronicles.block.AetherRootBlock;
-import com.zoshsgahdnkc.NebulaChronicles.block.AetherRootHairBlock;
 import com.zoshsgahdnkc.NebulaChronicles.registries.*;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.ByteTag;

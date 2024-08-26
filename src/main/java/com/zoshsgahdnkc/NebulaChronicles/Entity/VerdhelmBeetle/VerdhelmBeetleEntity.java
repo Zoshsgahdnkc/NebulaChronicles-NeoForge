@@ -5,6 +5,7 @@ import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModAttributes;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModEntityDataSerializers;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModParticles;
+import com.zoshsgahdnkc.NebulaChronicles.registries.ModSounds;
 import io.netty.buffer.ByteBuf;
 import net.minecraft.core.BlockPos;
 import net.minecraft.nbt.CompoundTag;
@@ -14,9 +15,8 @@ import net.minecraft.network.protocol.game.DebugPackets;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundEvent;
 import net.minecraft.tags.DamageTypeTags;
 import net.minecraft.util.ByIdMap;
 import net.minecraft.util.StringRepresentable;
@@ -31,6 +31,7 @@ import net.minecraft.world.entity.ai.memory.MemoryModuleType;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.gameevent.GameEvent;
+import net.neoforged.neoforge.common.NeoForgeMod;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.function.IntFunction;
@@ -38,11 +39,21 @@ import java.util.function.IntFunction;
 public class VerdhelmBeetleEntity extends Monster{
     public VerdhelmBeetleEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
+        int size = 0;
+        switch (getRandom().nextInt(3)) {
+            case 0: break;
+            case 1: size += 8; break;
+            case 2: size -= 8;
+        }
         this.getAttribute(ModAttributes.VERDHELM_SIZE).addTransientModifier(
                 new AttributeModifier(ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "verdhelm_size"),
-                        this.getRandom().nextInt(-15, 15), AttributeModifier.Operation.ADD_VALUE));
+                        size, AttributeModifier.Operation.ADD_VALUE));
     }
 
+    private static final AttributeModifier ARMOR_MODIFIER = new AttributeModifier(
+            ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "rolled_up_armor"), 7, AttributeModifier.Operation.ADD_VALUE);
+    private static final AttributeModifier KNOCKBACK_MODIFIER = new AttributeModifier(
+            ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "rolled_up_knockback"), 0.35, AttributeModifier.Operation.ADD_VALUE);
     private static final EntityDataAccessor<AnimState> ANIM_STATE = SynchedEntityData.defineId(VerdhelmBeetleEntity.class, ModEntityDataSerializers.VERDHELM_ANIM_STATE.get());
     @Nullable public BlockPos nestPos;
     public final AnimationState idleState = new AnimationState();
@@ -56,7 +67,7 @@ public class VerdhelmBeetleEntity extends Monster{
                 .add(Attributes.MAX_HEALTH, 10)
                 .add(Attributes.KNOCKBACK_RESISTANCE, 0.5)
                 .add(Attributes.MOVEMENT_SPEED, 0.2)
-                .add(Attributes.ARMOR, 8)
+                .add(Attributes.ARMOR, 6)
                 .add(Attributes.ARMOR_TOUGHNESS)
                 .add(Attributes.MAX_ABSORPTION)
                 .add(Attributes.STEP_HEIGHT)
@@ -73,21 +84,31 @@ public class VerdhelmBeetleEntity extends Monster{
                 .add(Attributes.ATTACK_KNOCKBACK)
                 .add(Attributes.ATTACK_DAMAGE, 2)
                 .add(Attributes.FOLLOW_RANGE, 24)
-                .add(net.neoforged.neoforge.common.NeoForgeMod.SWIM_SPEED)
-                .add(net.neoforged.neoforge.common.NeoForgeMod.NAMETAG_DISTANCE)
+                .add(NeoForgeMod.SWIM_SPEED)
+                .add(NeoForgeMod.NAMETAG_DISTANCE)
                 .add(ModAttributes.VERDHELM_SIZE, 100);
     }
 
     public boolean canSpawn() {
         return true;
     }
+
+    private void addModifiers() {
+        this.getAttribute(Attributes.ARMOR).addPermanentModifier(ARMOR_MODIFIER);
+        this.getAttribute(Attributes.KNOCKBACK_RESISTANCE).addPermanentModifier(KNOCKBACK_MODIFIER);
+    }
+    private void removeModifiers() {
+        this.getAttribute(Attributes.ARMOR).removeModifier(ARMOR_MODIFIER);
+        this.getAttribute(Attributes.ARMOR).removeModifier(KNOCKBACK_MODIFIER);
+    }
+
     public void rollUp() {
         if (!this.isScared()) {
             this.stopInPlace();
             this.gameEvent(GameEvent.ENTITY_ACTION);
-            this.makeSound(SoundEvents.ARMADILLO_ROLL);
-            this.makeSound(SoundEvents.ARMADILLO_ROLL);
+            this.makeSound(ModSounds.VERDHELM_BEETLE_ROLL_UP.get());
             this.switchToState(AnimState.ROLLING);
+            addModifiers();
         }
     }
 
@@ -101,8 +122,8 @@ public class VerdhelmBeetleEntity extends Monster{
     public void rollOut() {
         if (this.isScared()) {
             this.gameEvent(GameEvent.ENTITY_ACTION);
-            this.makeSound(SoundEvents.ARMADILLO_UNROLL_FINISH);
             this.switchToState(AnimState.IDLE);
+            removeModifiers();
         }
     }
     @Override
@@ -283,7 +304,7 @@ public class VerdhelmBeetleEntity extends Monster{
             }
         };
 
-        private static final StringRepresentable.EnumCodec<AnimState> CODEC = StringRepresentable.fromEnum(AnimState::values);
+        private static final EnumCodec<AnimState> CODEC = StringRepresentable.fromEnum(AnimState::values);
         private static final IntFunction<AnimState> BY_ID = ByIdMap.continuous(
                 AnimState::id, values(), ByIdMap.OutOfBoundsStrategy.ZERO
         );
@@ -334,6 +355,20 @@ public class VerdhelmBeetleEntity extends Monster{
             }
         }
     }
-    
-    
+
+    @Nullable
+    @Override
+    protected SoundEvent getAmbientSound() {
+        return ModSounds.VERDHELM_BEETLE_AMBIENT.get();
+    }
+
+    @Override
+    protected SoundEvent getHurtSound(DamageSource pDamageSource) {
+        return getState() == AnimState.SCARED ? ModSounds.VERDHELM_BEETLE_HURT_REDUCED.get() : ModSounds.VERDHELM_BEETLE_HURT.get();
+    }
+
+    @Override
+    protected SoundEvent getDeathSound() {
+        return ModSounds.VERDHELM_BEETLE_DEATH.get();
+    }
 }

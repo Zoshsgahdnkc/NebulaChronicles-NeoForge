@@ -124,5 +124,10 @@
   "SUBTITLES >>>": "",
   "subtitles.nch.aether_root_spore_spread": "以太根孢子：叮当",
   "subtitles.nch.aether_root_spore_inflate": "以太根：充气",
-  "subtitles.nch.aether_root_spore_fission": "以太根孢子：分裂"
+  "subtitles.nch.aether_root_spore_fission": "以太根孢子：分裂",
+  "subtitles.nch.verdhelm_beetle_ambient": "青盔虫：嘶嘶",
+  "subtitles.nch.verdhelm_beetle_roll_up": "青盔虫：蜷缩",
+  "subtitles.nch.verdhelm_beetle_hurt": "青盔虫：受伤",
+  "subtitles.nch.verdhelm_beetle_hurt_reduced": "青盔虫：自卫",
+  "subtitles.nch.verdhelm_beetle_death": "青盔虫：死亡"
 }

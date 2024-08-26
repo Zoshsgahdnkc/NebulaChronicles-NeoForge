@@ -122,7 +122,12 @@
   "entity.nch.verdhelm_beetle": "Verdhelm Beetle",
 
   "SUBTITLES >>>": "",
-  "subtitles.nch.aether_root_spore_spread": "Aether Root Spore Rang",
-  "subtitles.nch.aether_root_spore_inflate": "Aether Root Inflated",
-  "subtitles.nch.aether_root_spore_fission": "Aether Root Spore Split"
+  "subtitles.nch.aether_root_spore_spread": "Aether root spore rings",
+  "subtitles.nch.aether_root_spore_inflate": "Aether root inflates",
+  "subtitles.nch.aether_root_spore_fission": "Aether root spore splits",
+  "subtitles.nch.verdhelm_beetle_ambient": "Verdhelm beetle hisses",
+  "subtitles.nch.verdhelm_beetle_roll_up": "Verdhelm beetle rolls up",
+  "subtitles.nch.verdhelm_beetle_hurt": "Verdhelm beetle hurts",
+  "subtitles.nch.verdhelm_beetle_hurt_reduced": "Verdhelm beetle shields itself",
+  "subtitles.nch.verdhelm_beetle_death": "Verdhelm beetle dies"
 }

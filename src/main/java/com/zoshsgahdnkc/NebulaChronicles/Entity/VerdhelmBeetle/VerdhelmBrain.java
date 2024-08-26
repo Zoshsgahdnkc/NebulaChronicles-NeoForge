@@ -137,9 +137,9 @@ public class VerdhelmBrain {
             super.tick(pLevel, pOwner, pGameTime);
             if (pOwner.shouldSwitchToScaredState()) {
                 pOwner.switchToState(VerdhelmBeetleEntity.AnimState.SCARED);
-                if (pOwner.onGround()) {
-                    pOwner.playSound(SoundEvents.ARMADILLO_LAND);
-                }
+//                if (pOwner.onGround()) {
+//                    pOwner.playSound(SoundEvents.ARMADILLO_LAND);
+//                }
             } else {
                 VerdhelmBeetleEntity.AnimState state = pOwner.getState();
                 long i = pOwner.getBrain().getTimeUntilExpiry(MemoryModuleType.DANGER_DETECTED_RECENTLY);
@@ -149,17 +149,13 @@ public class VerdhelmBrain {
                 if (state == VerdhelmBeetleEntity.AnimState.SCARED) {
 
                     if (i < (long) VerdhelmBeetleEntity.AnimState.UNROLLING.animationDuration()) {
-                        pOwner.playSound(SoundEvents.ARMADILLO_UNROLL_START);
+//                        pOwner.playSound(SoundEvents.ARMADILLO_UNROLL_START);
                         pOwner.switchToState(VerdhelmBeetleEntity.AnimState.UNROLLING);
                     }
                 } else if (state == VerdhelmBeetleEntity.AnimState.UNROLLING && i > (long) VerdhelmBeetleEntity.AnimState.UNROLLING.animationDuration()) {
                     pOwner.switchToState(VerdhelmBeetleEntity.AnimState.SCARED);
                 }
             }
-        }
-
-        private int pickNextPeekTimer(VerdhelmBeetleEntity entity) {
-            return VerdhelmBeetleEntity.AnimState.SCARED.animationDuration() + entity.getRandom().nextIntBetweenInclusive(100, 400);
         }
 
         protected boolean checkExtraStartConditions(ServerLevel pLevel, VerdhelmBeetleEntity pOwner) {

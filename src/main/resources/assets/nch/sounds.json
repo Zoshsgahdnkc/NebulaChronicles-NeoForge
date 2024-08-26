@@ -64,6 +64,47 @@
       "nch:techblock_fall2"
     ]
   },
+  "verdhelm_beetle_ambient": {
+    "subtitle": "subtitles.nch.verdhelm_beetle_ambient",
+    "sounds": [
+      "nch:verdhelm_beetle_ambient_1",
+      "nch:verdhelm_beetle_ambient_2",
+      "nch:verdhelm_beetle_ambient_3"
+    ]
+  },
+  "verdhelm_beetle_roll_up": {
+    "subtitle": "subtitles.nch.verdhelm_beetle_roll_up",
+    "sounds": [
+      "nch:verdhelm_beetle_roll_up_1",
+      "nch:verdhelm_beetle_roll_up_2",
+      "nch:verdhelm_beetle_roll_up_3"
+    ]
+  },
+  "verdhelm_beetle_hurt": {
+    "subtitle": "subtitles.nch.verdhelm_beetle_hurt",
+    "sounds": [
+      "nch:verdhelm_beetle_hurt_1",
+      "nch:verdhelm_beetle_hurt_2",
+      "nch:verdhelm_beetle_hurt_3",
+      "nch:verdhelm_beetle_hurt_4"
+    ]
+  },
+  "verdhelm_beetle_hurt_reduced": {
+    "subtitle": "subtitles.nch.verdhelm_beetle_hurt_reduced",
+    "sounds": [
+      "nch:verdhelm_beetle_hurt_reduced_1",
+      "nch:verdhelm_beetle_hurt_reduced_2",
+      "nch:verdhelm_beetle_hurt_reduced_3"
+    ]
+  },
+  "verdhelm_beetle_death": {
+    "subtitle": "subtitles.nch.verdhelm_beetle_death",
+    "sounds": [
+      "nch:verdhelm_beetle_death_1",
+      "nch:verdhelm_beetle_death_2",
+      "nch:verdhelm_beetle_death_3"
+    ]
+  },
   "music_disc_halfway": {
     "sounds": [
       {
