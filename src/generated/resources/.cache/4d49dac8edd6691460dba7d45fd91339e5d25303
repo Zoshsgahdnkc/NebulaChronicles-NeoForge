@@ -1,3 +1,5 @@
-// 1.21	2024-08-14T17:34:20.5733152	Tags for minecraft:block mod id nch
+// 1.21	2024-09-03T17:21:38.4717909	Tags for minecraft:block mod id nch
+d0585560d7adbd106c8568c635fae6a5a53e35d0 data/minecraft/tags/block/climbable.json
 9e13b75f34cfaeff9a6c0a8cf820192dfebe7760 data/nch/tags/block/base_stone.json
+38140cd12f585b2c2c9bccb91bec96f52e192739 data/nch/tags/block/metal_scaffolding.json
 09f3c024423693afd8cae6dc7affecb00f0e474d data/nch/tags/block/sb_ore_replaceable.json

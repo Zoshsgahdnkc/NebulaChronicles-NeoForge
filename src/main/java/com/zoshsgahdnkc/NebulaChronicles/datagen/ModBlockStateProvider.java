@@ -73,7 +73,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.SOLAR_PANEL,
             ModBlocks.REDSTONE_POWER_PANEL,
             ModBlocks.TACHYON_PROJECTION_PANEL,
-            ModBlocks.DARK_MATTER_RENDER_PANEL
+            ModBlocks.DARK_MATTER_RENDER_PANEL,
+            ModBlocks.IRON_SCAFFOLDING,
+            ModBlocks.NICKELSTEEL_PLASTIC_SCAFFOLDING
     );
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -210,6 +212,14 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).addModels(new ConfiguredModel(models().cubeColumn(name(block) + "_double", side, end)));
         blockItem(block);
     }
+//    protected void scaffolding(DeferredBlock<Block> block) {
+//        var model = new ConfiguredModel(models().cubeBottomTop(name(block),
+//                getRL(blockSlashName(block) + "_side"),
+//                getRL(blockSlashName(block) + "_bottom"),
+//                getRL(blockSlashName(block) + "_top")).renderType("cutout"));
+//        var builder = getVariantBuilder(block.get());
+//        builder.addModels(builder.partialState(), model);
+//    }
     protected void wall(DeferredBlock<Block> block, ResourceLocation texture) {
         wallBlock((WallBlock) block.get(), texture);
         itemModels().wallInventory(name(block), texture);

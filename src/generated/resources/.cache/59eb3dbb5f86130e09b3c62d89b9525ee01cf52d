@@ -1,4 +1,4 @@
-// 1.21	2024-08-14T15:13:46.2408637	Loot Tables
+// 1.21	2024-09-03T12:59:18.2734743	Loot Tables
 e926cc54acc27b825ed44d90a5095ef11dbee869 data/nch/loot_table/blocks/aether_root.json
 24d6fae293e6c26aa4962eb37e3cf64a57f6c5a6 data/nch/loot_table/blocks/aether_root_hair.json
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_table/blocks/archeova_stone.json
@@ -28,6 +28,7 @@ ffa8fe8efa4a67043b147c1261035fa0512fd1e9 data/nch/loot_table/blocks/frozen_soil.
 d14403e09cd4e98a1058e8609235b3a084cb956a data/nch/loot_table/blocks/iron_bricks_slab.json
 00804246a6e9a385863ad28aa058020116e71869 data/nch/loot_table/blocks/iron_bricks_stairs.json
 bf0629cc42ab8cc95c043a5c1c97640ab0d32fe9 data/nch/loot_table/blocks/iron_collage.json
+139d62becdf0c766570b117e998bcc2bbccc2e64 data/nch/loot_table/blocks/iron_scaffolding.json
 305cc07bcf50be4ada1b0dd39bd605a0a40d0fd8 data/nch/loot_table/blocks/lemurium_block.json
 8a6976fe7f49c4fe2aaf6a8436cf8698897ac0fa data/nch/loot_table/blocks/light_tile.json
 ad19098579f1dfdb19a34d2a231d7ad18ea5ff3f data/nch/loot_table/blocks/low_fence.json
@@ -35,6 +36,7 @@ ad19098579f1dfdb19a34d2a231d7ad18ea5ff3f data/nch/loot_table/blocks/low_fence.js
 d49c5486b4b6b659bfdd5764fa1eecdc9abf13c9 data/nch/loot_table/blocks/moss_silverblanc_stone.json
 acbea5ee31f01f0bb6d458a395b6166d0c59e984 data/nch/loot_table/blocks/nickelsteel_plastic_block.json
 25609fdab02fcef68a880f2d978a58da5385bd3a data/nch/loot_table/blocks/nickelsteel_plastic_container.json
+41df291ee41f47807aa140725910f31c910f0864 data/nch/loot_table/blocks/nickelsteel_plastic_scaffolding.json
 2294a55271108a92cf046f93a155405b7bd10fe6 data/nch/loot_table/blocks/nickel_block.json
 d9ab7fdfa53b3798127607807eda2a7f796dff59 data/nch/loot_table/blocks/nickel_ore.json
 c0708b71349579a0a5424c5dc1489745c8b4cc84 data/nch/loot_table/blocks/organic_plastic_block.json

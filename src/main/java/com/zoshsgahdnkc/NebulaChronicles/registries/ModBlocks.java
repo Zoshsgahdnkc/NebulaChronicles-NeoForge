@@ -3,12 +3,17 @@ package com.zoshsgahdnkc.NebulaChronicles.registries;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.block.*;
 import com.zoshsgahdnkc.NebulaChronicles.block.entityblock.NickelsteelPlasticContainerBlock;
+import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.item.DyeColor;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.material.MapColor;
+import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
@@ -174,5 +179,22 @@ public class ModBlocks {
             () -> new AetherRootBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.NETHER_WART_BLOCK).randomTicks()));
     public static final DeferredBlock<Block> AETHER_ROOT_HAIR = registerBlock("aether_root_hair",
             () -> new AetherRootHairBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.HANGING_ROOTS)));
+    public static final DeferredBlock<Block> IRON_SCAFFOLDING = registerBlock("iron_scaffolding",
+            () -> new MetalScaffoldingBlock(BlockBehaviour.Properties.of()
+                    .sound(SoundType.COPPER)
+                    .strength(0.7f, 2.0f)
+                    .mapColor(DyeColor.GRAY)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .requiresCorrectToolForDrops()
+                    .noCollission()
+                    .isValidSpawn(Blocks::never)
+                    .isSuffocating(ModBlocks::never)
+                    .pushReaction(PushReaction.DESTROY)
+            ));
+    public static final DeferredBlock<Block> NICKELSTEEL_PLASTIC_SCAFFOLDING = registerBlock("nickelsteel_plastic_scaffolding",
+            () -> new MetalScaffoldingBlock(BlockBehaviour.Properties.ofFullCopy(IRON_SCAFFOLDING.get())));
 
+    private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
+        return false;
+    }
 }

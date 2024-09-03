@@ -1,4 +1,4 @@
-// 1.21	2024-08-09T15:43:10.531697	Block States: nch
+// 1.21	2024-09-03T16:26:53.2964929	Block States: nch
 179e1bf8f6f1720f71757fa950620e9bd9281015 assets/nch/blockstates/aether_root.json
 21d1420df0778f55a457e0c4ad240c721fe99877 assets/nch/blockstates/aether_root_hair.json
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
@@ -28,6 +28,7 @@ d051c52a80e77133b03cfdfbb91a737e955843c5 assets/nch/blockstates/iron_bricks.json
 264d2bab6c9e10ae29fc950b73b91aa1991c0fca assets/nch/blockstates/iron_bricks_slab.json
 cfeb89c91d5818bb5c806efb62d07625d606b10a assets/nch/blockstates/iron_bricks_stairs.json
 6c80b364a6a630058e6998e71d502072cb1daab5 assets/nch/blockstates/iron_collage.json
+51dd6c1ce7316bf18bef6fe3fac7f7a96bad5655 assets/nch/blockstates/iron_scaffolding.json
 da7f5c978ff09917811f1cd1a11b6fdba9e5084a assets/nch/blockstates/lemurium_block.json
 b841a1fb270bef0529c1bd1041207d30fed0add0 assets/nch/blockstates/light_tile.json
 237992877a2f21bef257949552da1f9bceb0fc0d assets/nch/blockstates/low_fence.json
@@ -35,6 +36,7 @@ b841a1fb270bef0529c1bd1041207d30fed0add0 assets/nch/blockstates/light_tile.json
 28d0dc8ce52a32d6187258902bec3236b4010907 assets/nch/blockstates/moss_silverblanc_stone.json
 b8c64d6acdbd629aa90567d5249510d1963a5e54 assets/nch/blockstates/nickelsteel_plastic_block.json
 46f243d36507980983b47aecd344d793e3363f8e assets/nch/blockstates/nickelsteel_plastic_container.json
+bf0be1c24e1004a9258dd1ff327cbdd283005b7d assets/nch/blockstates/nickelsteel_plastic_scaffolding.json
 2d3a996fd9b70624a4c6692a0351933095736797 assets/nch/blockstates/nickel_block.json
 4012a0bcaa554db9c1288c4b7f4d2ade9cddc05b assets/nch/blockstates/nickel_ore.json
 29b0878a67d58c9acae5ab424749e51f9a81eaae assets/nch/blockstates/organic_plastic_block.json
@@ -126,9 +128,11 @@ cde1f0bfd9499ac3dbc0e9f4b63806ce0f0ef617 assets/nch/models/block/iron_bricks_sta
 0c6f33280fb060c426c933da65b0f90ad307ef61 assets/nch/models/block/iron_collage_1.json
 48435f5650371feaeb7ca0d8721367839701062a assets/nch/models/block/iron_collage_2.json
 5bfd59822fcf6261055fe839ec0e935d30bd2550 assets/nch/models/block/iron_collage_3.json
+820e85b304b857be20af47b18bc8083721ff0a66 assets/nch/models/block/iron_scaffolding.json
 3f62dae3e0ef7eff22f9cf9c43200fe107ffe8ff assets/nch/models/block/lemurium_block.json
 e3070ed7873fdb3af26c400f31f7bed2c337274e assets/nch/models/block/light_tile.json
 352ccf204fa4b4dc2d4b9f283da3923fc410a8a9 assets/nch/models/block/nickelsteel_plastic_block.json
+68ceb16fad3c4479a56c877e893cf9fdb77d452d assets/nch/models/block/nickelsteel_plastic_scaffolding.json
 371ca10c850825d2fffa6d082180c8a35cb3d04c assets/nch/models/block/nickel_block.json
 21559f87b92c8fe09714ef1caf5f818bce7d6592 assets/nch/models/block/nickel_ore.json
 430a6b4891e6964a79935d997753234fe762b7ca assets/nch/models/block/organic_plastic_block.json
@@ -203,6 +207,7 @@ ff49604da1043e89eee9d355f825846cc4a36c99 assets/nch/models/item/fortress_wall_li
 c234048d6f1c7e4b99f0db9d56a8591b63c40355 assets/nch/models/item/iron_bricks_slab.json
 5c43ebe55b0d29088858a79b82483c227dd7621d assets/nch/models/item/iron_bricks_stairs.json
 04d81e5712bc2e070a2b8f369d35172c17407e9f assets/nch/models/item/iron_collage.json
+f34733176e707792172298385dcd6f6c36faf3e1 assets/nch/models/item/iron_scaffolding.json
 a004c67e092ed5403c6c2dee2ccd466177d3f1c3 assets/nch/models/item/lemurium_block.json
 891e07cb3e34de1fe10c80288e893fe8f21294f4 assets/nch/models/item/light_tile.json
 50e08f5a37540bf0d773da61eaac135ad0b85fa4 assets/nch/models/item/low_fence.json
@@ -210,6 +215,7 @@ bfefdb9dbf1f3a5660c9af40f732b278d5cfd63c assets/nch/models/item/moss_frozen_soil
 b22d4fa6433361fb8a5d4dbfd7cea5ca75d6a230 assets/nch/models/item/moss_silverblanc_stone.json
 0cf1e50263e95a63d3e6abc559f2247f1152a6de assets/nch/models/item/nickelsteel_plastic_block.json
 bf6df9d2bfe1384668551750998632c7fa3456ab assets/nch/models/item/nickelsteel_plastic_container.json
+07f1dd45530e13f0196dd71ceb453772faf722f8 assets/nch/models/item/nickelsteel_plastic_scaffolding.json
 0a36d280fa927ef203ac3cd177646f945b3984cb assets/nch/models/item/nickel_block.json
 3752384d999734963f7205d893441a77aed13f52 assets/nch/models/item/nickel_ore.json
 8f3eedea35fc2b5e63f5d480ccc465027674ff4f assets/nch/models/item/organic_plastic_block.json

@@ -2,6 +2,7 @@ package com.zoshsgahdnkc.NebulaChronicles.item;
 
 import com.google.common.collect.ImmutableList;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
+import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.ModBiomes;
 import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.ModDimensions;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;

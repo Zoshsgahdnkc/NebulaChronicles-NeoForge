@@ -57,6 +57,8 @@ public class ModTabs {
             .icon(() -> new ItemStack(ModItems.CPU.get()))
             .withTabsBefore(TAB_MISC.getId())
             .displayItems((param, tab) -> {
+                accept(tab, ModBlocks.IRON_SCAFFOLDING);
+                accept(tab, ModBlocks.NICKELSTEEL_PLASTIC_SCAFFOLDING);
                 accept(tab, ModBlocks.SOLAR_PANEL);
                 accept(tab, ModBlocks.REDSTONE_POWER_PANEL);
                 accept(tab, ModBlocks.TACHYON_PROJECTION_PANEL);
