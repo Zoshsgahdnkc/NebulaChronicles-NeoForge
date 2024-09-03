@@ -46,6 +46,8 @@ public class ModPF {
     public static final ResourceKey<PlacedFeature> SB_ORE_DIAMOND_LOWER = createKey("sb_ore_diamond_large");
     public static final ResourceKey<PlacedFeature> SB_ORE_DIAMOND_UPPER = createKey("sb_ore_diamond");
     public static final ResourceKey<PlacedFeature> SB_ORE_LAPIS = createKey("sb_ore_lapis");
+    public static final ResourceKey<PlacedFeature> SB_ORE_OBSIDIAN = createKey("sb_ore_obsidian");
+    public static final ResourceKey<PlacedFeature> SB_ORE_CRYING_OBSIDIAN = createKey("sb_ore_crying_obsidian");
     public static final ResourceKey<PlacedFeature> PLACE_COARSE_CACTUS = createKey("coarse_cactus");
     public static final ResourceKey<PlacedFeature> PLACE_AETHER_ROOT = createKey("aether_root");
 
@@ -116,6 +118,8 @@ public class ModPF {
         registerOreCount(context, features, SB_ORE_GOLD_LARGE, ModCF.ORE_GOLD_LARGE, 3, 0, 56);
         registerOreCount(context, features, SB_ORE_LAPIS, ModCF.ORE_LAPIS, 5, 16, 80);
         registerOreCount(context, features, SB_ORE_DIAMOND_UPPER, ModCF.ORE_DIAMOND_UPPER, 3, 28, 68);
+        registerOreCount(context, features, SB_ORE_OBSIDIAN, ModCF.ORE_OBSIDIAN, 4, 0, 48);
+        registerOreCount(context, features, SB_ORE_CRYING_OBSIDIAN, ModCF.ORE_CRYING_OBSIDIAN, 2, 0, 48);
         registerOreRarity(context, features, SB_ORE_DIAMOND_LOWER, ModCF.ORE_DIAMOND_LOWER, 1, -40, 40);
     }
     protected static ResourceKey<PlacedFeature> createKey(String key) {

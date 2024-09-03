@@ -2,11 +2,11 @@
   "type": "minecraft:ore",
   "config": {
     "discard_chance_on_air_exposure": 0.0,
-    "size": 16,
+    "size": 32,
     "targets": [
       {
         "state": {
-          "Name": "minecraft:crying_obsidian"
+          "Name": "minecraft:obsidian"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

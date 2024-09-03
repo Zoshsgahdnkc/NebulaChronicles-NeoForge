@@ -193,6 +193,8 @@ public class ModBiomes {
                 .mobSpawnSettings(DUMMY_SETTING)
                 .generationSettings(
                         genCarversSB(new BiomeGenerationSettings.Builder(featureGetter,carverGetter))
+                                .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPF.SB_ORE_OBSIDIAN)
+                                .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPF.SB_ORE_CRYING_OBSIDIAN)
                                 .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPF.SB_ORE_LAPIS)
                                 .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPF.SB_ORE_DIAMOND_LOWER)
                                 .addFeature(GenerationStep.Decoration.UNDERGROUND_ORES, ModPF.SB_ORE_DIAMOND_UPPER)

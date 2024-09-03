@@ -54,6 +54,7 @@ public class ModBlockTags extends BlockTagsProvider {
 
         tag(BlockTags.CLIMBABLE)
                 .replace(false)
+                .add(ModBlocks.AETHER_ROOT_HAIR.get())
                 .addTag(METAL_SCAFFOLDING);
     }
 

@@ -1,4 +1,4 @@
-// 1.21	2024-09-03T16:26:53.2964929	Block States: nch
+// 1.21	2024-09-04T02:23:37.7316203	Block States: nch
 179e1bf8f6f1720f71757fa950620e9bd9281015 assets/nch/blockstates/aether_root.json
 21d1420df0778f55a457e0c4ad240c721fe99877 assets/nch/blockstates/aether_root_hair.json
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
@@ -128,11 +128,9 @@ cde1f0bfd9499ac3dbc0e9f4b63806ce0f0ef617 assets/nch/models/block/iron_bricks_sta
 0c6f33280fb060c426c933da65b0f90ad307ef61 assets/nch/models/block/iron_collage_1.json
 48435f5650371feaeb7ca0d8721367839701062a assets/nch/models/block/iron_collage_2.json
 5bfd59822fcf6261055fe839ec0e935d30bd2550 assets/nch/models/block/iron_collage_3.json
-820e85b304b857be20af47b18bc8083721ff0a66 assets/nch/models/block/iron_scaffolding.json
 3f62dae3e0ef7eff22f9cf9c43200fe107ffe8ff assets/nch/models/block/lemurium_block.json
 e3070ed7873fdb3af26c400f31f7bed2c337274e assets/nch/models/block/light_tile.json
 352ccf204fa4b4dc2d4b9f283da3923fc410a8a9 assets/nch/models/block/nickelsteel_plastic_block.json
-68ceb16fad3c4479a56c877e893cf9fdb77d452d assets/nch/models/block/nickelsteel_plastic_scaffolding.json
 371ca10c850825d2fffa6d082180c8a35cb3d04c assets/nch/models/block/nickel_block.json
 21559f87b92c8fe09714ef1caf5f818bce7d6592 assets/nch/models/block/nickel_ore.json
 430a6b4891e6964a79935d997753234fe762b7ca assets/nch/models/block/organic_plastic_block.json
