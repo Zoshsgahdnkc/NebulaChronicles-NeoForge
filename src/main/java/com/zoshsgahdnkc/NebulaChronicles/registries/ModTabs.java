@@ -83,6 +83,8 @@ public class ModTabs {
                 accept(tab, ModItems.ULTRALLOY_COIL);
                 accept(tab, ModItems.EMPTY_BATTERY);
                 accept(tab, ModItems.REDSTONE_BATTERY);
+                accept(tab, ModItems.BIOMASS_BATTERY);
+                accept(tab, ModItems.DUOCURRENT_BATTERY);
                 accept(tab, ModItems.BATTERY_WASTE);
                 accept(tab, ModItems.VACUUM_TUBE);
                 accept(tab, ModItems.CALCITE_CASING);
@@ -102,9 +104,7 @@ public class ModTabs {
             .withTabsBefore(TAB_INDUSTRY.getId())
             .displayItems((param, tab) -> {
                 accept(tab, ModItems.LEMON);
-                accept(tab, ModItems.AETHER_ROOT_SPORE);
-                accept(tab, ModItems.VERDHELM_BEETLE_SPAWN_EGG);
-                accept(tab, ModBlocks.VERDHELM_LARVAE);
+                accept(tab, ModItems.DUOCURRENT_CRYSTAL_SHARD);
                 accept(tab, ModBlocks.ARCHEOVA_STONE);
                 accept(tab, ModBlocks.COSMIC_SAND);
                 accept(tab, ModBlocks.COSMIC_SANDSTONE);
@@ -142,6 +142,9 @@ public class ModTabs {
                 accept(tab, ModBlocks.WHITE_KODOKU_FLOWER);
                 accept(tab, ModBlocks.AETHER_ROOT);
                 accept(tab, ModBlocks.AETHER_ROOT_HAIR);
+                accept(tab, ModItems.AETHER_ROOT_SPORE);
+                accept(tab, ModBlocks.VERDHELM_LARVAE);
+                accept(tab, ModItems.VERDHELM_BEETLE_SPAWN_EGG);
             })
             .build());
     private static void accept(CreativeModeTab.Output tab, DeferredItem<? extends ItemLike> object) {

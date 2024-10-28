@@ -31,7 +31,7 @@ public class VerdhelmLarvaeBlock extends DirectionalBlock {
     @Override
     protected void onPlace(BlockState pState, Level pLevel, BlockPos pPos, BlockState pOldState, boolean pMovedByPiston) {
         super.onPlace(pState, pLevel, pPos, pOldState, pMovedByPiston);
-        pLevel.scheduleTick(pPos, pState.getBlock(), 1);
+        pLevel.scheduleTick(pPos, pState.getBlock(), 5);
     }
 
     @Override
@@ -40,7 +40,7 @@ public class VerdhelmLarvaeBlock extends DirectionalBlock {
         if (pRandom.nextFloat() < 0.1f) {
             VerdhelmLarvaeDummyEntity overseer = new VerdhelmLarvaeDummyEntity(pPos.getX(), pPos.getY(), pPos.getZ(), pLevel, pState.getValue(FACING));
             pLevel.addFreshEntity(overseer);
-            pLevel.gameEvent(overseer, GameEvent.ENTITY_PLACE, pPos);
+//            pLevel.gameEvent(overseer, GameEvent.ENTITY_PLACE, pPos);
             pLevel.destroyBlock(pPos, false);
         }
         pLevel.scheduleTick(pPos, pState.getBlock(), 1);

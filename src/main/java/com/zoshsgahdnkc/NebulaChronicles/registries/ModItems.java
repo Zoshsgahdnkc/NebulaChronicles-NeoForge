@@ -17,6 +17,7 @@ public class ModItems {
                     .rarity(Rarity.RARE).jukeboxPlayable(ModJukeboxSongs.MUSIC_DISC_HALFWAY))
     );
 
+    public static final DeferredItem<Item> DUOCURRENT_CRYSTAL_SHARD = ITEMS.registerSimpleItem("duocurrent_crystal_shard");
     public static final DeferredItem<Item> RAW_NICKEL = ITEMS.registerSimpleItem("raw_nickel");
     public static final DeferredItem<Item> NICKEL_INGOT = ITEMS.registerSimpleItem("nickel_ingot");
     public static final DeferredItem<Item> NICKEL_NUGGET = ITEMS.registerSimpleItem("nickel_nugget");
@@ -37,8 +38,10 @@ public class ModItems {
     public static final DeferredItem<Item> ULTRALLOY_COIL = ITEMS.registerSimpleItem("ultralloy_coil");
     public static final DeferredItem<Item> EMPTY_BATTERY = ITEMS.registerSimpleItem("empty_battery", new Item.Properties().stacksTo(16));
     public static final DeferredItem<Item> REDSTONE_BATTERY = ITEMS.registerSimpleItem("redstone_battery", new Item.Properties().stacksTo(16));
+    public static final DeferredItem<Item> BIOMASS_BATTERY = ITEMS.registerSimpleItem("biomass_battery", new Item.Properties().stacksTo(16));
+    public static final DeferredItem<Item> DUOCURRENT_BATTERY = ITEMS.registerSimpleItem("duocurrent_battery", new Item.Properties().stacksTo(16));
     public static final DeferredItem<Item> BATTERY_WASTE = ITEMS.registerSimpleItem("battery_waste");
-    public static final DeferredItem<Item> VACUUM_TUBE = ITEMS.registerSimpleItem("vacuum_tube");
+    public static final DeferredItem<Item> VACUUM_TUBE = ITEMS.registerSimpleItem("vacuum_tube", new Item.Properties().stacksTo(4));
     public static final DeferredItem<Item> CALCITE_CASING = ITEMS.registerSimpleItem("calcite_casing");
     public static final DeferredItem<Item> CPU = ITEMS.registerSimpleItem("cpu", new Item.Properties().stacksTo(16));
     public static final DeferredItem<Item> ROCKET_FUEL = ITEMS.registerSimpleItem("rocket_fuel");

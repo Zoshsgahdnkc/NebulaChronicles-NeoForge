@@ -1,6 +1,7 @@
-// 1.21	2024-10-27T19:23:38.1226156	Item Models: nch
+// 1.21	2024-10-28T11:33:27.5144774	Item Models: nch
 c1cc65e2e489f3a25ec0203ecebe385d75f29a50 assets/nch/models/item/aether_root_spore.json
 6d1d415fa845640c1fb1a21b73c2aa583a01eaed assets/nch/models/item/battery_waste.json
+ce923db57497475a0641edeaf32ff0bdd76a557f assets/nch/models/item/biomass_battery.json
 0e7f7daec937f2266fefeed41b5d7cb44c01f052 assets/nch/models/item/calcite_casing.json
 1cbbf479cf2b1f54277147154ab5f329845d77a9 assets/nch/models/item/coal_dust.json
 10fc3b5d6a9623bbc8ed483ca8b7ba8118cddf9e assets/nch/models/item/coarse_cactus.json
@@ -8,6 +9,8 @@ c1cc65e2e489f3a25ec0203ecebe385d75f29a50 assets/nch/models/item/aether_root_spor
 b34b4877160ca395e92f524a50e565232685a5cb assets/nch/models/item/copper_coil.json
 cee56f6f2b5208039c7d3ab185259cb27f9f60c0 assets/nch/models/item/cpu.json
 688e2a83ab2e2bdbf684d8026042fba591a6c27d assets/nch/models/item/dark_matter_render_panel.json
+28f8725615e1da2d92be3fe95f645db15903bb45 assets/nch/models/item/duocurrent_battery.json
+7358f268aa93e7622752f0f838bd1a3250c2e58f assets/nch/models/item/duocurrent_crystal_shard.json
 fd5adb2a41dc4ea5c8628049a7c6a3980cc13986 assets/nch/models/item/empty_battery.json
 27d7724463597855c650c863554ae5636e448d6b assets/nch/models/item/fortress_door.json
 2f4c0332f4497e1bd641ba16a0b0db6a783fecb5 assets/nch/models/item/golden_coil.json

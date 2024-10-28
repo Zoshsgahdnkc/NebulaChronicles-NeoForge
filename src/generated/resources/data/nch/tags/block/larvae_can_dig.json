@@ -4,8 +4,11 @@
     "#minecraft:base_stone_nether",
     "#nch:base_stone",
     "#nch:ice",
+    "minecraft:sandstone",
+    "minecraft:calcite",
     "minecraft:end_stone",
     "minecraft:magma_block",
+    "nch:cosmic_sandstone",
     "minecraft:prismarine"
   ]
 }
