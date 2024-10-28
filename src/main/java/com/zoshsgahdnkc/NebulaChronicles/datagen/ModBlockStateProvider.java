@@ -6,6 +6,7 @@ import com.zoshsgahdnkc.NebulaChronicles.block.AetherRootHairBlock;
 import com.zoshsgahdnkc.NebulaChronicles.block.CoarseCactusBlock;
 import com.zoshsgahdnkc.NebulaChronicles.block.ColumnBlock;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
+import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -54,6 +55,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.TECH_TILE_WITH_SIGN,
             ModBlocks.WALL_PAPER,
 
+            ModBlocks.VERDHELM_LARVAE,
             ModBlocks.COSMIC_SAND
     );
     private static final ImmutableSet<DeferredBlock<Block>> DIRECTIONALS = ImmutableSet.of(
@@ -133,6 +135,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.COARSE_CACTUS_TRAPDOOR, "coarse_cactus_trapdoor_bottom", b -> trapdoorBlockWithRenderType((TrapDoorBlock) b.get(), blockTexture(b.get()), true, "cutout"));
         extendableColumnBlock(ModBlocks.WALL_PAPER);
         aetherRootHairBlock(ModBlocks.AETHER_ROOT_HAIR);
+        directionalBlock(ModBlocks.VERDHELM_LARVAE.get(), models().getExistingFile(getRL(blockSlashName(ModBlocks.VERDHELM_LARVAE))));
     }
 
     protected void simple(DeferredBlock<Block> block) {

@@ -48,6 +48,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         blockWithTexture(ModBlocks.DARK_MATTER_RENDER_PANEL);
         blockWithTexture(ModBlocks.WHITE_BUD);
         blockWithTexture(ModBlocks.COARSE_CACTUS);
+        blockWithTexture(ModBlocks.VERDHELM_LARVAE);
 
     }
 

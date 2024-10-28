@@ -1,4 +1,4 @@
-// 1.21	2024-09-03T12:59:18.2734743	Loot Tables
+// 1.21	2024-10-27T19:23:38.1285957	Loot Tables
 e926cc54acc27b825ed44d90a5095ef11dbee869 data/nch/loot_table/blocks/aether_root.json
 24d6fae293e6c26aa4962eb37e3cf64a57f6c5a6 data/nch/loot_table/blocks/aether_root_hair.json
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_table/blocks/archeova_stone.json
@@ -70,6 +70,7 @@ c1a8408693eb98d99412f9122ed11abffdd938de data/nch/loot_table/blocks/tachyon_proj
 935da2ed8edee335870de8cfa7c860ae4eb3deaf data/nch/loot_table/blocks/thick_vault_stairs.json
 d6d07df2df642d0fd54b28c34919ee597dd07750 data/nch/loot_table/blocks/thulium_188_block.json
 24c44b3b0e04290f67997bd8d880540b0a7c8f36 data/nch/loot_table/blocks/ultralloy_block.json
+5d5e9e415875c5ac526b64edd2aca2cde0be7158 data/nch/loot_table/blocks/verdhelm_larvae.json
 a4b85b33f7a24bbfa95c15cd1f2d9ae3978ae4b9 data/nch/loot_table/blocks/wall_paper.json
 40c53e1ab421ca46065a5fbfea1b29a51340115e data/nch/loot_table/blocks/white_bud.json
 63da023d8f07418af22d917ba779ca1ff9ee61b7 data/nch/loot_table/blocks/white_kodoku_flower.json

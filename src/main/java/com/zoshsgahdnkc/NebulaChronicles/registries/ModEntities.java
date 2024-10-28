@@ -2,6 +2,7 @@ package com.zoshsgahdnkc.NebulaChronicles.registries;
 
 import com.zoshsgahdnkc.NebulaChronicles.Entity.AetherRootSporeEntity;
 import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmBeetle.VerdhelmBeetleEntity;
+import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmLarvaeDummyEntity;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.entity.EntityType;
@@ -22,4 +23,9 @@ public class ModEntities {
                     .of(VerdhelmBeetleEntity::new, MobCategory.MONSTER)
                     .sized(0.75f, 0.5f)
                     .build("verdhelm_beetle"));
+
+    public static final DeferredHolder<EntityType<?>, EntityType<VerdhelmLarvaeDummyEntity>> VERDHELM_LARVAE_DUMMY =
+            ENTITIES.register("verdhelm_larvae_dummy", () -> EntityType.Builder
+                    .<VerdhelmLarvaeDummyEntity>of(VerdhelmLarvaeDummyEntity::new, MobCategory.MISC)
+                    .build("verdhelm_larvae_dummy"));
 }

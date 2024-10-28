@@ -1,5 +1,6 @@
 package com.zoshsgahdnkc.NebulaChronicles.event;
 
+import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmLarvaeDummyEntity;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.client.entity.VerdhelmBeetleModel;
 import com.zoshsgahdnkc.NebulaChronicles.client.entity.VerdhelmBeetleRenderer;
@@ -7,6 +8,9 @@ import com.zoshsgahdnkc.NebulaChronicles.particle.AetherSporeParticle;
 import com.zoshsgahdnkc.NebulaChronicles.particle.MossClumpsParticle;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModEntities;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModParticles;
+import net.minecraft.client.renderer.entity.EntityRenderer;
+import net.minecraft.client.renderer.entity.EntityRendererProvider;
+import net.minecraft.client.renderer.entity.NoopRenderer;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -28,6 +32,7 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.VERDHELM_BEETLE.get(), VerdhelmBeetleRenderer::new);
+        event.registerEntityRenderer(ModEntities.VERDHELM_LARVAE_DUMMY.get(), NoopRenderer::new);
     }
 
     @SubscribeEvent

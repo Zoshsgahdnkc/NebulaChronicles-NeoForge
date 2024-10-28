@@ -1,0 +1,11 @@
+{
+  "values": [
+    "#minecraft:base_stone_overworld",
+    "#minecraft:base_stone_nether",
+    "#nch:base_stone",
+    "#nch:ice",
+    "minecraft:end_stone",
+    "minecraft:magma_block",
+    "minecraft:prismarine"
+  ]
+}

@@ -193,6 +193,11 @@ public class ModBlocks {
             ));
     public static final DeferredBlock<Block> NICKELSTEEL_PLASTIC_SCAFFOLDING = registerBlock("nickelsteel_plastic_scaffolding",
             () -> new MetalScaffoldingBlock(BlockBehaviour.Properties.ofFullCopy(IRON_SCAFFOLDING.get())));
+    public static final DeferredBlock<Block> VERDHELM_LARVAE = registerBlock("verdhelm_larvae",
+            () -> new VerdhelmLarvaeBlock(BlockBehaviour.Properties.of()
+                    .sound(SoundType.SLIME_BLOCK)
+                    .noCollission()
+            ));
 
     private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
         return false;

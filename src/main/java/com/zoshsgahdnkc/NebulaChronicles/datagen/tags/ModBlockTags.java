@@ -27,6 +27,8 @@ public class ModBlockTags extends BlockTagsProvider {
     public static final TagKey<Block> BASE_STONE = TagKey.create(Registries.BLOCK, getRL("base_stone"));
     public static final TagKey<Block> SB_ORE_REPLACEABLE = TagKey.create(Registries.BLOCK, getRL("sb_ore_replaceable"));
     public static final TagKey<Block> METAL_SCAFFOLDING = TagKey.create(Registries.BLOCK, getRL("metal_scaffolding"));
+    public static final TagKey<Block> ICE = TagKey.create(Registries.BLOCK, getRL("ice"));
+    public static final TagKey<Block> LARVAE_CAN_DIG = TagKey.create(Registries.BLOCK, getRL("larvae_can_dig"));
 
     private static ResourceLocation getRL(String name) {
         return ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, name);
@@ -34,6 +36,11 @@ public class ModBlockTags extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(ICE)
+                .add(ModBlocks.SALTY_ICE.get())
+                .add(Blocks.ICE)
+                .add(Blocks.PACKED_ICE)
+                .add(Blocks.BLUE_ICE);
         tag(SB_ORE_REPLACEABLE)
                 .add(ModBlocks.SILVERBLANC_STONE.get())
                 .add(Blocks.CALCITE)
@@ -50,6 +57,19 @@ public class ModBlockTags extends BlockTagsProvider {
         tag(METAL_SCAFFOLDING)
                 .add(ModBlocks.IRON_SCAFFOLDING.get())
                 .add(ModBlocks.NICKELSTEEL_PLASTIC_SCAFFOLDING.get());
+        tag(LARVAE_CAN_DIG)
+                .addTag(BlockTags.BASE_STONE_OVERWORLD)
+                .addTag(BlockTags.BASE_STONE_NETHER)
+                .addTag(BASE_STONE)
+                .addTag(ICE)
+                .add(Blocks.SANDSTONE)
+                .add(Blocks.CALCITE)
+                .add(Blocks.END_STONE)
+                .add(Blocks.MAGMA_BLOCK)
+                .add(ModBlocks.COSMIC_SANDSTONE.get())
+                .add(Blocks.PRISMARINE);
+
+
 
 
         tag(BlockTags.CLIMBABLE)

@@ -104,6 +104,7 @@ public class ModTabs {
                 accept(tab, ModItems.LEMON);
                 accept(tab, ModItems.AETHER_ROOT_SPORE);
                 accept(tab, ModItems.VERDHELM_BEETLE_SPAWN_EGG);
+                accept(tab, ModBlocks.VERDHELM_LARVAE);
                 accept(tab, ModBlocks.ARCHEOVA_STONE);
                 accept(tab, ModBlocks.COSMIC_SAND);
                 accept(tab, ModBlocks.COSMIC_SANDSTONE);

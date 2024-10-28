@@ -1,0 +1,56 @@
+{
+  "variants": {
+    "facing=down,static=false": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 180
+    },
+    "facing=down,static=true": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 180
+    },
+    "facing=east,static=false": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,static=true": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north,static=false": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 90
+    },
+    "facing=north,static=true": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 90
+    },
+    "facing=south,static=false": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,static=true": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up,static=false": {
+      "model": "nch:block/verdhelm_larvae"
+    },
+    "facing=up,static=true": {
+      "model": "nch:block/verdhelm_larvae"
+    },
+    "facing=west,static=false": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,static=true": {
+      "model": "nch:block/verdhelm_larvae",
+      "x": 90,
+      "y": 270
+    }
+  }
+}
