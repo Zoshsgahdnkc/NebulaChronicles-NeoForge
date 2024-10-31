@@ -11,11 +11,11 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "nch:moss_frozen_soil"
+          "name": "nch:cryosol"
         }
       ],
       "rolls": 1.0
     }
   ],
-  "random_sequence": "nch:blocks/moss_frozen_soil"
+  "random_sequence": "nch:blocks/cryosol"
 }

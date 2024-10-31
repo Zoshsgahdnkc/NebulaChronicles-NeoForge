@@ -79,13 +79,13 @@ public class ModCF {
         register(context, WHITE_KODOKU_FLOWER, Feature.RANDOM_PATCH, grassPatch(BlockStateProvider.simple(ModBlocks.WHITE_KODOKU_FLOWER.get().defaultBlockState()), 12));
         register(context, AMETHYST, ModFeatures.CAVE_AMETHYST.get(), new NoneFeatureConfiguration());
         register(context, SILVERBLANC_SALTY_ICE_LAKE, Feature.LAKE, new LakeFeature.Configuration(BlockStateProvider.simple(ModBlocks.SALTY_ICE.get()), BlockStateProvider.simple(ModBlocks.SILVERBLANC_STONE.get())));
-        register(context, DISK_FROZEN_SOIL, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.FROZEN_SOIL.get()),
-                BlockPredicate.matchesBlocks(ModBlocks.FROZEN_SOIL.get(), ModBlocks.MOSS_FROZEN_SOIL.get()),
+        register(context, DISK_FROZEN_SOIL, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.CRYOSOL.get()),
+                BlockPredicate.matchesBlocks(ModBlocks.CRYOSOL.get(), ModBlocks.MOSS_CRYOSOL.get()),
                 UniformInt.of(3, 5), 1));
         register(context, ORE_DEEPSLATE, Feature.ORE, new OreConfiguration(new TagMatchTest(ModBlockTags.BASE_STONE),
                 Blocks.DEEPSLATE.defaultBlockState(), 32));
         register(context, ORE_FROZEN_SOIL, Feature.ORE, new OreConfiguration(new TagMatchTest(ModBlockTags.BASE_STONE),
-                ModBlocks.FROZEN_SOIL.get().defaultBlockState(), 48));
+                ModBlocks.CRYOSOL.get().defaultBlockState(), 48));
         register(context, ORE_CALCITE, Feature.ORE, new OreConfiguration(new TagMatchTest(ModBlockTags.BASE_STONE),
                 Blocks.CALCITE.defaultBlockState(), 64));
         register(context, ORE_COSMIC_SAND, Feature.ORE, new OreConfiguration(new TagMatchTest(ModBlockTags.BASE_STONE),

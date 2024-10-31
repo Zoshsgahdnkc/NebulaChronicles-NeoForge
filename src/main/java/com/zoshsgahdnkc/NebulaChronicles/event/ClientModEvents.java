@@ -1,21 +1,22 @@
 package com.zoshsgahdnkc.NebulaChronicles.event;
 
-import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmLarvaeDummyEntity;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
+import com.zoshsgahdnkc.NebulaChronicles.client.dimension.ModDimensionSpecialEffect;
 import com.zoshsgahdnkc.NebulaChronicles.client.entity.VerdhelmBeetleModel;
 import com.zoshsgahdnkc.NebulaChronicles.client.entity.VerdhelmBeetleRenderer;
 import com.zoshsgahdnkc.NebulaChronicles.particle.AetherSporeParticle;
 import com.zoshsgahdnkc.NebulaChronicles.particle.MossClumpsParticle;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModEntities;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModParticles;
-import net.minecraft.client.renderer.entity.EntityRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
 import net.minecraft.client.renderer.entity.NoopRenderer;
+import net.minecraft.resources.ResourceLocation;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.neoforge.client.event.RegisterDimensionSpecialEffectsEvent;
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import org.checkerframework.checker.units.qual.N;
 
 @EventBusSubscriber(modid = NebulaChronicles.MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class ClientModEvents {
@@ -38,5 +39,12 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(VerdhelmBeetleModel.LAYER_LOCATION, VerdhelmBeetleModel::createBodyLayer);
+    }
+
+    @SubscribeEvent
+    public static void registerDimensionEffects(RegisterDimensionSpecialEffectsEvent event) {
+        event.register(ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "silverblanc"),
+                new ModDimensionSpecialEffect.SilverblancEffect());
+
     }
 }

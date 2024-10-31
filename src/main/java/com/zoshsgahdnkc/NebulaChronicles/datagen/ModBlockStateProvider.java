@@ -6,7 +6,6 @@ import com.zoshsgahdnkc.NebulaChronicles.block.AetherRootHairBlock;
 import com.zoshsgahdnkc.NebulaChronicles.block.CoarseCactusBlock;
 import com.zoshsgahdnkc.NebulaChronicles.block.ColumnBlock;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
-import net.minecraft.core.Direction;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -29,9 +28,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
             ModBlocks.IRON_COLLAGE,
             ModBlocks.BUNKER_BRICKS,
-            ModBlocks.FROZEN_SOIL,
+            ModBlocks.CRYOSOL,
             ModBlocks.MOSS_SILVERBLANC_STONE,
-            ModBlocks.MOSS_FROZEN_SOIL,
+            ModBlocks.MOSS_CRYOSOL,
             ModBlocks.WHITE_BUD,
             ModBlocks.COARSE_CACTUS,
 
@@ -103,9 +102,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
         multipleSimple(ModBlocks.IRON_COLLAGE, 3);
         multipleSimple(ModBlocks.BUNKER_BRICKS, 3);
-        multipleSimple(ModBlocks.FROZEN_SOIL, 2);
+        multipleSimple(ModBlocks.CRYOSOL, 2);
         multipleExistingWithWeight(ModBlocks.MOSS_SILVERBLANC_STONE, 20, 12, 2, 20, 1);
-        multipleExistingWithWeight(ModBlocks.MOSS_FROZEN_SOIL, 20, 12, 2, 20, 1, 20, 12, 2, 20, 1);
+        multipleExistingWithWeight(ModBlocks.MOSS_CRYOSOL, 20, 12, 2, 20, 1, 20, 12, 2, 20, 1);
         multipleExistingWithRotation(ModBlocks.WHITE_BUD, 2);
         coarseCactus();
         blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));

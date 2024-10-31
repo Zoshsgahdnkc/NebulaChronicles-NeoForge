@@ -111,8 +111,8 @@ public class ModTabs {
                 accept(tab, ModBlocks.COSMIC_STONE);
                 accept(tab, ModBlocks.DEEPSPACE_STONE);
                 accept(tab, ModBlocks.SALTY_ICE);
-                accept(tab, ModBlocks.FROZEN_SOIL);
-                accept(tab, ModBlocks.MOSS_FROZEN_SOIL);
+                accept(tab, ModBlocks.CRYOSOL);
+                accept(tab, ModBlocks.MOSS_CRYOSOL);
                 accept(tab, ModBlocks.SILVERBLANC_STONE);
                 accept(tab, ModBlocks.SILVERBLANC_STONE_SLAB);
                 accept(tab, ModBlocks.SILVERBLANC_STONE_STAIRS);

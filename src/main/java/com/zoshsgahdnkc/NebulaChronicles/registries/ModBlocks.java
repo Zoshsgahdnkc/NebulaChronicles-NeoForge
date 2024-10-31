@@ -161,10 +161,10 @@ public class ModBlocks {
             () -> new SlabBlock(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_STONE_BRICKS.get())));
     public static final DeferredBlock<Block> SILVERBLANC_STONE_BRICKS_WALL = registerBlock("silverblanc_stone_bricks_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_STONE_BRICKS.get())));
-    public static final DeferredBlock<Block> FROZEN_SOIL = registerBlock("frozen_soil",
+    public static final DeferredBlock<Block> CRYOSOL = registerBlock("cryosol",
             () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.DIRT).strength(2F)));
-    public static final DeferredBlock<Block> MOSS_FROZEN_SOIL = registerBlock("moss_frozen_soil",
-            () -> new SilverblancMossBlock(BlockBehaviour.Properties.ofLegacyCopy(FROZEN_SOIL.get()), FROZEN_SOIL));
+    public static final DeferredBlock<Block> MOSS_CRYOSOL = registerBlock("moss_cryosol",
+            () -> new SilverblancMossBlock(BlockBehaviour.Properties.ofLegacyCopy(CRYOSOL.get()), CRYOSOL));
     public static final DeferredBlock<Block> SALTY_ICE = registerBlock("salty_ice",
             () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.PACKED_ICE)));
     public static final DeferredBlock<Block> BLUE_KODOKU_FLOWER = registerBlock("blue_kodoku_flower",

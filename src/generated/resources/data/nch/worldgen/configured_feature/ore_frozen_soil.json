@@ -6,7 +6,7 @@
     "targets": [
       {
         "state": {
-          "Name": "nch:frozen_soil"
+          "Name": "nch:cryosol"
         },
         "target": {
           "predicate_type": "minecraft:tag_match",

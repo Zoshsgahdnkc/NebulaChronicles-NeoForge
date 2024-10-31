@@ -3,7 +3,6 @@
   "bed_works": true,
   "coordinate_scale": 1.0,
   "effects": "nch:silverblanc",
-  "fixed_time": 18000,
   "has_ceiling": false,
   "has_raids": true,
   "has_skylight": true,

@@ -425,7 +425,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "nch:moss_frozen_soil"
+                        "Name": "nch:moss_cryosol"
                       }
                     }
                   },
@@ -441,7 +441,7 @@
                     "then_run": {
                       "type": "minecraft:block",
                       "result_state": {
-                        "Name": "nch:frozen_soil"
+                        "Name": "nch:cryosol"
                       }
                     }
                   }
@@ -603,7 +603,7 @@
                 "then_run": {
                   "type": "minecraft:block",
                   "result_state": {
-                    "Name": "nch:frozen_soil"
+                    "Name": "nch:cryosol"
                   }
                 }
               }

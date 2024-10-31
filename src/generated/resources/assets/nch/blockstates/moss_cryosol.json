@@ -1,0 +1,44 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "nch:block/moss_cryosol_1",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_cryosol_2",
+        "weight": 12
+      },
+      {
+        "model": "nch:block/moss_cryosol_3",
+        "weight": 2
+      },
+      {
+        "model": "nch:block/moss_cryosol_4",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_cryosol_5"
+      },
+      {
+        "model": "nch:block/moss_cryosol_6",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_cryosol_7",
+        "weight": 12
+      },
+      {
+        "model": "nch:block/moss_cryosol_8",
+        "weight": 2
+      },
+      {
+        "model": "nch:block/moss_cryosol_9",
+        "weight": 20
+      },
+      {
+        "model": "nch:block/moss_cryosol_10"
+      }
+    ]
+  }
+}

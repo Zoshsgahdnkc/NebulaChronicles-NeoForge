@@ -34,8 +34,8 @@ public class SilverblancStoneBlock extends Block implements BonemealableBlock {
             BlockState posState = level.getBlockState(pos);
             if (above && posState.is(ModBlocks.SILVERBLANC_STONE.get())) {
                 level.setBlock(pos, ModBlocks.MOSS_SILVERBLANC_STONE.get().defaultBlockState(), 3);
-            } else if (above && posState.is(ModBlocks.FROZEN_SOIL.get())) {
-                level.setBlock(pos, ModBlocks.MOSS_FROZEN_SOIL.get().defaultBlockState(), 3);
+            } else if (above && posState.is(ModBlocks.CRYOSOL.get())) {
+                level.setBlock(pos, ModBlocks.MOSS_CRYOSOL.get().defaultBlockState(), 3);
             }
         };
     }

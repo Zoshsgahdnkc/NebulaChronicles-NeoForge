@@ -49,7 +49,7 @@ public class SilverblancMossBlock extends NyliumBlock implements BonemealableBlo
         for (BlockPos pos : BlockTraverse.traverseSquare(blockPos, 3, 3, 1)) {
             boolean aboveEmpty = level.getBlockState(pos.above()).isAir();
             BlockState posState = level.getBlockState(pos);
-            if (aboveEmpty && (posState.is(ModBlocks.MOSS_SILVERBLANC_STONE.get()) || posState.is(ModBlocks.MOSS_FROZEN_SOIL.get()))) {
+            if (aboveEmpty && (posState.is(ModBlocks.MOSS_SILVERBLANC_STONE.get()) || posState.is(ModBlocks.MOSS_CRYOSOL.get()))) {
                 if (randomSource.nextFloat() < GROWING_STRENGTH) {
                     if (GROWABLE_FEATURES.isEmpty()) {
                         GROWABLE_FEATURES = WeightedRandomList.create(

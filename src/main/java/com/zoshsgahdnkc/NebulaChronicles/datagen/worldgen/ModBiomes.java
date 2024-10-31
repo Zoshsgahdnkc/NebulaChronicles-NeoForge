@@ -28,11 +28,6 @@ public class ModBiomes {
 
     public static final MobSpawnSettings DUMMY_SETTING = new MobSpawnSettings.Builder().build();
     private static BiomeSpecialEffects generateEffects(int... colors) {
-//        if (colors.length < 6) {
-//            return new BiomeSpecialEffects.Builder()
-//                    .ambientMoodSound(new AmbientMoodSettings(SoundEvents.AMBIENT_CAVE, 6000, 8, 2))
-//                    .build();
-//        }
         return new BiomeSpecialEffects.Builder()
                 .skyColor(colors[0])
                 .fogColor(colors[1])
@@ -56,7 +51,7 @@ public class ModBiomes {
     public static final ResourceKey<Biome> GREEN_GLACIER = createKey("green_glacier");
     public static final ResourceKey<Biome> SILVERBLANC_CAVE = createKey("silverblanc_cave");
     public static final ResourceKey<Biome> FROST_CAVE = createKey("frost_cave");
-    public static final int[] colors_SB = {7907327,12638463,8185086,2124168,4191135,3144081};
+    public static final int[] colors_SB = {5865141,5865141,8185086,2124168,5948039,5948039};
     public static BiomeGenerationSettings.Builder genCarversSB(BiomeGenerationSettings.Builder builder) {
         return builder.addCarver(GenerationStep.Carving.AIR, Carvers.CAVE)
                 .addCarver(GenerationStep.Carving.AIR, Carvers.CAVE_EXTRA_UNDERGROUND)
@@ -255,11 +250,11 @@ public class ModBiomes {
                 Pair.of(Climate.parameters(
                         Climate.Parameter.point(0f),     // Temperature
                         Climate.Parameter.point(0f),     // Humidity
-                        Climate.Parameter.span(-0.1f, 0f),     // Continentalness
-                        Climate.Parameter.point(0),      // erosion
+                        Climate.Parameter.span(-0.2f, 0.1f),     // Continentalness
+                        Climate.Parameter.point(0.05f),      // erosion
                         Climate.Parameter.point(-1.4f),      // depth
                         Climate.Parameter.point(0f),     //weirdness
-                        0.25f), biomeRegistry.getOrThrow(SALTY_MARSH)),
+                        0.18f), biomeRegistry.getOrThrow(SALTY_MARSH)),
                 Pair.of(Climate.parameters(
                         Climate.Parameter.point(0f),     // Temperature
                         Climate.Parameter.point(0f),     // Humidity

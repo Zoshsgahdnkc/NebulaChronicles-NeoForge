@@ -30,7 +30,7 @@ public class PlanetUtils {
 //            return factor > 0 ? factor : 0;
 //        }
 //        return 1;
-        return ySpeed < 0 ? 1.33 * (1 - Mth.sqrt((float) ((ySpeed / -3.4) + 0.08))) : 1;
+        return ySpeed < 0 ? 1.4 * (1 - Mth.sqrt((float) ((ySpeed / -3.4) + 0.08))) : 1;
     }
     public static Planet getPlanet(Level level) {
         return planets.getOrDefault(level.dimension().location(), null);

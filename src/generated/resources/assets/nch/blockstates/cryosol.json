@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "nch:block/cryosol_1"
+      },
+      {
+        "model": "nch:block/cryosol_2"
+      }
+    ]
+  }
+}

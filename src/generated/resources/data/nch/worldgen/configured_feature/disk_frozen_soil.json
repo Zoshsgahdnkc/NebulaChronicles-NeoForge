@@ -11,7 +11,7 @@
       "fallback": {
         "type": "minecraft:simple_state_provider",
         "state": {
-          "Name": "nch:frozen_soil"
+          "Name": "nch:cryosol"
         }
       },
       "rules": []
@@ -19,8 +19,8 @@
     "target": {
       "type": "minecraft:matching_blocks",
       "blocks": [
-        "nch:frozen_soil",
-        "nch:moss_frozen_soil"
+        "nch:cryosol",
+        "nch:moss_cryosol"
       ]
     }
   }

@@ -1,4 +1,4 @@
-// 1.21	2024-10-28T10:41:57.2263355	Block States: nch
+// 1.21	2024-10-31T15:59:39.8752615	Block States: nch
 179e1bf8f6f1720f71757fa950620e9bd9281015 assets/nch/blockstates/aether_root.json
 21d1420df0778f55a457e0c4ad240c721fe99877 assets/nch/blockstates/aether_root_hair.json
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
@@ -12,6 +12,7 @@ ac025baa3c8cf421d4a587624e7145d477103c52 assets/nch/blockstates/coarse_cactus_tr
 0239974e5e36fc8d2fda58c4310d37f23525cc22 assets/nch/blockstates/cosmic_sand.json
 cde214bf968f72b1124b114d83eb65fa63d88ae6 assets/nch/blockstates/cosmic_sandstone.json
 6e872ab26fc924ef4beddd924cf7d737fb30f5e1 assets/nch/blockstates/cosmic_stone.json
+a19c332d584b9baaacf86c760e9b6182ec5e0610 assets/nch/blockstates/cryosol.json
 c9666d187ee0396466f227f8b33d2ab05948e41f assets/nch/blockstates/dark_matter_render_panel.json
 c600cfd7acd4f006a52b807ee78badb4f132c4d7 assets/nch/blockstates/dark_tile.json
 f8ae134f3c064fa08f0bc56b0c60a45e80e23ede assets/nch/blockstates/deepslate_nickel_ore.json
@@ -23,7 +24,6 @@ b966e8fb3383f8b6c56d5508005aadd0e939c777 assets/nch/blockstates/fortress_door.js
 bdcd6bb90fe86c7f73f270ed16ca4c51f3f36a9e assets/nch/blockstates/fortress_wall.json
 34cdb844bc221742db62884d77bd338be4793f0e assets/nch/blockstates/fortress_wall_light.json
 4d64180b4fdbbb1977170a9fae52419d708ac883 assets/nch/blockstates/fortress_wall_light_unlit.json
-41be8003c4d941d517326c8dd76830f23ca36b68 assets/nch/blockstates/frozen_soil.json
 d051c52a80e77133b03cfdfbb91a737e955843c5 assets/nch/blockstates/iron_bricks.json
 264d2bab6c9e10ae29fc950b73b91aa1991c0fca assets/nch/blockstates/iron_bricks_slab.json
 cfeb89c91d5818bb5c806efb62d07625d606b10a assets/nch/blockstates/iron_bricks_stairs.json
@@ -32,7 +32,7 @@ cfeb89c91d5818bb5c806efb62d07625d606b10a assets/nch/blockstates/iron_bricks_stai
 da7f5c978ff09917811f1cd1a11b6fdba9e5084a assets/nch/blockstates/lemurium_block.json
 b841a1fb270bef0529c1bd1041207d30fed0add0 assets/nch/blockstates/light_tile.json
 237992877a2f21bef257949552da1f9bceb0fc0d assets/nch/blockstates/low_fence.json
-47be57b151046baa37e6b1ef58ae6b0ef53dc0a0 assets/nch/blockstates/moss_frozen_soil.json
+a77e172c05a3cbed0b473e669acdc810eaefe6f6 assets/nch/blockstates/moss_cryosol.json
 28d0dc8ce52a32d6187258902bec3236b4010907 assets/nch/blockstates/moss_silverblanc_stone.json
 b8c64d6acdbd629aa90567d5249510d1963a5e54 assets/nch/blockstates/nickelsteel_plastic_block.json
 46f243d36507980983b47aecd344d793e3363f8e assets/nch/blockstates/nickelsteel_plastic_container.json
@@ -98,6 +98,8 @@ ee13ff204281c5f0c28fee2a214d9f2be58fbe67 assets/nch/models/block/coarse_cactus_t
 76c9199f51fb29e06b1805a601168c9ba640d265 assets/nch/models/block/cosmic_sand.json
 c5274082a3c3e5475ea061a02d9efe5792436341 assets/nch/models/block/cosmic_sandstone.json
 2ce6da6c16ac0d33efcf9eb126c4732ef1bb8496 assets/nch/models/block/cosmic_stone.json
+95a6dd95a04a6c519ac93835a41ebaa475f73fda assets/nch/models/block/cryosol_1.json
+a0662c414af1cb828b6b408c20682b969ee4bebd assets/nch/models/block/cryosol_2.json
 873d315db6716a1fa527b5ca5bd90f1f86ffeacc assets/nch/models/block/dark_tile.json
 672ffe7023c10e9263aa833f0614b8326cf1e171 assets/nch/models/block/deepslate_nickel_ore.json
 445ca0f9fb9dd301e0dafd11cae0d1f8663ea909 assets/nch/models/block/deepspace_stone.json
@@ -117,8 +119,6 @@ dd8fce2cc009930ded02e4fe095c33326678252f assets/nch/models/block/fortress_wall.j
 947828c366d9ee450f14b2b09cd518d5d1b70bc4 assets/nch/models/block/fortress_wall_light_horizontal.json
 52335e29ede00a69eef84138049dc0846b7d0894 assets/nch/models/block/fortress_wall_light_unlit.json
 e154c0d0e819e0e1381abe3867742e03cc36a305 assets/nch/models/block/fortress_wall_light_unlit_horizontal.json
-14ec107d81016092e73771d0eb88d920d4c7114d assets/nch/models/block/frozen_soil_1.json
-5871e05df2c334e91e0bf1f9d22e651f1c23d059 assets/nch/models/block/frozen_soil_2.json
 cabfd9640574117790a91ff69754fb6deffa89ab assets/nch/models/block/iron_bricks.json
 5b46526e6ede512d3f197418d03cf11908e7ca34 assets/nch/models/block/iron_bricks_slab.json
 0531ab4aaf9103a898f0d63401bcec24b86da1e2 assets/nch/models/block/iron_bricks_slab_double.json
@@ -191,6 +191,7 @@ aa4f3613d526f6aa64d0e05ad50a279af239e406 assets/nch/models/item/cargo_box.json
 ff5ac123e79d6c6b1e7d5d85fbec47f186e21c55 assets/nch/models/item/cosmic_sand.json
 7b150132839f7be3df3f651e749cf317d431654a assets/nch/models/item/cosmic_sandstone.json
 062722f3fe86d355489ec13e6c563e1baf117e72 assets/nch/models/item/cosmic_stone.json
+12702515713478f14f67b2343c30b3cbf0111723 assets/nch/models/item/cryosol.json
 e139d7e7cb012de9e71d3a40b85ebaa03ede4c21 assets/nch/models/item/dark_matter_render_panel.json
 2dae6b9331465f907b71dd88af90370adaff1a6e assets/nch/models/item/dark_tile.json
 f8354018a105489d785d869fc0c91ee60fcd3880 assets/nch/models/item/deepslate_nickel_ore.json
@@ -201,7 +202,6 @@ dc9c8e515f1af06b7078a82aa27be2ddc589ac97 assets/nch/models/item/eroded_dark_tile
 b1a10ed4cfa0cf5ac23b3e865aaa1fff28737a90 assets/nch/models/item/fortress_wall.json
 ff49604da1043e89eee9d355f825846cc4a36c99 assets/nch/models/item/fortress_wall_light.json
 8fd8dc2aab972174c7d3d50db8fe22dc373a842f assets/nch/models/item/fortress_wall_light_unlit.json
-24132c0c4fe54bfabb17ddc98e0def305dc4dc62 assets/nch/models/item/frozen_soil.json
 68a5cc002b60b911ebae57dd29af7d1eac838d97 assets/nch/models/item/iron_bricks.json
 c234048d6f1c7e4b99f0db9d56a8591b63c40355 assets/nch/models/item/iron_bricks_slab.json
 5c43ebe55b0d29088858a79b82483c227dd7621d assets/nch/models/item/iron_bricks_stairs.json
@@ -210,7 +210,7 @@ f34733176e707792172298385dcd6f6c36faf3e1 assets/nch/models/item/iron_scaffolding
 a004c67e092ed5403c6c2dee2ccd466177d3f1c3 assets/nch/models/item/lemurium_block.json
 891e07cb3e34de1fe10c80288e893fe8f21294f4 assets/nch/models/item/light_tile.json
 50e08f5a37540bf0d773da61eaac135ad0b85fa4 assets/nch/models/item/low_fence.json
-bfefdb9dbf1f3a5660c9af40f732b278d5cfd63c assets/nch/models/item/moss_frozen_soil.json
+65b23dcda42f7a093a4db20ea207bbdf977b5e9c assets/nch/models/item/moss_cryosol.json
 b22d4fa6433361fb8a5d4dbfd7cea5ca75d6a230 assets/nch/models/item/moss_silverblanc_stone.json
 0cf1e50263e95a63d3e6abc559f2247f1152a6de assets/nch/models/item/nickelsteel_plastic_block.json
 bf6df9d2bfe1384668551750998632c7fa3456ab assets/nch/models/item/nickelsteel_plastic_container.json
