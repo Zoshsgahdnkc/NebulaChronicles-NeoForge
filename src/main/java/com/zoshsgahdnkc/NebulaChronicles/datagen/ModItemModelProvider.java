@@ -23,7 +23,8 @@ public class ModItemModelProvider extends ItemModelProvider {
     public static final ImmutableSet<DeferredHolder<Item, ? extends Item>> IGNORES = ImmutableSet.of(
     );
     public static final ImmutableSet<DeferredHolder<Item, ? extends Item>> SPAWN_EGGS = ImmutableSet.of(
-            ModItems.VERDHELM_BEETLE_SPAWN_EGG
+            ModItems.VERDHELM_BEETLE_SPAWN_EGG,
+            ModItems.SPIKED_VERDHELM_BEETLE_SPAWN_EGG
     );
 
     private static boolean predicateItemEntry(DeferredHolder<Item, ? extends Item> entry) {

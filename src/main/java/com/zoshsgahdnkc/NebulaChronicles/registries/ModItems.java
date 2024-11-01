@@ -48,6 +48,8 @@ public class ModItems {
     public static final DeferredItem<Item> LEMON = ITEMS.register("lemon", () -> new LemonItem(new Item.Properties()));
     public static final DeferredItem<Item> AETHER_ROOT_SPORE = ITEMS.register("aether_root_spore", () -> new AethorRootSporeItem(new Item.Properties()));
     public static final DeferredItem<Item> VERDHELM_BEETLE_SPAWN_EGG = ITEMS.registerItem("verdhelm_beetle_spawn_egg",
-            (properties) -> new DeferredSpawnEggItem(ModEntities.VERDHELM_BEETLE, 0x999999, 0x118877, properties));
+            (properties) -> new DeferredSpawnEggItem(ModEntities.VERDHELM_BEETLE, 0x998580, 0x118877, properties));
+    public static final DeferredItem<Item> SPIKED_VERDHELM_BEETLE_SPAWN_EGG = ITEMS.registerItem("spiked_verdhelm_beetle_spawn_egg",
+         (properties) -> new DeferredSpawnEggItem(ModEntities.SPIKED_VERDHELM_BEETLE, 0x999999, 0x678C84, properties));
 
 }

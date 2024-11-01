@@ -1,4 +1,4 @@
-// 1.21	2024-10-28T11:33:27.5144774	Item Models: nch
+// 1.21	2024-10-31T21:49:33.4852053	Item Models: nch
 c1cc65e2e489f3a25ec0203ecebe385d75f29a50 assets/nch/models/item/aether_root_spore.json
 6d1d415fa845640c1fb1a21b73c2aa583a01eaed assets/nch/models/item/battery_waste.json
 ce923db57497475a0641edeaf32ff0bdd76a557f assets/nch/models/item/biomass_battery.json
@@ -30,6 +30,7 @@ ddf9048899816176e7ae0299f5e60ade80f376c5 assets/nch/models/item/organic_plastic_
 875b4d9121f1977ddd08fc8dea742375d3a85540 assets/nch/models/item/redstone_power_panel.json
 4fa4c10b14644954efed030eaa5d05cd4753423d assets/nch/models/item/rocket_fuel.json
 87ad5916be6d076910bd4f30269d640b51e99568 assets/nch/models/item/solar_panel.json
+63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/nch/models/item/spiked_verdhelm_beetle_spawn_egg.json
 44838d5307d632b689e3aadab72c4276371de208 assets/nch/models/item/tachyon_projection_panel.json
 b9a121718020eb52c23b12eaf25bb67087d18ccf assets/nch/models/item/thulium_188_ingot.json
 54ef61e01df8ec6a0fa882a309658e6b00cf5648 assets/nch/models/item/thulium_188_nugget.json

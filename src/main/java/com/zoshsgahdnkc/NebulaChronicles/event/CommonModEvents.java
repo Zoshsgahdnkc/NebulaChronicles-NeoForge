@@ -1,5 +1,6 @@
 package com.zoshsgahdnkc.NebulaChronicles.event;
 
+import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmBeetle.SpikedVerdhelmBeetleEntity;
 import com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmBeetle.VerdhelmBeetleEntity;
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModEntities;
@@ -12,6 +13,7 @@ public class CommonModEvents {
     @SubscribeEvent
     public static void putEntityAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.VERDHELM_BEETLE.get(), VerdhelmBeetleEntity.createAttributes().build());
+        event.put(ModEntities.SPIKED_VERDHELM_BEETLE.get(), SpikedVerdhelmBeetleEntity.createAttributes().build());
     }
 
 //    @SubscribeEvent

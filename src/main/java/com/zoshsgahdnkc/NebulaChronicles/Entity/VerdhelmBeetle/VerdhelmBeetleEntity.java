@@ -65,14 +65,14 @@ public class VerdhelmBeetleEntity extends Monster{
     public static AttributeSupplier.Builder createAttributes() {
         return AttributeSupplier.builder()
                 .add(Attributes.MAX_HEALTH, 10)
-                .add(Attributes.KNOCKBACK_RESISTANCE, 0.5)
+                .add(Attributes.KNOCKBACK_RESISTANCE, 0.3)
                 .add(Attributes.MOVEMENT_SPEED, 0.2)
                 .add(Attributes.ARMOR, 6)
                 .add(Attributes.ARMOR_TOUGHNESS)
                 .add(Attributes.MAX_ABSORPTION)
                 .add(Attributes.STEP_HEIGHT)
                 .add(Attributes.SCALE)
-                .add(Attributes.GRAVITY)
+                .add(Attributes.GRAVITY, 0.16)
                 .add(Attributes.SAFE_FALL_DISTANCE)
                 .add(Attributes.FALL_DAMAGE_MULTIPLIER)
                 .add(Attributes.JUMP_STRENGTH)
@@ -94,12 +94,18 @@ public class VerdhelmBeetleEntity extends Monster{
     }
 
     private void addModifiers() {
-        this.getAttribute(Attributes.ARMOR).addPermanentModifier(ARMOR_MODIFIER);
-        this.getAttribute(Attributes.KNOCKBACK_RESISTANCE).addPermanentModifier(KNOCKBACK_MODIFIER);
+        if (!this.getAttribute(Attributes.ARMOR).hasModifier(ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "rolled_up_armor")) ||
+                !this.getAttribute(Attributes.KNOCKBACK_RESISTANCE).hasModifier(ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "rolled_up_knockback"))) {
+            this.getAttribute(Attributes.ARMOR).addPermanentModifier(ARMOR_MODIFIER);
+            this.getAttribute(Attributes.KNOCKBACK_RESISTANCE).addPermanentModifier(KNOCKBACK_MODIFIER);
+        }
     }
     private void removeModifiers() {
-        this.getAttribute(Attributes.ARMOR).removeModifier(ARMOR_MODIFIER);
-        this.getAttribute(Attributes.ARMOR).removeModifier(KNOCKBACK_MODIFIER);
+        if (this.getAttribute(Attributes.ARMOR).hasModifier(ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "rolled_up_armor")) &&
+                this.getAttribute(Attributes.KNOCKBACK_RESISTANCE).hasModifier(ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "rolled_up_knockback"))) {
+            this.getAttribute(Attributes.ARMOR).removeModifier(ARMOR_MODIFIER);
+            this.getAttribute(Attributes.KNOCKBACK_RESISTANCE).removeModifier(KNOCKBACK_MODIFIER);
+        }
     }
 
     public void rollUp() {

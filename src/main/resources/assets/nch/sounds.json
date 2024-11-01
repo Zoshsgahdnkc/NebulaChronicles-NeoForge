@@ -105,6 +105,43 @@
       "nch:verdhelm_beetle_death_3"
     ]
   },
+  "spiked_verdhelm_beetle_ambient": {
+    "subtitle": "subtitles.nch.spiked_verdhelm_beetle_ambient",
+    "sounds": [
+      "nch:spiked_verdhelm_beetle_ambient_1",
+      "nch:spiked_verdhelm_beetle_ambient_2",
+      "nch:spiked_verdhelm_beetle_ambient_3"
+    ]
+  },
+  "spiked_verdhelm_beetle_hurt": {
+    "subtitle": "subtitles.nch.spiked_verdhelm_beetle_hurt",
+    "sounds": [
+      "nch:spiked_verdhelm_beetle_hurt_1",
+      "nch:spiked_verdhelm_beetle_hurt_2",
+      "nch:spiked_verdhelm_beetle_hurt_3",
+      "nch:spiked_verdhelm_beetle_hurt_4"
+    ]
+  },
+  "spiked_verdhelm_beetle_death": {
+    "subtitle": "subtitles.nch.spiked_verdhelm_beetle_death",
+    "sounds": [
+      "nch:spiked_verdhelm_beetle_death_1",
+      "nch:spiked_verdhelm_beetle_death_2"
+    ]
+  },
+  "spiked_verdhelm_beetle_throw_stone": {
+    "subtitle": "subtitles.nch.spiked_verdhelm_beetle_throw_stone",
+    "sounds": [
+      "nch:spiked_verdhelm_beetle_throw_stone_1",
+      "nch:spiked_verdhelm_beetle_throw_stone_2"
+    ]
+  },
+  "shooting_rock_break": {
+    "subtitle": "subtitles.nch.shooting_rock_break",
+    "sounds": [
+      "nch:shooting_rock_break"
+    ]
+  },
   "music_disc_halfway": {
     "sounds": [
       {

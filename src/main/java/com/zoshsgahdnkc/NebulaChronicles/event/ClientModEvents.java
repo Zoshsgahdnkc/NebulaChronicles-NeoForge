@@ -2,8 +2,7 @@ package com.zoshsgahdnkc.NebulaChronicles.event;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.client.dimension.ModDimensionSpecialEffect;
-import com.zoshsgahdnkc.NebulaChronicles.client.entity.VerdhelmBeetleModel;
-import com.zoshsgahdnkc.NebulaChronicles.client.entity.VerdhelmBeetleRenderer;
+import com.zoshsgahdnkc.NebulaChronicles.client.entity.*;
 import com.zoshsgahdnkc.NebulaChronicles.particle.AetherSporeParticle;
 import com.zoshsgahdnkc.NebulaChronicles.particle.MossClumpsParticle;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModEntities;
@@ -33,12 +32,16 @@ public class ClientModEvents {
     @SubscribeEvent
     public static void registerRenderers(EntityRenderersEvent.RegisterRenderers event) {
         event.registerEntityRenderer(ModEntities.VERDHELM_BEETLE.get(), VerdhelmBeetleRenderer::new);
+        event.registerEntityRenderer(ModEntities.SPIKED_VERDHELM_BEETLE.get(), SpikedVerdhelmBeetleRenderer::new);
+        event.registerEntityRenderer(ModEntities.SHOOTING_ROCK.get(), ShootingRockRenderer::new);
         event.registerEntityRenderer(ModEntities.VERDHELM_LARVAE_DUMMY.get(), NoopRenderer::new);
     }
 
     @SubscribeEvent
     public static void registerLayer(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(ShootingRockModel.LAYER_LOCATION, ShootingRockModel::createBodyLayer);
         event.registerLayerDefinition(VerdhelmBeetleModel.LAYER_LOCATION, VerdhelmBeetleModel::createBodyLayer);
+        event.registerLayerDefinition(SpikedVerdhelmBeetleModel.LAYER_LOCATION, SpikedVerdhelmBeetleModel::createBodyLayer);
     }
 
     @SubscribeEvent

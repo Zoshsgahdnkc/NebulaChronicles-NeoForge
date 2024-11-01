@@ -111,6 +111,7 @@
   "item.nch.rocket_fuel": "火箭燃料",
   "item.nch.aether_root_spore": "以太根孢子",
   "item.nch.verdhelm_beetle_spawn_egg": "青盔虫刷怪蛋",
+  "item.nch.spiked_verdhelm_beetle_spawn_egg": "尖角青盔虫刷怪蛋",
 
   "TOOLTIPS >>>": "",
   "tooltip.nch.lemon": "[调试物品] 目前用于传送",
@@ -129,6 +130,10 @@
 
   "ENTITIES >>>": "",
   "entity.nch.verdhelm_beetle": "青盔虫",
+  "entity.nch.spiked_verdhelm_beetle": "尖角青盔虫",
+
+  "EFFECTS >>>": "",
+  "effect.nch.cripple": "残废",
 
   "SUBTITLES >>>": "",
   "subtitles.nch.aether_root_spore_spread": "以太根孢子：叮当",
@@ -138,5 +143,10 @@
   "subtitles.nch.verdhelm_beetle_roll_up": "青盔虫：蜷缩",
   "subtitles.nch.verdhelm_beetle_hurt": "青盔虫：受伤",
   "subtitles.nch.verdhelm_beetle_hurt_reduced": "青盔虫：自卫",
-  "subtitles.nch.verdhelm_beetle_death": "青盔虫：死亡"
+  "subtitles.nch.verdhelm_beetle_death": "青盔虫：死亡",
+  "subtitles.nch.spiked_verdhelm_beetle_ambient": "尖角青盔虫：嘶嘶",
+  "subtitles.nch.spiked_verdhelm_beetle_throw_stone": "尖角青盔虫：投石头",
+  "subtitles.nch.spiked_verdhelm_beetle_hurt": "尖角青盔虫：受伤",
+  "subtitles.nch.spiked_verdhelm_beetle_death": "尖角青盔虫：死亡",
+  "subtitles.nch.shooting_rock_break": "小石块：碎裂"
 }

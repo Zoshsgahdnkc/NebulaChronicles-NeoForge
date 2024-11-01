@@ -35,6 +35,7 @@ public class NebulaChronicles {
         ModEntities.ENTITIES.register(modEventBus);
         ModEntitySensors.SENSORS.register(modEventBus);
         ModEntityDataSerializers.SERIALIZERS.register(modEventBus);
+        ModEffects.EFFECTS.register(modEventBus);
 //        NeoForge.EVENT_BUS.register(this);
 
     }

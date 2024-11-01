@@ -24,6 +24,13 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> VERDHELM_BEETLE_HURT_REDUCED = register("verdhelm_beetle_hurt_reduced");
     public static final DeferredHolder<SoundEvent, SoundEvent> VERDHELM_BEETLE_DEATH = register("verdhelm_beetle_death");
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> SPIKED_VERDHELM_BEETLE_AMBIENT = register("spiked_verdhelm_beetle_ambient");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SPIKED_VERDHELM_BEETLE_THROW_STONE = register("spiked_verdhelm_beetle_throw_stone");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SPIKED_VERDHELM_BEETLE_HURT = register("spiked_verdhelm_beetle_hurt");
+    public static final DeferredHolder<SoundEvent, SoundEvent> SPIKED_VERDHELM_BEETLE_DEATH = register("spiked_verdhelm_beetle_death");
+
+    public static final DeferredHolder<SoundEvent, SoundEvent> SHOOTING_ROCK_BREAK = register("shooting_rock_break");
+
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLOCK_HIT = register("tech_block_hit");
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLOCK_BREAK = register("tech_block_break");
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLOCK_PLACE = register("tech_block_place");

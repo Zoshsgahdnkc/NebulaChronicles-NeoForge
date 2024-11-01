@@ -110,6 +110,7 @@
   "item.nch.rocket_fuel": "Rocket Fuel",
   "item.nch.aether_root_spore": "Aether Root Spore",
   "item.nch.verdhelm_beetle_spawn_egg": "Verdhelm Beetle Spawn Egg",
+  "item.nch.spiked_verdhelm_beetle_spawn_egg": "Spiked Verdhelm Beetle Spawn Egg",
 
   "TOOLTIPS >>>": "",
   "tooltip.nch.lemon": "[Debug Item] Currently Used To Teleport",
@@ -128,6 +129,10 @@
 
   "ENTITIES >>>": "",
   "entity.nch.verdhelm_beetle": "Verdhelm Beetle",
+  "entity.nch.spiked_verdhelm_beetle": "Spiked Verdhelm Beetle",
+
+  "EFFECTS >>>": "",
+  "effect.nch.cripple": "Cripple",
 
   "SUBTITLES >>>": "",
   "subtitles.nch.aether_root_spore_spread": "Aether root spore rings",
@@ -137,5 +142,10 @@
   "subtitles.nch.verdhelm_beetle_roll_up": "Verdhelm beetle rolls up",
   "subtitles.nch.verdhelm_beetle_hurt": "Verdhelm beetle hurts",
   "subtitles.nch.verdhelm_beetle_hurt_reduced": "Verdhelm beetle shields itself",
-  "subtitles.nch.verdhelm_beetle_death": "Verdhelm beetle dies"
+  "subtitles.nch.verdhelm_beetle_death": "Verdhelm beetle dies",
+  "subtitles.nch.spiked_verdhelm_beetle_ambient": "Spiked verdhelm beetle hisses",
+  "subtitles.nch.spiked_verdhelm_beetle_throw_stone": "Spiked verdhelm beetle throws stone",
+  "subtitles.nch.spiked_verdhelm_beetle_hurt": "Spiked verdhelm beetle hurts",
+  "subtitles.nch.spiked_verdhelm_beetle_death": "Spiked verdhelm beetle dies",
+  "subtitles.nch.shooting_rock_break": "Stone breaks"
 }

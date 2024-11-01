@@ -145,6 +145,7 @@ public class ModTabs {
                 accept(tab, ModItems.AETHER_ROOT_SPORE);
                 accept(tab, ModBlocks.VERDHELM_LARVAE);
                 accept(tab, ModItems.VERDHELM_BEETLE_SPAWN_EGG);
+                accept(tab, ModItems.SPIKED_VERDHELM_BEETLE_SPAWN_EGG);
             })
             .build());
     private static void accept(CreativeModeTab.Output tab, DeferredItem<? extends ItemLike> object) {
