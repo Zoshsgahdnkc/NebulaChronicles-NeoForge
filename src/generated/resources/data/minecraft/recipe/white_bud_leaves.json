@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "nch:white_bud_leaves_block"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "nch:white_bud_leaves"
+  }
+}

@@ -3,6 +3,7 @@ package com.zoshsgahdnkc.NebulaChronicles;
 import com.mojang.logging.LogUtils;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlockEntities;
 import com.zoshsgahdnkc.NebulaChronicles.registries.*;
+import com.zoshsgahdnkc.NebulaChronicles.utils.ModCommonConfig;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 import net.neoforged.api.distmarker.Dist;
@@ -11,6 +12,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
@@ -24,6 +26,7 @@ public class NebulaChronicles {
     public NebulaChronicles(IEventBus modEventBus, Dist dist, ModContainer modContainer) {
 
         modEventBus.addListener(this::commonSetup);
+        modContainer.registerConfig(ModConfig.Type.COMMON, ModCommonConfig.COMMON_SPEC);
         ModItems.ITEMS.register(modEventBus);
         ModBlocks.BLOCKS.register(modEventBus);
         ModSounds.SOUND_EVENT.register(modEventBus);

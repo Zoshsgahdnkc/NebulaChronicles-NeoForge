@@ -78,6 +78,7 @@
   "block.nch.nickelsteel_plastic_scaffolding": "Nickelsteel Plastic Scaffolding",
   "block.nch.verdhelm_larvae": "Verdhelm Larvae",
   "block.nch.spiked_verdhelm_beetle_skull": "Spiked Verdhelm Beetle Skull",
+  "block.nch.white_bud_leaves_block": "White Bud Leaves Block",
 
   "ITEMS >>>": "",
   "item.nch.lemon": "LEMON",
@@ -112,6 +113,9 @@
   "item.nch.cpu": "Crystal Processing Unit",
   "item.nch.rocket_fuel": "Rocket Fuel",
   "item.nch.aether_root_spore": "Aether Root Spore",
+  "item.nch.white_bud_leaves": "White Bud Leaves",
+  "item.nch.white_bud_stew": "White Bud Stew",
+  "item.nch.pebble_berries": "Pebble Berries",
   "item.nch.verdhelm_beetle_spawn_egg": "Verdhelm Beetle Spawn Egg",
   "item.nch.spiked_verdhelm_beetle_spawn_egg": "Spiked Verdhelm Beetle Spawn Egg",
 

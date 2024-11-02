@@ -33,6 +33,7 @@ public class ModBlockLoot extends BlockLootSubProvider {
             ModBlocks.FORTRESS_DOOR,
             ModBlocks.COARSE_CACTUS_DOOR,
             ModBlocks.CARGO_BOX,
+            ModBlocks.WHITE_BUD,
 
             ModBlocks.SILVERBLANC_STONE,
             ModBlocks.MOSS_SILVERBLANC_STONE,
@@ -55,6 +56,9 @@ public class ModBlockLoot extends BlockLootSubProvider {
         add(ModBlocks.FORTRESS_DOOR.get(), (this::createDoorTable));
         add(ModBlocks.COARSE_CACTUS_DOOR.get(), (this::createDoorTable));
         add(ModBlocks.COARSE_CACTUS_TRAPDOOR.get(), (this::createDoorTable));
+        add(ModBlocks.WHITE_BUD.get(), createSilkTouchDispatchTable(ModBlocks.WHITE_BUD.get(),
+                LootItem.lootTableItem(ModItems.WHITE_BUD_LEAVES)
+                        .apply(SetItemCountFunction.setCount(BinomialDistributionGenerator.binomial(2, 0.3f)))));
         add(ModBlocks.SILVERBLANC_STONE.get(),(block) ->
                 createSingleItemTableWithSilkTouch(block, ModBlocks.SILVERBLANC_COBBLESTONE.get()));
         add(ModBlocks.MOSS_SILVERBLANC_STONE.get(),(block) ->

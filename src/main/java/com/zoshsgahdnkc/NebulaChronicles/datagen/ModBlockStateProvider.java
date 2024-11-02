@@ -128,7 +128,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wall(ModBlocks.SILVERBLANC_STONE_BRICKS_WALL, getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE_BRICKS)));
         wall(ModBlocks.SILVERBLANC_STONE_WALL, getRL(blockSlashName(ModBlocks.SILVERBLANC_STONE)));
         wall(ModBlocks.SILVERBLANC_COBBLESTONE_WALL, getRL(blockSlashName(ModBlocks.SILVERBLANC_COBBLESTONE)));
-        slab(ModBlocks.IRON_BRICKS_SLAB, getRL(blockSlashName(ModBlocks.IRON_BRICKS_SLAB)), getRL(blockSlashName(ModBlocks.IRON_BRICKS_SLAB)));
+        slab(ModBlocks.IRON_BRICKS_SLAB, getRL(blockSlashName(ModBlocks.IRON_BRICKS_SLAB)), getRL(blockSlashName(ModBlocks.IRON_BRICKS)));
         doorBlockWithRenderType((DoorBlock) ModBlocks.FORTRESS_DOOR.get(),
                 getRL("block/fortress_door_bottom"),
                 getRL("block/fortress_door_top"),

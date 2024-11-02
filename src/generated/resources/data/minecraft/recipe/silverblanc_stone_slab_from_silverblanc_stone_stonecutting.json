@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "nch:silverblanc_stone"
+  },
+  "result": {
+    "count": 2,
+    "id": "nch:silverblanc_stone_slab"
+  }
+}

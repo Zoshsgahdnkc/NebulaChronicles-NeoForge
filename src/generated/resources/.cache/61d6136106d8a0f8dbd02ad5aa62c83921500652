@@ -1,4 +1,4 @@
-// 1.21	2024-10-31T21:49:33.4852053	Item Models: nch
+// 1.21	2024-11-02T22:54:18.5614333	Item Models: nch
 c1cc65e2e489f3a25ec0203ecebe385d75f29a50 assets/nch/models/item/aether_root_spore.json
 6d1d415fa845640c1fb1a21b73c2aa583a01eaed assets/nch/models/item/battery_waste.json
 ce923db57497475a0641edeaf32ff0bdd76a557f assets/nch/models/item/biomass_battery.json
@@ -25,6 +25,7 @@ f2a1dea2a2a6762d4cd5e2232f41d3df394a2481 assets/nch/models/item/nickel_ingot.jso
 91a4bcb31f0c6c2bee7e94a9e5310b9c69254c6c assets/nch/models/item/nickel_nugget.json
 f95749023f92093857b451557bbdd5b3e5ecd3a2 assets/nch/models/item/organic_plastic.json
 ddf9048899816176e7ae0299f5e60ade80f376c5 assets/nch/models/item/organic_plastic_nugget.json
+e85b2bfe23f78cd7240be03433767bade754ad1c assets/nch/models/item/pebble_berries.json
 352e4ecd7b8b0c5c7e9d8b08604f9ba487a77600 assets/nch/models/item/raw_nickel.json
 07725caf0bc90e571a07b8fb74023ca668dd80bc assets/nch/models/item/redstone_battery.json
 875b4d9121f1977ddd08fc8dea742375d3a85540 assets/nch/models/item/redstone_power_panel.json
@@ -41,3 +42,5 @@ b29ecb18da8b8ea6bd5529ae9ef4e4e21340783a assets/nch/models/item/ultralloy_coil.j
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/nch/models/item/verdhelm_beetle_spawn_egg.json
 2b0f2504cc7fd982bb881c0b374530efa76d05e9 assets/nch/models/item/verdhelm_larvae.json
 4754eabd324dead1125da3746d35eb8fece2444a assets/nch/models/item/white_bud.json
+ec3fc68575d3ccb3463ec1954513886bf8835875 assets/nch/models/item/white_bud_leaves.json
+0a98189bcad9f99c89edd552fadc12362225c0e7 assets/nch/models/item/white_bud_stew.json

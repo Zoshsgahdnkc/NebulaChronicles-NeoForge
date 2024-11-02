@@ -107,6 +107,9 @@ public class ModTabs {
             .displayItems((param, tab) -> {
                 accept(tab, ModItems.LEMON);
                 accept(tab, ModItems.DUOCURRENT_CRYSTAL_SHARD);
+                accept(tab, ModItems.WHITE_BUD_LEAVES);
+                accept(tab, ModBlocks.WHITE_BUD_LEAVES_BLOCK);
+                accept(tab, ModItems.WHITE_BUD_STEW);
                 accept(tab, ModBlocks.ARCHEOVA_STONE);
                 accept(tab, ModBlocks.COSMIC_SAND);
                 accept(tab, ModBlocks.COSMIC_SANDSTONE);

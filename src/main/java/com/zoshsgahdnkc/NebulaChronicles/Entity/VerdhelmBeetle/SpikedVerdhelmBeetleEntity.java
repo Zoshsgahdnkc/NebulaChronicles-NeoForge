@@ -1,6 +1,7 @@
 package com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmBeetle;
 
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModSounds;
+import com.zoshsgahdnkc.NebulaChronicles.utils.ModCommonConfig;
 import com.zoshsgahdnkc.NebulaChronicles.utils.Utils;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -32,9 +33,9 @@ import java.util.EnumSet;
 
 //TODO: animation not working while chasing target
 public class SpikedVerdhelmBeetleEntity extends AbstractVerdhelmBeetleEntity {
-    private static final int ATTACK_RANGE_SQR = 196;
-    private static final int RANGED_ATTACK_INTERVAL = 80;
-    private static final int HARD_RANGED_ATTACK_INTERVAL = 50;
+    private final int ATTACK_RANGE_SQR = ModCommonConfig.ATTACK_RANGE_SQR.get();
+    private final int RANGED_ATTACK_INTERVAL = ModCommonConfig.RANGED_ATTACK_INTERVAL.get();
+    private final int HARD_RANGED_ATTACK_INTERVAL = ModCommonConfig.HARD_RANGED_ATTACK_INTERVAL.get();
     public AnimationState idleState = new AnimationState();
     public int idleStateTimeout = 0;
     public AnimationState attackingState = new AnimationState();

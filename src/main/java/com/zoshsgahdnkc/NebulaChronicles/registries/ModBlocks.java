@@ -5,8 +5,10 @@ import com.zoshsgahdnkc.NebulaChronicles.block.*;
 import com.zoshsgahdnkc.NebulaChronicles.block.entityblock.NickelsteelPlasticContainerBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.effect.MobEffects;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
@@ -206,10 +208,22 @@ public class ModBlocks {
             () -> new SpikedVerdhelmBeetleSkullBlock(BlockBehaviour.Properties.of()
                     .sound(SoundType.WOOD)
                     .strength(0.5f, 2.0f)
-                    .mapColor(DyeColor.GRAY)
+                    .mapColor(DyeColor.BLACK)
                     .isValidSpawn(Blocks::never)
                     .isSuffocating(ModBlocks::never)
             ));
+    public static final DeferredBlock<Block> WHITE_BUD_LEAVES_BLOCK = registerBlock("white_bud_leaves_block",
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .sound(SoundType.WART_BLOCK)
+                    .instrument(NoteBlockInstrument.GUITAR)
+                    .strength(1f)
+                    .mapColor(DyeColor.GRAY)
+                    .ignitedByLava()) {
+                @Override
+                public void fallOn(Level pLevel, BlockState pState, BlockPos pPos, Entity pEntity, float pFallDistance) {
+                    pEntity.causeFallDamage(pFallDistance, 0.05f, pLevel.damageSources().fall());
+                }
+            });
 
     private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
         return false;

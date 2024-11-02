@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_coarse_cactus_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nch:coarse_cactus_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nch:coarse_cactus_door"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_coarse_cactus_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nch:coarse_cactus_door"
+    ]
+  }
+}

@@ -78,6 +78,7 @@
   "block.nch.nickelsteel_plastic_scaffolding": "镍钢塑料脚手架",
   "block.nch.verdhelm_larvae": "青盔幼虫",
   "block.nch.spiked_verdhelm_beetle_skull": "尖角青盔虫头颅",
+  "block.nch.white_bud_leaves_block": "白芽叶片块",
 
 
   "ITEMS >>>": "",
@@ -113,6 +114,9 @@
   "item.nch.cpu": "水晶处理器",
   "item.nch.rocket_fuel": "火箭燃料",
   "item.nch.aether_root_spore": "以太根孢子",
+  "item.nch.white_bud_leaves": "白芽叶片",
+  "item.nch.white_bud_stew": "白芽炖菜",
+  "item.nch.pebble_berries": "卵石莓",
   "item.nch.verdhelm_beetle_spawn_egg": "青盔虫刷怪蛋",
   "item.nch.spiked_verdhelm_beetle_spawn_egg": "尖角青盔虫刷怪蛋",
 

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:bowl"
+    },
+    {
+      "item": "nch:white_bud_leaves"
+    },
+    {
+      "item": "nch:white_bud_leaves"
+    },
+    {
+      "item": "nch:aether_root_spore"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "nch:white_bud_stew"
+  }
+}
