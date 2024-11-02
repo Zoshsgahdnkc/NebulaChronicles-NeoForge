@@ -36,7 +36,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.function.IntFunction;
 
-public class VerdhelmBeetleEntity extends Monster{
+public class VerdhelmBeetleEntity extends AbstractVerdhelmBeetleEntity{
     public VerdhelmBeetleEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
         int size = 0;
@@ -48,6 +48,7 @@ public class VerdhelmBeetleEntity extends Monster{
         this.getAttribute(ModAttributes.VERDHELM_SIZE).addTransientModifier(
                 new AttributeModifier(ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "verdhelm_size"),
                         size, AttributeModifier.Operation.ADD_VALUE));
+        this.xpReward = 2;
     }
 
     private static final AttributeModifier ARMOR_MODIFIER = new AttributeModifier(

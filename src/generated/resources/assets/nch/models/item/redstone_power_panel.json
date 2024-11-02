@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "nch:item/redstone_power_panel"
-  }
+  "parent": "nch:block/redstone_power_panel"
 }

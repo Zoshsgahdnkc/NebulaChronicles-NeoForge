@@ -18,7 +18,6 @@ import net.minecraft.world.level.levelgen.placement.*;
 import java.util.List;
 
 public class ModPF {
-    //TODO Too little ores
     public static final ResourceKey<PlacedFeature> PLACE_STRANGE_FERN = createKey("place_strange_fern");
     public static final ResourceKey<PlacedFeature> PLACE_WHITE_BUD = createKey("place_white_bud");
     public static final ResourceKey<PlacedFeature> PLACE_SILVERBLANC_FLOWER = createKey("place_silverblanc_flower");
@@ -107,20 +106,20 @@ public class ModPF {
                 CountPlacement.of(2), InSquarePlacement.spread(), BiomeFilter.biome(),
                 HeightRangePlacement.uniform(VerticalAnchor.absolute(-48), VerticalAnchor.absolute(0)));
 
-        registerOreCount(context, features, SB_ORE_COPPER, ModCF.ORE_COPPER_SMALL, 6, 32, 160);
-        registerOreCount(context, features, SB_ORE_COPPER_LARGE, ModCF.ORE_COPPER_LARGE, 4, 32, 160);
-        registerOreCount(context, features, SB_ORE_IRON_UPPER, ModCF.ORE_IRON_SMALL, 48, 0, 160);
-        registerOreCount(context, features, SB_ORE_IRON, ModCF.ORE_IRON_SMALL, 12, 0, 112);
-        registerOreCount(context, features, SB_ORE_IRON_LARGE, ModCF.ORE_IRON_LARGE, 8, 16, 88);
-        registerOreCount(context, features, SB_ORE_NICKEL, ModCF.ORE_NICKEL_SMALL, 12, 0, 96);
-        registerOreCount(context, features, SB_ORE_NICKEL_LARGE, ModCF.ORE_NICKEL_LARGE, 12, 0, 80);
-        registerOreCount(context, features, SB_ORE_GOLD, ModCF.ORE_GOLD_SMALL, 5, 0, 96);
-        registerOreCount(context, features, SB_ORE_GOLD_LARGE, ModCF.ORE_GOLD_LARGE, 3, 0, 56);
-        registerOreCount(context, features, SB_ORE_LAPIS, ModCF.ORE_LAPIS, 5, 16, 80);
-        registerOreCount(context, features, SB_ORE_DIAMOND_UPPER, ModCF.ORE_DIAMOND_UPPER, 3, 28, 68);
-        registerOreCount(context, features, SB_ORE_OBSIDIAN, ModCF.ORE_OBSIDIAN, 4, 0, 48);
-        registerOreCount(context, features, SB_ORE_CRYING_OBSIDIAN, ModCF.ORE_CRYING_OBSIDIAN, 2, 0, 48);
-        registerOreRarity(context, features, SB_ORE_DIAMOND_LOWER, ModCF.ORE_DIAMOND_LOWER, 1, -40, 40);
+        registerOreCount(context, features, SB_ORE_COPPER, ModCF.ORE_COPPER_SMALL, 6, -16, 112);
+        registerOreCount(context, features, SB_ORE_COPPER_LARGE, ModCF.ORE_COPPER_LARGE, 4, -16, 112);
+        registerOreCount(context, features, SB_ORE_IRON_UPPER, ModCF.ORE_IRON_SMALL, 48, -48, 112);
+        registerOreCount(context, features, SB_ORE_IRON, ModCF.ORE_IRON_SMALL, 15, -48, 64);
+        registerOreCount(context, features, SB_ORE_IRON_LARGE, ModCF.ORE_IRON_LARGE, 10, -32, 40);
+        registerOreCount(context, features, SB_ORE_NICKEL, ModCF.ORE_NICKEL_SMALL, 14, -48, 48);
+        registerOreCount(context, features, SB_ORE_NICKEL_LARGE, ModCF.ORE_NICKEL_LARGE, 13, -48, 32);
+        registerOreCount(context, features, SB_ORE_GOLD, ModCF.ORE_GOLD_SMALL, 7, -48, 48);
+        registerOreCount(context, features, SB_ORE_GOLD_LARGE, ModCF.ORE_GOLD_LARGE, 4, -48, 8);
+        registerOreCount(context, features, SB_ORE_LAPIS, ModCF.ORE_LAPIS, 8, -32, 32);
+        registerOreCount(context, features, SB_ORE_DIAMOND_UPPER, ModCF.ORE_DIAMOND_UPPER, 4, -4, 20);
+        registerOreRarity(context, features, SB_ORE_DIAMOND_LOWER, ModCF.ORE_DIAMOND_LOWER, 1, -88, -8);
+        registerOreCount(context, features, SB_ORE_OBSIDIAN, ModCF.ORE_OBSIDIAN, 4, -48, 0);
+        registerOreCount(context, features, SB_ORE_CRYING_OBSIDIAN, ModCF.ORE_CRYING_OBSIDIAN, 2, -48, 0);
     }
     protected static ResourceKey<PlacedFeature> createKey(String key) {
         return ResourceKey.create(Registries.PLACED_FEATURE, ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, key));
@@ -140,7 +139,7 @@ public class ModPF {
                                          ResourceKey<PlacedFeature> placed, ResourceKey<ConfiguredFeature<?, ?>> configured,
                                          int count, int trapezoidMin, int trapezoidMax) {
         register(context, placed, features.getOrThrow(configured), CountPlacement.of(count), InSquarePlacement.spread(),
-                HeightRangePlacement.of(TrapezoidHeight.of(VerticalAnchor.aboveBottom(trapezoidMin), VerticalAnchor.aboveBottom(trapezoidMax))),
+                HeightRangePlacement.of(TrapezoidHeight.of(VerticalAnchor.absolute(trapezoidMin), VerticalAnchor.absolute(trapezoidMax))),
                 BiomeFilter.biome());
     }
     private static void registerOreRarity(BootstrapContext<PlacedFeature> context, HolderGetter<ConfiguredFeature<?, ?>> features,

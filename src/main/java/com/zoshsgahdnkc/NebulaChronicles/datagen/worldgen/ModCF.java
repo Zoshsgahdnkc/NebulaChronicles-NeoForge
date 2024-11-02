@@ -2,9 +2,9 @@ package com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen;
 
 import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.block.CoarseCactusBlock;
+import com.zoshsgahdnkc.NebulaChronicles.datagen.tags.ModBlockTags;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModFeatures;
-import com.zoshsgahdnkc.NebulaChronicles.utils.ModBlockTags;
 import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.feature.configurations.SimpleReplacementConfiguration;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
@@ -78,7 +78,7 @@ public class ModCF {
                 .add(ModBlocks.PURPLE_KODOKU_FLOWER.get().defaultBlockState(), 1)), 6));
         register(context, WHITE_KODOKU_FLOWER, Feature.RANDOM_PATCH, grassPatch(BlockStateProvider.simple(ModBlocks.WHITE_KODOKU_FLOWER.get().defaultBlockState()), 12));
         register(context, AMETHYST, ModFeatures.CAVE_AMETHYST.get(), new NoneFeatureConfiguration());
-        register(context, SILVERBLANC_SALTY_ICE_LAKE, Feature.LAKE, new LakeFeature.Configuration(BlockStateProvider.simple(ModBlocks.SALTY_ICE.get()), BlockStateProvider.simple(ModBlocks.SILVERBLANC_STONE.get())));
+        register(context, SILVERBLANC_SALTY_ICE_LAKE, Feature.LAKE, new LakeFeature.Configuration(BlockStateProvider.simple(ModBlocks.SALTY_ICE.get()), BlockStateProvider.simple(ModBlocks.SILVERBLANC_COBBLESTONE.get())));
         register(context, DISK_FROZEN_SOIL, Feature.DISK, new DiskConfiguration(RuleBasedBlockStateProvider.simple(ModBlocks.CRYOSOL.get()),
                 BlockPredicate.matchesBlocks(ModBlocks.CRYOSOL.get(), ModBlocks.MOSS_CRYOSOL.get()),
                 UniformInt.of(3, 5), 1));

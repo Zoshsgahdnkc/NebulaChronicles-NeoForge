@@ -37,6 +37,10 @@ public class ModSounds {
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLOCK_STEP = register("tech_block_step");
     public static final DeferredHolder<SoundEvent, SoundEvent> TECH_BLOCK_FALL = register("tech_block_fall");
 
+    public static final DeferredHolder<SoundEvent, SoundEvent> AMBIENT_OMEN = register("ambient_omen");
+    public static final DeferredHolder<SoundEvent, SoundEvent> AMBIENT_POLAR = register("ambient_polar");
+    public static final DeferredHolder<SoundEvent, SoundEvent> BGM_WANDERLUST = register("bgm_wanderlust");
+
     public static final DeferredHolder<SoundEvent, SoundEvent> MUSIC_DISC_HALFWAY = register("music_disc_halfway");
 
     public static final SoundType TECH_BLOCK = new DeferredSoundType(

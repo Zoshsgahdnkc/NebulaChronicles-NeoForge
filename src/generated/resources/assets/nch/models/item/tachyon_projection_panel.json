@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "nch:item/tachyon_projection_panel"
-  }
+  "parent": "nch:block/tachyon_projection_panel"
 }

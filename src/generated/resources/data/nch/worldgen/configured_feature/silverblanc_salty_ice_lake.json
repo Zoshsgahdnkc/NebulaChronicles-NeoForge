@@ -4,7 +4,7 @@
     "barrier": {
       "type": "minecraft:simple_state_provider",
       "state": {
-        "Name": "nch:silverblanc_stone"
+        "Name": "nch:silverblanc_cobblestone"
       }
     },
     "fluid": {

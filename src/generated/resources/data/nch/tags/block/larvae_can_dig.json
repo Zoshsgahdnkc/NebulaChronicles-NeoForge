@@ -2,7 +2,10 @@
   "values": [
     "#minecraft:base_stone_overworld",
     "#minecraft:base_stone_nether",
+    "minecraft:crimson_nylium",
+    "minecraft:warped_nylium",
     "#nch:base_stone",
+    "nch:moss_silverblanc_stone",
     "#nch:ice",
     "minecraft:sandstone",
     "minecraft:calcite",

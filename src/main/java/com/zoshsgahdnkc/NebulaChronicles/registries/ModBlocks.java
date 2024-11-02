@@ -53,6 +53,10 @@ public class ModBlocks {
             () -> new GlazedTerracottaBlock(BlockBehaviour.Properties.ofLegacyCopy(TECH_TILE.get())));
     public static final DeferredBlock<Block> COARSE_CACTUS_PLANKS = registerBlock("coarse_cactus_planks",
             () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.OAK_PLANKS).sound(SoundType.BAMBOO_WOOD)));
+    public static final DeferredBlock<Block> COARSE_CACTUS_SLAB = registerBlock("coarse_cactus_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.ofLegacyCopy(COARSE_CACTUS_PLANKS.get())));
+    public static final DeferredBlock<Block> COARSE_CACTUS_STAIRS = registerBlock("coarse_cactus_stairs",
+            () -> new StairBlock(COARSE_CACTUS_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.ofLegacyCopy(COARSE_CACTUS_PLANKS.get())));
     public static final DeferredBlock<Block> COARSE_CACTUS_DOOR = registerBlock("coarse_cactus_door",
             () -> new DoorBlock(BlockSetType.BAMBOO, BlockBehaviour.Properties.ofLegacyCopy(COARSE_CACTUS_PLANKS.get())));
     public static final DeferredBlock<Block> COARSE_CACTUS_TRAPDOOR = registerBlock("coarse_cactus_trapdoor",
@@ -197,6 +201,14 @@ public class ModBlocks {
             () -> new VerdhelmLarvaeBlock(BlockBehaviour.Properties.of()
                     .sound(SoundType.SLIME_BLOCK)
                     .noCollission()
+            ));
+    public static final DeferredBlock<Block> SPIKED_VERDHELM_BEETLE_SKULL = registerBlock("spiked_verdhelm_beetle_skull",
+            () -> new SpikedVerdhelmBeetleSkullBlock(BlockBehaviour.Properties.of()
+                    .sound(SoundType.WOOD)
+                    .strength(0.5f, 2.0f)
+                    .mapColor(DyeColor.GRAY)
+                    .isValidSpawn(Blocks::never)
+                    .isSuffocating(ModBlocks::never)
             ));
 
     private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {

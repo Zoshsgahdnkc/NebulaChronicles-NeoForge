@@ -20,6 +20,8 @@
   "block.nch.thick_vault_stairs": "Thick Vault Stairs",
   "block.nch.low_fence": "Low Fence",
   "block.nch.coarse_cactus_planks": "Coarse Cactus Planks",
+  "block.nch.coarse_cactus_slab": "Coarse Cactus Slab",
+  "block.nch.coarse_cactus_stairs": "Coarse Cactus Stairs",
   "block.nch.coarse_cactus_door": "Coarse Cactus Door",
   "block.nch.coarse_cactus_trapdoor": "Coarse Cactus Trapdoor",
   "block.nch.nickelsteel_plastic_container": "Nickelsteel Plastic Container",
@@ -75,6 +77,7 @@
   "block.nch.iron_scaffolding": "Iron Scaffolding",
   "block.nch.nickelsteel_plastic_scaffolding": "Nickelsteel Plastic Scaffolding",
   "block.nch.verdhelm_larvae": "Verdhelm Larvae",
+  "block.nch.spiked_verdhelm_beetle_skull": "Spiked Verdhelm Beetle Skull",
 
   "ITEMS >>>": "",
   "item.nch.lemon": "LEMON",
@@ -147,5 +150,7 @@
   "subtitles.nch.spiked_verdhelm_beetle_throw_stone": "Spiked verdhelm beetle throws stone",
   "subtitles.nch.spiked_verdhelm_beetle_hurt": "Spiked verdhelm beetle hurts",
   "subtitles.nch.spiked_verdhelm_beetle_death": "Spiked verdhelm beetle dies",
-  "subtitles.nch.shooting_rock_break": "Stone breaks"
+  "subtitles.nch.shooting_rock_break": "Stone breaks",
+  "subtitles.nch.ambient_omen": "Ominous wind",
+  "subtitles.nch.ambient_polar": "Ethereal ambient"
 }

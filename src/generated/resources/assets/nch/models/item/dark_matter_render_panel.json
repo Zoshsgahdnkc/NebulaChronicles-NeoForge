@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "nch:item/dark_matter_render_panel"
-  }
+  "parent": "nch:block/dark_matter_render_panel"
 }

@@ -2,6 +2,9 @@ package com.zoshsgahdnkc.NebulaChronicles.Entity.VerdhelmBeetle;
 
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModSounds;
 import com.zoshsgahdnkc.NebulaChronicles.utils.Utils;
+import net.minecraft.network.syncher.EntityDataAccessor;
+import net.minecraft.network.syncher.EntityDataSerializers;
+import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.Difficulty;
@@ -27,17 +30,23 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.EnumSet;
 
-public class SpikedVerdhelmBeetleEntity extends Monster {
+//TODO: animation not working while chasing target
+public class SpikedVerdhelmBeetleEntity extends AbstractVerdhelmBeetleEntity {
     private static final int ATTACK_RANGE_SQR = 196;
     private static final int RANGED_ATTACK_INTERVAL = 80;
     private static final int HARD_RANGED_ATTACK_INTERVAL = 50;
     public AnimationState idleState = new AnimationState();
+    public int idleStateTimeout = 0;
+    public AnimationState attackingState = new AnimationState();
+    public int attackingStateTimeout = 0;
+    protected static final EntityDataAccessor<Boolean> THROWING =
+            SynchedEntityData.defineId(SpikedVerdhelmBeetleEntity.class, EntityDataSerializers.BOOLEAN);
 
     public SpikedVerdhelmBeetleEntity(EntityType<? extends Monster> pEntityType, Level pLevel) {
         super(pEntityType, pLevel);
         this.setPathfindingMalus(PathType.DANGER_FIRE, 16.0F);
         this.setPathfindingMalus(PathType.DAMAGE_FIRE, -1.0F);
-        this.xpReward = 8;
+        this.xpReward = 12;
     }
 
     public static AttributeSupplier.Builder createAttributes() {
@@ -75,7 +84,7 @@ public class SpikedVerdhelmBeetleEntity extends Monster {
         this.goalSelector.addGoal(5, new LookAtPlayerGoal(this, Player.class, 8.0F));
         this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 //        this.targetSelector.addGoal(1, new LairHitByTargetGoal(this));
-        this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
+        this.targetSelector.addGoal(2, new HurtByTargetGoal(this).setAlertOthers(AbstractVerdhelmBeetleEntity.class));
         this.targetSelector.addGoal(3, new NearestAttackableTargetGoal<>(this, Player.class, true));
     }
 
@@ -87,6 +96,34 @@ public class SpikedVerdhelmBeetleEntity extends Monster {
         }
     }
 
+    private void setUpAnimationState() {
+        if (idleStateTimeout <= 0) {
+            idleStateTimeout = this.random.nextInt(40) + 80;
+            idleState.startIfStopped(this.tickCount);
+        } else {
+            --idleStateTimeout;
+        }
+
+        if (isAttacking()) {
+            if (attackingStateTimeout <= 0) {
+                attackingStateTimeout = 8;
+                attackingState.startIfStopped(this.tickCount);
+            } else {
+                --attackingStateTimeout;
+            }
+        } else {
+            attackingState.stop();
+        }
+    }
+
+    protected void setAttacking(boolean attacking) {
+        this.entityData.set(THROWING, attacking);
+    }
+
+    protected boolean isAttacking() {
+        return this.entityData.get(THROWING);
+    }
+
     @Override
     public boolean doHurtTarget(Entity pEntity) {
         boolean toReturn = super.doHurtTarget(pEntity);
@@ -94,6 +131,12 @@ public class SpikedVerdhelmBeetleEntity extends Monster {
             entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, (level().getDifficulty().getId() - 1) * 80));
         }
         return toReturn;
+    }
+
+    @Override
+    protected void defineSynchedData(SynchedEntityData.Builder pBuilder) {
+        super.defineSynchedData(pBuilder);
+        pBuilder.define(THROWING, false);
     }
 
     @Nullable
@@ -111,19 +154,14 @@ public class SpikedVerdhelmBeetleEntity extends Monster {
     protected SoundEvent getDeathSound() {
         return ModSounds.SPIKED_VERDHELM_BEETLE_DEATH.get();
     }
-
-    private void setUpAnimationState() {
-        idleState.startIfStopped(this.tickCount);
-    }
-
     // Shooting Rock to Distant Target While Moving Towards It
     public class ShootRockGoal extends Goal {
-        protected int nextAttackTickCount;
+
         private int attackTime;
         private int lastSeen;
 
         public ShootRockGoal() {
-            this.setFlags(EnumSet.of(Goal.Flag.LOOK));
+            this.setFlags(EnumSet.of(Flag.LOOK));
         }
         @Override
         public boolean canUse() {
@@ -144,7 +182,6 @@ public class SpikedVerdhelmBeetleEntity extends Monster {
 
         @Override
         public void tick() {
-            System.out.println("-----------ticking");
             this.attackTime--;
             SpikedVerdhelmBeetleEntity entity = SpikedVerdhelmBeetleEntity.this;
             LivingEntity target = entity.getTarget();
@@ -159,6 +196,7 @@ public class SpikedVerdhelmBeetleEntity extends Monster {
                 if (distance < ATTACK_RANGE_SQR && hasSight) {
                     entity.getMoveControl().setWantedPosition(target.getX(), target.getY(), target.getZ(), 1.0);
                     if (attackTime <= 0) {
+                        entity.setAttacking(true);
                         RandomSource random = entity.getRandom();
                         double x = target.getX() - entity.getX();
                         double y = target.getY(0.5) - entity.getY(0.5);
@@ -169,6 +207,8 @@ public class SpikedVerdhelmBeetleEntity extends Monster {
                         entity.level().addFreshEntity(shootingRock);
                         playSound(ModSounds.SPIKED_VERDHELM_BEETLE_THROW_STONE.get());
                         attackTime = entity.level().getDifficulty() == Difficulty.HARD ? HARD_RANGED_ATTACK_INTERVAL : RANGED_ATTACK_INTERVAL;
+                    } else {
+                        entity.setAttacking(false);
                     }
                 } else if (this.lastSeen < 5) {
                     entity.getMoveControl().setWantedPosition(target.getX(), target.getY(), target.getZ(), 1.0);
@@ -188,6 +228,7 @@ public class SpikedVerdhelmBeetleEntity extends Monster {
         @Override
         public void stop() {
             super.stop();
+            entity.setAttacking(false);
             entity.setAggressive(false);
         }
 

@@ -47,8 +47,7 @@ public class ShootingRockEntity extends AbstractHurtingProjectile {
                 } else {
                     damageSource = damageSources().magic();
                 }
-                entity.hurt(damageSource, level().getDifficulty() == Difficulty.EASY ? 3 : 6);
-                if (entity instanceof LivingEntity target) {
+                if (entity instanceof LivingEntity target && entity.hurt(damageSource, level().getDifficulty() == Difficulty.EASY ? 3 : 6)) {
                     target.addEffect(new MobEffectInstance(ModEffects.CRIPPLE, 160, 2));
                 }
             }

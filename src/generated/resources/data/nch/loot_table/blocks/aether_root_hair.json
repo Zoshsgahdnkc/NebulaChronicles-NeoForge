@@ -14,7 +14,18 @@
           "name": "nch:aether_root_hair"
         }
       ],
-      "rolls": 1.0
+      "functions": [
+        {
+          "add": false,
+          "count": 1.0,
+          "function": "minecraft:set_count"
+        }
+      ],
+      "rolls": {
+        "type": "minecraft:binomial",
+        "n": 1.0,
+        "p": 0.4
+      }
     }
   ],
   "random_sequence": "nch:blocks/aether_root_hair"

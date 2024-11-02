@@ -1,4 +1,4 @@
-// 1.21	2024-10-31T15:59:39.8752615	Block States: nch
+// 1.21	2024-11-02T13:07:38.2580179	Block States: nch
 179e1bf8f6f1720f71757fa950620e9bd9281015 assets/nch/blockstates/aether_root.json
 21d1420df0778f55a457e0c4ad240c721fe99877 assets/nch/blockstates/aether_root_hair.json
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
@@ -8,6 +8,8 @@ ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.j
 d93c39f6cc24b543461422098b4d921031698535 assets/nch/blockstates/coarse_cactus.json
 08c809eba530763f11affac5b6205e736b3b70b9 assets/nch/blockstates/coarse_cactus_door.json
 cd44f80a8e205c57ca886cb40634c1aec8f9106e assets/nch/blockstates/coarse_cactus_planks.json
+5c0c6be770483af1e979edf28a7ef954327b66a1 assets/nch/blockstates/coarse_cactus_slab.json
+c066675743eb4be5710eb2f5608ae37ffb0aad51 assets/nch/blockstates/coarse_cactus_stairs.json
 ac025baa3c8cf421d4a587624e7145d477103c52 assets/nch/blockstates/coarse_cactus_trapdoor.json
 0239974e5e36fc8d2fda58c4310d37f23525cc22 assets/nch/blockstates/cosmic_sand.json
 cde214bf968f72b1124b114d83eb65fa63d88ae6 assets/nch/blockstates/cosmic_sandstone.json
@@ -63,6 +65,7 @@ cd2a2d362393d057635991d9e56ba607d47153c5 assets/nch/blockstates/silverblanc_ston
 675db2bf5927a9ca9537fb3a279fdef89e5b248a assets/nch/blockstates/silverblanc_stone_wall.json
 7559c6a54b611db19d23005e8d68cd75a0e3d1d4 assets/nch/blockstates/simple_vault_stairs.json
 268393af334bd9730637c6a391d40202042b6f2e assets/nch/blockstates/solar_panel.json
+71208d3749fbc38b975d8df1ae01b6f2d46b2734 assets/nch/blockstates/spiked_verdhelm_beetle_skull.json
 84eeebe7a4e3a456178ccf834a763913d42add90 assets/nch/blockstates/strange_fern.json
 8bbb99b22145fb1ab35d8fda498920ceab703779 assets/nch/blockstates/tachyon_projection_panel.json
 60e116970173a2c08d6b41b0fa2335fb2aa73b30 assets/nch/blockstates/tech_tile.json
@@ -92,6 +95,11 @@ da527c3361d46551de8899e39b6ad2a1a9b0c4e2 assets/nch/models/block/coarse_cactus_d
 d41a24518f3ace160a8001c93d17f484e446bb67 assets/nch/models/block/coarse_cactus_door_top_right.json
 747de20b91f99aabb514122b2f989d52f355e3ef assets/nch/models/block/coarse_cactus_door_top_right_open.json
 eeadd742bd7e63be8a7b39d9093ad54da076ddc9 assets/nch/models/block/coarse_cactus_planks.json
+2385d8b21245ad313a1f019fdba65744f7ee5bfb assets/nch/models/block/coarse_cactus_slab.json
+336025b3117ddfc0443e8ff376aaf0c160ef5a05 assets/nch/models/block/coarse_cactus_slab_top.json
+c064f1c53f4a5c6d717dd034455607da552354fa assets/nch/models/block/coarse_cactus_stairs.json
+093f787bc5fd94557a1d5a5c0b2f2d360b54ad5e assets/nch/models/block/coarse_cactus_stairs_inner.json
+b5a2e808e5dcb467b60272d3ea8f37772a01a008 assets/nch/models/block/coarse_cactus_stairs_outer.json
 ccdd895170f970810a131065f9dd5c2df4dff6eb assets/nch/models/block/coarse_cactus_trapdoor_bottom.json
 e5ab34364fbd019d46df8ff40a262f06e8c8dea1 assets/nch/models/block/coarse_cactus_trapdoor_open.json
 ee13ff204281c5f0c28fee2a214d9f2be58fbe67 assets/nch/models/block/coarse_cactus_trapdoor_top.json
@@ -187,6 +195,8 @@ ed873f955800826b580a98a5b2f3573c7a8d64b4 assets/nch/models/block/white_kodoku_fl
 874863327f2a852632bcb3b9beb5d8d9f4f97375 assets/nch/models/item/bunker_bricks.json
 aa4f3613d526f6aa64d0e05ad50a279af239e406 assets/nch/models/item/cargo_box.json
 5e9fced6cc2ea1fde09a02c7aecd33613a2803c8 assets/nch/models/item/coarse_cactus_planks.json
+c7cbd8250224d4a0236e95ad3a5ee60bab9d968d assets/nch/models/item/coarse_cactus_slab.json
+c77b77f62d9a34eab60c82284bd1ccc4d2a77ff5 assets/nch/models/item/coarse_cactus_stairs.json
 9b5661fe0cbbb02c82b8f1d34fc38f34ee365cde assets/nch/models/item/coarse_cactus_trapdoor.json
 ff5ac123e79d6c6b1e7d5d85fbec47f186e21c55 assets/nch/models/item/cosmic_sand.json
 7b150132839f7be3df3f651e749cf317d431654a assets/nch/models/item/cosmic_sandstone.json
@@ -241,6 +251,7 @@ b254131d98484a7a5681494f119d49977d19b31a assets/nch/models/item/silverblanc_ston
 2ad5a8637c2e7671d89ef62adc4a5e29a6b50f5b assets/nch/models/item/silverblanc_stone_wall.json
 4191d3860d86a3c0131b94164a9cec582577efd5 assets/nch/models/item/simple_vault_stairs.json
 fba908be7ae6e9f5a777f8fe9fe25685dd677f58 assets/nch/models/item/solar_panel.json
+5c7efbbc33e6a490963d3b795133abe9c6f47709 assets/nch/models/item/spiked_verdhelm_beetle_skull.json
 feed4167209b92aec1ed3ceddf7d9b838bbc0ced assets/nch/models/item/strange_fern.json
 da7f438c037d3631e489269e07c49c842d8b2b92 assets/nch/models/item/tachyon_projection_panel.json
 70c5733378cced351b108fe409085592706978c0 assets/nch/models/item/tech_tile.json

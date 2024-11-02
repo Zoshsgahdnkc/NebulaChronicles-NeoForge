@@ -35,7 +35,7 @@
                   "condition": "minecraft:survives_explosion"
                 }
               ],
-              "name": "nch:silverblanc_stone"
+              "name": "nch:silverblanc_cobblestone"
             }
           ]
         }

@@ -1,21 +1,32 @@
 package com.zoshsgahdnkc.NebulaChronicles.block;
 
+import com.zoshsgahdnkc.NebulaChronicles.Entity.AetherRootSporeEntity;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModItems;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModParticles;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.BonemealableBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.phys.BlockHitResult;
 
 public class AetherRootBlock extends RotatedPillarBlock implements BonemealableBlock {
     public AetherRootBlock(Properties p_49795_) {
         super(p_49795_);
+    }
+
+    @Override
+    protected void onProjectileHit(Level pLevel, BlockState pState, BlockHitResult pHit, Projectile pProjectile) {
+        super.onProjectileHit(pLevel, pState, pHit, pProjectile);
+        if (!(pProjectile instanceof AetherRootSporeEntity)) {
+            pLevel.destroyBlock(pHit.getBlockPos(), true);
+        }
     }
 
     @Override

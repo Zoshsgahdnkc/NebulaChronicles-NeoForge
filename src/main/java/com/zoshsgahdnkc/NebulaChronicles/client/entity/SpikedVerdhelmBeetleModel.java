@@ -75,6 +75,7 @@ public class SpikedVerdhelmBeetleModel<T extends Entity> extends HierarchicalMod
 		this.root().getAllParts().forEach(ModelPart::resetPose);
 		this.applyHeadRotation(netHeadYaw, headPitch, ageInTicks);
 		this.animate(((SpikedVerdhelmBeetleEntity) entity).idleState, SpikedVerdhelmBeetleAnimation.IDLE, ageInTicks, 1f);
+		this.animate(((SpikedVerdhelmBeetleEntity) entity).attackingState, SpikedVerdhelmBeetleAnimation.ATTACK, ageInTicks, 1f);
 	}
 
 	private void applyHeadRotation(float pNetHeadYaw, float pHeadPitch, float pAgeInTicks) {

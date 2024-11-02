@@ -23,6 +23,8 @@ import java.util.function.Consumer;
 public class ModBlockStateProvider extends BlockStateProvider {
     private static final ImmutableSet<DeferredBlock<Block>> IGNORES = ImmutableSet.of(
             ModBlocks.FORTRESS_DOOR,
+            ModBlocks.COARSE_CACTUS_SLAB,
+            ModBlocks.COARSE_CACTUS_STAIRS,
             ModBlocks.COARSE_CACTUS_DOOR,
             ModBlocks.COARSE_CACTUS_TRAPDOOR,
 
@@ -61,7 +63,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.THICK_VAULT_STAIRS,
             ModBlocks.SIMPLE_VAULT_STAIRS,
             ModBlocks.LOW_FENCE,
-            ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER
+            ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER,
+            ModBlocks.SPIKED_VERDHELM_BEETLE_SKULL
     );
     private static final ImmutableSet<DeferredBlock<Block>> CROSS = ImmutableSet.of(
             ModBlocks.STRANGE_FERN,
@@ -76,7 +79,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
             ModBlocks.TACHYON_PROJECTION_PANEL,
             ModBlocks.DARK_MATTER_RENDER_PANEL,
             ModBlocks.IRON_SCAFFOLDING,
-            ModBlocks.NICKELSTEEL_PLASTIC_SCAFFOLDING
+            ModBlocks.NICKELSTEEL_PLASTIC_SCAFFOLDING,
+            ModBlocks.SPIKED_VERDHELM_BEETLE_SKULL
     );
 
     public ModBlockStateProvider(PackOutput output, ExistingFileHelper exFileHelper) {
@@ -107,6 +111,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
         multipleExistingWithWeight(ModBlocks.MOSS_CRYOSOL, 20, 12, 2, 20, 1, 20, 12, 2, 20, 1);
         multipleExistingWithRotation(ModBlocks.WHITE_BUD, 2);
         coarseCactus();
+        blockWithItem(ModBlocks.COARSE_CACTUS_SLAB, b ->slabBlock(((SlabBlock) b.get()), getRL(blockSlashName(ModBlocks.COARSE_CACTUS_PLANKS)), getRL(blockSlashName(ModBlocks.COARSE_CACTUS_PLANKS))));
+        blockWithItem(ModBlocks.COARSE_CACTUS_STAIRS, b ->stairsBlock(((StairBlock) b.get()), getRL(blockSlashName(ModBlocks.COARSE_CACTUS_PLANKS))));
         blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT, b -> logBlock((RotatedPillarBlock) b.get()));
         blockWithItem(ModBlocks.FORTRESS_WALL_LIGHT_UNLIT, b -> logBlock((RotatedPillarBlock) b.get()));

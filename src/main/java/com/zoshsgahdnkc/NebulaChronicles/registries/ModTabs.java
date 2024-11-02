@@ -44,6 +44,8 @@ public class ModTabs {
                 accept(tab, ModBlocks.LOW_FENCE);
                 accept(tab, ModItems.MUSIC_DISC_HALFWAY);
                 accept(tab, ModBlocks.COARSE_CACTUS_PLANKS);
+                accept(tab, ModBlocks.COARSE_CACTUS_SLAB);
+                accept(tab, ModBlocks.COARSE_CACTUS_STAIRS);
                 accept(tab, ModBlocks.COARSE_CACTUS_DOOR);
                 accept(tab, ModBlocks.COARSE_CACTUS_TRAPDOOR);
                 accept(tab, ModBlocks.NICKELSTEEL_PLASTIC_CONTAINER);
@@ -144,6 +146,7 @@ public class ModTabs {
                 accept(tab, ModBlocks.AETHER_ROOT_HAIR);
                 accept(tab, ModItems.AETHER_ROOT_SPORE);
                 accept(tab, ModBlocks.VERDHELM_LARVAE);
+                accept(tab, ModBlocks.SPIKED_VERDHELM_BEETLE_SKULL);
                 accept(tab, ModItems.VERDHELM_BEETLE_SPAWN_EGG);
                 accept(tab, ModItems.SPIKED_VERDHELM_BEETLE_SPAWN_EGG);
             })
