@@ -131,6 +131,7 @@ public class ModTabs {
                 accept(tab, ModBlocks.SILVERBLANC_STONE_BRICKS_SLAB);
                 accept(tab, ModBlocks.SILVERBLANC_STONE_BRICKS_STAIRS);
                 accept(tab, ModBlocks.SILVERBLANC_STONE_BRICKS_WALL);
+                accept(tab, ModBlocks.CHISELED_SILVERBLANC_STONE_BRICKS);
                 accept(tab, ModBlocks.NICKEL_ORE);
                 accept(tab, ModBlocks.DEEPSLATE_NICKEL_ORE);
                 accept(tab, ModBlocks.SILVERBLANC_COPPER_ORE);

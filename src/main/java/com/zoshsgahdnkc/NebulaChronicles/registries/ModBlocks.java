@@ -161,6 +161,8 @@ public class ModBlocks {
             () -> new WallBlock(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_COBBLESTONE.get())));
     public static final DeferredBlock<Block> SILVERBLANC_STONE_BRICKS = registerBlock("silverblanc_stone_bricks",
             () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_COBBLESTONE.get())));
+    public static final DeferredBlock<Block> CHISELED_SILVERBLANC_STONE_BRICKS = registerBlock("chiseled_silverblanc_stone_bricks",
+            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_STONE_BRICKS.get())));
     public static final DeferredBlock<Block> SILVERBLANC_STONE_BRICKS_STAIRS = registerBlock("silverblanc_stone_bricks_stairs",
             () -> new StairBlock(SILVERBLANC_STONE_BRICKS.get().defaultBlockState(), BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_STONE_BRICKS.get())));
     public static final DeferredBlock<Block> SILVERBLANC_STONE_BRICKS_SLAB = registerBlock("silverblanc_stone_bricks_slab",
@@ -214,7 +216,7 @@ public class ModBlocks {
             ));
     public static final DeferredBlock<Block> WHITE_BUD_LEAVES_BLOCK = registerBlock("white_bud_leaves_block",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .sound(SoundType.WART_BLOCK)
+                    .sound(SoundType.WOOL)
                     .instrument(NoteBlockInstrument.GUITAR)
                     .strength(1f)
                     .mapColor(DyeColor.GRAY)

@@ -11,8 +11,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.SlabBlock;
-import net.minecraft.world.level.block.StairBlock;
 import net.neoforged.neoforge.common.conditions.IConditionBuilder;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -32,10 +30,18 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModItems.WHITE_BUD_LEAVES)
                 .requires(ModItems.WHITE_BUD_LEAVES)
                 .requires(ModItems.AETHER_ROOT_SPORE)
-                //TODO : GIMME PEBBLEBERRIES !
+                .requires(ModItems.PEBBLE_BERRIES)
                 .unlockedBy(getHasName(ModItems.WHITE_BUD_LEAVES), has(ModItems.WHITE_BUD_LEAVES))
                 .unlockedBy(getHasName(ModItems.AETHER_ROOT_SPORE), has(ModItems.AETHER_ROOT_SPORE))
                 .save(output);
+        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AETHER_ROOT)
+                .define('#', ModItems.AETHER_ROOT_SPORE)
+                .pattern("###")
+                .pattern("###")
+                .pattern("###")
+                .group(null)
+                .unlockedBy(getHasName(ModItems.AETHER_ROOT_SPORE), has(ModItems.AETHER_ROOT_SPORE))
+                .save(output, ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, getSimpleRecipeName(ModBlocks.AETHER_ROOT)));
 
         // Building Blocks
         nineBlockStorageRecipes(output, RecipeCategory.MISC, ModItems.WHITE_BUD_LEAVES, RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_BUD_LEAVES_BLOCK);
@@ -46,15 +52,14 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .group(null)
                 .unlockedBy(getHasName(ModBlocks.COARSE_CACTUS), has(ModBlocks.COARSE_CACTUS))
                 .save(output, ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, getSimpleRecipeName(ModBlocks.COARSE_CACTUS_PLANKS)));
-        ShapedRecipeBuilder.shaped(RecipeCategory.MISC, ModBlocks.AETHER_ROOT)
-                .define('#', ModItems.AETHER_ROOT_SPORE)
-                .pattern("###")
-                .pattern("###")
-                .pattern("###")
+        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SILVERBLANC_STONE_BRICKS)
+                .define('#', ModBlocks.SILVERBLANC_STONE_BRICKS_SLAB)
+                .pattern("#")
+                .pattern("#")
                 .group(null)
-                .unlockedBy(getHasName(ModItems.AETHER_ROOT_SPORE), has(ModItems.AETHER_ROOT_SPORE))
-                .save(output, ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, getSimpleRecipeName(ModBlocks.AETHER_ROOT)));
-
+                .unlockedBy(getHasName(ModBlocks.SILVERBLANC_STONE_BRICKS_SLAB), has(ModBlocks.SILVERBLANC_STONE_BRICKS_SLAB))
+                .save(output);
+        stonecutterResultFromBase(output, RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_SILVERBLANC_STONE_BRICKS, ModBlocks.SILVERBLANC_STONE_BRICKS);
         // Block Variants
         slabAndStair(output, ModBlocks.IRON_BRICKS, ModBlocks.IRON_BRICKS_SLAB, ModBlocks.IRON_BRICKS_STAIRS);
         slabAndStair(output, ModBlocks.SILVERBLANC_STONE, ModBlocks.SILVERBLANC_STONE_SLAB, ModBlocks.SILVERBLANC_STONE_STAIRS);

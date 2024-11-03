@@ -1,10 +1,11 @@
-// 1.21	2024-11-02T23:07:53.6033116	Block States: nch
+// 1.21	2024-11-03T12:22:57.2983501	Block States: nch
 179e1bf8f6f1720f71757fa950620e9bd9281015 assets/nch/blockstates/aether_root.json
 21d1420df0778f55a457e0c4ad240c721fe99877 assets/nch/blockstates/aether_root_hair.json
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
 27a09f0c38c6fa92bb5f17bf80c0d2c3b0be5fdb assets/nch/blockstates/blue_kodoku_flower.json
 791b01c4ed47ae0a89cbbf4b890dad4a2870c482 assets/nch/blockstates/bunker_bricks.json
 724f744b19175264a3a1c05f27568cbf65d9426a assets/nch/blockstates/cargo_box.json
+b1e8981dc0696b6f3a7fbe91b0663bd9ca1bacd0 assets/nch/blockstates/chiseled_silverblanc_stone_bricks.json
 d93c39f6cc24b543461422098b4d921031698535 assets/nch/blockstates/coarse_cactus.json
 08c809eba530763f11affac5b6205e736b3b70b9 assets/nch/blockstates/coarse_cactus_door.json
 cd44f80a8e205c57ca886cb40634c1aec8f9106e assets/nch/blockstates/coarse_cactus_planks.json
@@ -87,6 +88,7 @@ d5ebffbcca0d2247ae20a96f87ec6b109211aded assets/nch/models/block/archeova_stone.
 7da885d63f80daef82e800e23d036643360a1ac5 assets/nch/models/block/bunker_bricks_1.json
 47f809a36789c3ed654b7e82e6166b87b278dda8 assets/nch/models/block/bunker_bricks_2.json
 3357a295282074edbaca3ab29eb4cd36e8c5f932 assets/nch/models/block/bunker_bricks_3.json
+f7321f505bdbcbdd68e1c162842af4757bc31315 assets/nch/models/block/chiseled_silverblanc_stone_bricks.json
 ce111f79fc67eaf36369d7ea22b6b5e08a2a1e8c assets/nch/models/block/coarse_cactus_door_bottom_left.json
 ea5ae727400f9a16efcb454b8f7432bd3de8a3a9 assets/nch/models/block/coarse_cactus_door_bottom_left_open.json
 da6379e9e661083d5dcf8c78fceeb68c016f95a1 assets/nch/models/block/coarse_cactus_door_bottom_right.json
@@ -196,6 +198,7 @@ ed873f955800826b580a98a5b2f3573c7a8d64b4 assets/nch/models/block/white_kodoku_fl
 42d8ceaae869d233f19300adf58dc7df4b5e0f7d assets/nch/models/item/blue_kodoku_flower.json
 874863327f2a852632bcb3b9beb5d8d9f4f97375 assets/nch/models/item/bunker_bricks.json
 aa4f3613d526f6aa64d0e05ad50a279af239e406 assets/nch/models/item/cargo_box.json
+f9d735b200a108e0f3eee925527a95af6900c1ec assets/nch/models/item/chiseled_silverblanc_stone_bricks.json
 5e9fced6cc2ea1fde09a02c7aecd33613a2803c8 assets/nch/models/item/coarse_cactus_planks.json
 c7cbd8250224d4a0236e95ad3a5ee60bab9d968d assets/nch/models/item/coarse_cactus_slab.json
 c77b77f62d9a34eab60c82284bd1ccc4d2a77ff5 assets/nch/models/item/coarse_cactus_stairs.json

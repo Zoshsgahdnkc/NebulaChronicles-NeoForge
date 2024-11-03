@@ -1,10 +1,11 @@
-// 1.21	2024-11-02T23:04:16.611699	Loot Tables
+// 1.21	2024-11-03T12:22:57.3063232	Loot Tables
 a8e7e0a33d7236c2f9e1431bf1259ad5d28a999d data/nch/loot_table/blocks/aether_root.json
 2d3540f2033c4471a1e1a5d4774344062ac6caae data/nch/loot_table/blocks/aether_root_hair.json
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_table/blocks/archeova_stone.json
 fad25934b764f1e5c00cf082b3b39b8a0d3d11df data/nch/loot_table/blocks/blue_kodoku_flower.json
 c3c366bad90dcbaea3d9305c0a4a3db67bb3e7cc data/nch/loot_table/blocks/bunker_bricks.json
 8026915ffd16a7ff0d5ef7f66c3c6c92d7217fbc data/nch/loot_table/blocks/cargo_box.json
+46475064b64031f8069faf0fa0cba59a6895c744 data/nch/loot_table/blocks/chiseled_silverblanc_stone_bricks.json
 8c3b5ce2e88a523d7890a3cce6a0d9a81b504e3c data/nch/loot_table/blocks/coarse_cactus.json
 3cbfd5afe68ff93572c54fbf20b696004af375e4 data/nch/loot_table/blocks/coarse_cactus_door.json
 9a5e44b0839b80610837e667e4be5e49c970d66c data/nch/loot_table/blocks/coarse_cactus_planks.json
