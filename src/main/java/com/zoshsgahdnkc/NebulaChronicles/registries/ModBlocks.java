@@ -223,7 +223,7 @@ public class ModBlocks {
                     .ignitedByLava()) {
                 @Override
                 public void fallOn(Level pLevel, BlockState pState, BlockPos pPos, Entity pEntity, float pFallDistance) {
-                    pEntity.causeFallDamage(pFallDistance, 0.05f, pLevel.damageSources().fall());
+                    pEntity.causeFallDamage(pFallDistance, 0.1f, pLevel.damageSources().fall());
                 }
             });
 

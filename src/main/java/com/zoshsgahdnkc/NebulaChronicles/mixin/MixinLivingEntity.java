@@ -57,7 +57,7 @@ public abstract class MixinLivingEntity {
         Planet planet = PlanetUtils.getPlanet(entity);
         if (planet != null) {
             float safeDistance = 3F / Mth.sqrt(getGravityRatio(planet));
-            distance -= safeDistance - 3;
+            distance -= safeDistance;
         }
         return distance;
     }
