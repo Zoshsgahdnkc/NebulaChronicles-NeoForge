@@ -1,5 +1,14 @@
-// 1.21	2024-11-02T14:36:59.788984	Tags for minecraft:block mod id nch
+// 1.21	2024-11-04T17:52:42.4600965	Tags for minecraft:block mod id nch
+ddccbb16fbb1766ea39edb7209a36239ef44d3a2 data/minecraft/tags/block/base_stone_overworld.json
 4ff567d8fea0ec9d68c9535f62714ecae4cd2d04 data/minecraft/tags/block/climbable.json
+2117ba4d1740fba3e988d22b84b47813c26fdbf8 data/minecraft/tags/block/dirt.json
+59c1ffec7ea6e7662cdb3601cb87192b98d072dc data/minecraft/tags/block/mineable/axe.json
+1deeff6a99855eb5dec92a79f56ce09080dad20c data/minecraft/tags/block/mineable/pickaxe.json
+5d373c8336991b60c3d18a97e54f45fc61a8a269 data/minecraft/tags/block/mineable/shovel.json
+d2caf4560ea6be366158eb1d9673ddeae1b3daab data/minecraft/tags/block/sand.json
+a95c666031ca069a8adda5c64002dc7ef6f0be0c data/minecraft/tags/block/slabs.json
+095efd2980326f36c2c5290ba97b9e667ae9e66e data/minecraft/tags/block/stairs.json
+b1d9079c28fd016b25c6830e9e06777e3591c905 data/minecraft/tags/block/walls.json
 9e13b75f34cfaeff9a6c0a8cf820192dfebe7760 data/nch/tags/block/base_stone.json
 55160c1e7e79915d59c5d686f2def29a0e8731ef data/nch/tags/block/ice.json
 1a3f1e311f67e7acad0612c115c51b99cb686e87 data/nch/tags/block/larvae_can_dig.json

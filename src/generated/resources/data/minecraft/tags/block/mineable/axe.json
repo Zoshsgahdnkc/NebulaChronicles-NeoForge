@@ -1,9 +1,9 @@
 {
-  "replace": false,
   "values": [
+    "nch:coarse_cactus",
     "nch:coarse_cactus_planks",
     "nch:coarse_cactus_slab",
-    "nch:coarse_cactus_stair",
+    "nch:coarse_cactus_stairs",
     "nch:coarse_cactus_door",
     "nch:coarse_cactus_trapdoor",
     "nch:spiked_verdhelm_beetle_skull"
