@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_fortress_wall_light_unlit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "nch:fortress_wall_light_unlit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "nch:fortress_wall_light"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_fortress_wall_light_unlit"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "nch:fortress_wall_light"
+    ]
+  }
+}

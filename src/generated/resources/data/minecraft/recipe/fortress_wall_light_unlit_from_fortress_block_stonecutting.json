@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "nch:fortress_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "nch:fortress_wall_light_unlit"
+  }
+}

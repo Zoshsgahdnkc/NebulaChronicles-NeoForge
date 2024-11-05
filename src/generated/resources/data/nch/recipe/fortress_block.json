@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "I": {
+      "item": "minecraft:iron_ingot"
+    },
+    "N": {
+      "item": "nch:nickelsteel_plastic"
+    }
+  },
+  "pattern": [
+    "NI",
+    "IN"
+  ],
+  "result": {
+    "count": 24,
+    "id": "nch:fortress_block"
+  }
+}
