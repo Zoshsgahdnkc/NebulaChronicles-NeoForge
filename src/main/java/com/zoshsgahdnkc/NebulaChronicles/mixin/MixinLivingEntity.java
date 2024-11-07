@@ -1,22 +1,19 @@
 package com.zoshsgahdnkc.NebulaChronicles.mixin;
 
 import com.zoshsgahdnkc.NebulaChronicles.datagen.worldgen.ModDimensions;
-import com.zoshsgahdnkc.NebulaChronicles.planet.Planet;
 import com.zoshsgahdnkc.NebulaChronicles.planet.PlanetUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.Mth;
 import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.Vec3;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
-import org.spongepowered.asm.mixin.injection.ModifyArg;
+import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
@@ -24,9 +21,11 @@ import static com.zoshsgahdnkc.NebulaChronicles.planet.PlanetUtils.*;
 
 @Mixin(LivingEntity.class)
 public abstract class MixinLivingEntity {
-    @Shadow private float speed;
-
-    @Shadow public abstract void push(Entity p_21294_);
+    @Inject(method = "tick", at = @At("HEAD"))
+    public void nchTick(CallbackInfo ci) {
+        LivingEntity entity = (LivingEntity) (Object) this;
+        PlanetUtils.applyOrRemoveAttributes(entity);
+    }
 
     // Modify the gravity
     @Inject(method = "travel", at = @At("TAIL"))
@@ -41,26 +40,16 @@ public abstract class MixinLivingEntity {
         }
     }
 
-    @ModifyArg(method = "causeFallDamage", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;calculateFallDamage(FF)I"), index = 1)
-    public float nchCalculateFallDamageModifyModifier(float modifier) {
+    @ModifyVariable(method = "calculateFallDamage", at = @At("HEAD"), ordinal = 1, argsOnly = true)
+    public float nchCalculateFallDamageModifyModifier(float pDamageMultiplier) {
         LivingEntity entity = (LivingEntity) (Object) this;
         Planet planet = PlanetUtils.getPlanet(entity);
         if (planet != null) {
-            modifier *= getGravityRatio(planet) * 1.5f;
+            pDamageMultiplier *= getGravityRatio(planet) * 1.5f;
         }
-        return modifier;
+        return pDamageMultiplier;
     }
 
-    @ModifyArg(method = "causeFallDamage", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;calculateFallDamage(FF)I"), index = 0)
-    public float nchCalculateFallDamageModifyDistance(float distance) {
-        LivingEntity entity = (LivingEntity) (Object) this;
-        Planet planet = PlanetUtils.getPlanet(entity);
-        if (planet != null) {
-            float safeDistance = 3F / Mth.sqrt(getGravityRatio(planet));
-            distance -= safeDistance;
-        }
-        return distance;
-    }
     @Inject(method = "maxUpStep", at = @At("HEAD"), cancellable = true)
     public void nchMaxUpStep(CallbackInfoReturnable<Float> cir) {
         LivingEntity entity = (LivingEntity) (Object) this;

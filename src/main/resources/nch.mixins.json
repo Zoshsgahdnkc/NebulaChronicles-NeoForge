@@ -5,6 +5,7 @@
   "compatibilityLevel": "JAVA_21",
   "refmap": "nch.refmap.json",
   "mixins": [
+    "MixinEntity",
     "MixinLivingEntity"
   ],
   "client": [
