@@ -60,7 +60,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> COARSE_CACTUS_STAIRS = registerBlock("coarse_cactus_stairs",
             () -> new StairBlock(COARSE_CACTUS_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.ofLegacyCopy(COARSE_CACTUS_PLANKS.get())));
     public static final DeferredBlock<Block> COARSE_CACTUS_DOOR = registerBlock("coarse_cactus_door",
-            () -> new DoorBlock(BlockSetType.BAMBOO, BlockBehaviour.Properties.ofLegacyCopy(COARSE_CACTUS_PLANKS.get())));
+            () -> new DoorBlock(BlockSetType.BAMBOO, BlockBehaviour.Properties.ofLegacyCopy(COARSE_CACTUS_PLANKS.get()).noOcclusion()));
     public static final DeferredBlock<Block> COARSE_CACTUS_TRAPDOOR = registerBlock("coarse_cactus_trapdoor",
             () -> new TrapDoorBlock(BlockSetType.BAMBOO, BlockBehaviour.Properties.ofLegacyCopy(COARSE_CACTUS_PLANKS.get()).noOcclusion()));
     public static final DeferredBlock<Block> DARK_TILE = registerBlock("dark_tile",
