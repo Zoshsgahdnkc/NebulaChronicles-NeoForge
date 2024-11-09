@@ -104,8 +104,8 @@ public class AetherRootSporeEntity extends ThrowableItemProjectile {
                 this.level().setBlock(pos.below(i), ModBlocks.AETHER_ROOT_HAIR.get().defaultBlockState(), 3);
                 this.level().updateNeighborsAt(pos, ModBlocks.AETHER_ROOT_HAIR.get());
             }
-            removing = true;
         }
+        removing = true;
     }
 
     @Override
