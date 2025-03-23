@@ -59,6 +59,8 @@ public class ModTabs {
             .icon(() -> new ItemStack(ModItems.CPU.get()))
             .withTabsBefore(TAB_MISC.getId())
             .displayItems((param, tab) -> {
+                accept(tab, ModItems.SCREWDRIVER);
+                accept(tab, ModBlocks.SOLAR_POWER_GENERATOR);
                 accept(tab, ModBlocks.IRON_SCAFFOLDING);
                 accept(tab, ModBlocks.NICKELSTEEL_PLASTIC_SCAFFOLDING);
                 accept(tab, ModBlocks.SOLAR_PANEL);
@@ -96,8 +98,8 @@ public class ModTabs {
                 accept(tab, ModBlocks.ORGANIC_PLASTIC_BLOCK);
                 accept(tab, ModBlocks.NICKELSTEEL_PLASTIC_BLOCK);
                 accept(tab, ModBlocks.THULIUM_188_BLOCK);
-                accept(tab, ModBlocks.ULTRALLOY_BLOCK);
-                accept(tab, ModBlocks.LEMURIUM_BLOCK);
+                accept(tab, ModItems.ULTRALLOY_BLOCK);
+                accept(tab, ModItems.LEMURIUM_BLOCK);
             })
             .build());
     public static final DeferredHolder<CreativeModeTab, CreativeModeTab> TAB_WORLD = TABS.register("tab_world", () -> CreativeModeTab.builder()

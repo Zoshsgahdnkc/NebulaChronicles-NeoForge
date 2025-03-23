@@ -5,6 +5,7 @@ import com.zoshsgahdnkc.NebulaChronicles.NebulaChronicles;
 import com.zoshsgahdnkc.NebulaChronicles.block.AetherRootHairBlock;
 import com.zoshsgahdnkc.NebulaChronicles.block.CoarseCactusBlock;
 import com.zoshsgahdnkc.NebulaChronicles.block.ColumnBlock;
+import com.zoshsgahdnkc.NebulaChronicles.block.DebugLightBlock;
 import com.zoshsgahdnkc.NebulaChronicles.registries.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -22,6 +23,9 @@ import java.util.function.Consumer;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     private static final ImmutableSet<DeferredBlock<Block>> IGNORES = ImmutableSet.of(
+            ModBlocks.SOLAR_POWER_GENERATOR,
+            ModBlocks.DEBUG_LIGHT_BLOCK,
+
             ModBlocks.FORTRESS_DOOR,
             ModBlocks.COARSE_CACTUS_SLAB,
             ModBlocks.COARSE_CACTUS_STAIRS,
@@ -103,7 +107,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 simple(entry);
             }
         }
-        blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
         multipleSimple(ModBlocks.IRON_COLLAGE, 3);
         multipleSimple(ModBlocks.BUNKER_BRICKS, 3);
         multipleSimple(ModBlocks.CRYOSOL, 2);
@@ -111,6 +114,9 @@ public class ModBlockStateProvider extends BlockStateProvider {
         multipleExistingWithWeight(ModBlocks.MOSS_CRYOSOL, 20, 12, 2, 20, 1, 20, 12, 2, 20, 1);
         multipleExistingWithRotation(ModBlocks.WHITE_BUD, 2);
         coarseCactus();
+        debugLight();
+        blockWithItem(ModBlocks.TECH_TILE_WITH_SIGN, b -> horizontalBlock(b.get(), cubeAll(b.get())));
+        blockWithItem(ModBlocks.SOLAR_POWER_GENERATOR, b -> simpleBlock(b.get(), models().cubeBottomTop(name(b), getRL("block/generator_side"), getRL("block/generator_bottom"), getRL("block/solar_panel_top"))));
         blockWithItem(ModBlocks.COARSE_CACTUS_SLAB, b ->slabBlock(((SlabBlock) b.get()), getRL(blockSlashName(ModBlocks.COARSE_CACTUS_PLANKS)), getRL(blockSlashName(ModBlocks.COARSE_CACTUS_PLANKS))));
         blockWithItem(ModBlocks.COARSE_CACTUS_STAIRS, b ->stairsBlock(((StairBlock) b.get()), getRL(blockSlashName(ModBlocks.COARSE_CACTUS_PLANKS))));
         blockWithItem(ModBlocks.FORTRESS_WALL, b -> simpleBlock(b.get(), models().cubeColumn(name(b), getRL("block/fortress_wall"), getRL("block/fortress_wall_top"))));
@@ -219,6 +225,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 .partialState().with(SlabBlock.TYPE, SlabType.TOP).addModels(new ConfiguredModel(models().slabTop(name(block) + "_top", side, end, end)))
                 .partialState().with(SlabBlock.TYPE, SlabType.DOUBLE).addModels(new ConfiguredModel(models().cubeColumn(name(block) + "_double", side, end)));
         blockItem(block);
+    }
+    protected void debugLight() {
+        var b = ModBlocks.DEBUG_LIGHT_BLOCK;
+        getVariantBuilder(b.get())
+                .partialState().with(DebugLightBlock.WORKING, true).addModels(new ConfiguredModel(models().cubeAll(name(b) + "_on", getRL(blockSlashName(b) + "_on"))))
+                .partialState().with(DebugLightBlock.WORKING, false).addModels(new ConfiguredModel(models().cubeAll(name(b) + "_off", getRL(blockSlashName(b) + "_off"))));
     }
 //    protected void scaffolding(DeferredBlock<Block> block) {
 //        var model = new ConfiguredModel(models().cubeBottomTop(name(block),

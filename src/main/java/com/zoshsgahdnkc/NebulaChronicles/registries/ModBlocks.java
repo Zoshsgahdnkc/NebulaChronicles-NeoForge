@@ -38,6 +38,14 @@ public class ModBlocks {
                     .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
                     .requiresCorrectToolForDrops()
             ));
+
+    // special with items
+    public static final DeferredBlock<Block> ULTRALLOY_BLOCK = BLOCKS.register("ultralloy_block",
+            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.IRON_BLOCK).friction(0.97f)));
+    public static final DeferredBlock<Block> LEMURIUM_BLOCK = BLOCKS.register("lemurium_block",
+            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.IRON_BLOCK)));
+
+    // blocks
     public static final DeferredBlock<Block> FORTRESS_WALL = registerBlock("fortress_wall",
             () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(FORTRESS_BLOCK.get())));
     public static final DeferredBlock<Block> CARGO_BOX = registerBlock("cargo_box",
@@ -90,33 +98,57 @@ public class ModBlocks {
     public static final DeferredBlock<Block> NICKELSTEEL_PLASTIC_CONTAINER = registerBlock("nickelsteel_plastic_container",
             () -> new NickelsteelPlasticContainerBlock(BlockBehaviour.Properties.ofLegacyCopy(FORTRESS_BLOCK.get()).noOcclusion()));
     public static final DeferredBlock<Block> NICKEL_BLOCK = registerBlock("nickel_block",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f,6f)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.RAW_IRON)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .sound(SoundType.METAL)
+            ));
     public static final DeferredBlock<Block> NICKELSTEEL_PLASTIC_BLOCK = registerBlock("nickelsteel_plastic_block",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.IRON_BLOCK)));
-    public static final DeferredBlock<Block> ULTRALLOY_BLOCK = registerBlock("ultralloy_block",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.IRON_BLOCK)));
-    public static final DeferredBlock<Block> LEMURIUM_BLOCK = registerBlock("lemurium_block",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(5f,6f)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_LIGHT_GRAY)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .sound(SoundType.METAL)
+            ));
     public static final DeferredBlock<Block> THULIUM_188_BLOCK = registerBlock("thulium_188_block",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.IRON_BLOCK)));
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2f,6f)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.COLOR_ORANGE)
+                    .instrument(NoteBlockInstrument.IRON_XYLOPHONE)
+                    .sound(SoundType.METAL)
+                    .lightLevel((light) -> 6)
+            ));
     public static final DeferredBlock<Block> ORGANIC_PLASTIC_BLOCK = registerBlock("organic_plastic_block",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.IRON_BLOCK).strength(2f,4f)));
+            () -> new Block(BlockBehaviour.Properties.of()
+                    .strength(2f,3f)
+                    .requiresCorrectToolForDrops()
+                    .mapColor(MapColor.METAL)
+                    .instrument(NoteBlockInstrument.XYLOPHONE)
+                    .sound(SoundType.METAL)
+            ));
     public static final DeferredBlock<Block> NICKEL_ORE = registerBlock("nickel_ore",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.IRON_ORE)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_ORE)));
     public static final DeferredBlock<Block> DEEPSLATE_NICKEL_ORE = registerBlock("deepslate_nickel_ore",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.DEEPSLATE_IRON_ORE)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE_IRON_ORE)));
     public static final DeferredBlock<Block> ARCHEOVA_STONE = registerBlock("archeova_stone",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.DEEPSLATE).strength(6f,7f)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.DEEPSLATE).strength(6f,7f)));
     public static final DeferredBlock<Block> COSMIC_STONE = registerBlock("cosmic_stone",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.STONE).strength(5f,6f)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(5f,6f)));
     public static final DeferredBlock<Block> DEEPSPACE_STONE = registerBlock("deepspace_stone",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.STONE).strength(7.5f,12f)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE).strength(7.5f,12f)));
     public static final DeferredBlock<Block> COSMIC_SAND = registerBlock("cosmic_sand",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SAND).strength(1f)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SAND).strength(1f)));
     public static final DeferredBlock<Block> COSMIC_SANDSTONE = registerBlock("cosmic_sandstone",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(Blocks.SANDSTONE).strength(1f)));
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.SANDSTONE).strength(1f)));
     public static final DeferredBlock<Block> SILVERBLANC_STONE = registerBlock("silverblanc_stone",
-            () -> new SilverblancStoneBlock(BlockBehaviour.Properties.ofLegacyCopy(Blocks.STONE).strength(1f).sound(SoundType.STONE).requiresCorrectToolForDrops()));
+            () -> new SilverblancStoneBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STONE)
+                    .strength(1f)
+                    .sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> SILVERBLANC_STONE_SLAB = registerBlock("silverblanc_stone_slab",
             () -> new SlabBlock(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_STONE.get())));
     public static final DeferredBlock<Block> SILVERBLANC_STONE_STAIRS = registerBlock("silverblanc_stone_stairs",
@@ -124,7 +156,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SILVERBLANC_STONE_WALL = registerBlock("silverblanc_stone_wall",
             () -> new WallBlock(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_STONE.get())));
     public static final DeferredBlock<Block> SILVERBLANC_COPPER_ORE = registerBlock("silverblanc_copper_ore",
-            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_STONE.get()).strength(2F)));
+            () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_STONE.get()).strength(3F, 2F)));
     public static final DeferredBlock<Block> SILVERBLANC_IRON_ORE = registerBlock("silverblanc_iron_ore",
             () -> new Block(BlockBehaviour.Properties.ofLegacyCopy(SILVERBLANC_COPPER_ORE.get())));
     public static final DeferredBlock<Block> SILVERBLANC_GOLD_ORE = registerBlock("silverblanc_gold_ore",
@@ -209,7 +241,7 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SPIKED_VERDHELM_BEETLE_SKULL = registerBlock("spiked_verdhelm_beetle_skull",
             () -> new SpikedVerdhelmBeetleSkullBlock(BlockBehaviour.Properties.of()
                     .sound(SoundType.WOOD)
-                    .strength(0.5f, 2.0f)
+                    .strength(2f, 2.0f)
                     .mapColor(DyeColor.BLACK)
                     .isValidSpawn(Blocks::never)
                     .isSuffocating(ModBlocks::never)
@@ -226,6 +258,14 @@ public class ModBlocks {
                     pEntity.causeFallDamage(pFallDistance, 0.1f, pLevel.damageSources().fall());
                 }
             });
+    public static final DeferredBlock<Block> SOLAR_POWER_GENERATOR = registerBlock("solar_power_generator",
+            () -> new SolarPowerGeneratorBlock(BlockBehaviour.Properties.of()
+                    .sound(ModSounds.TECH_BLOCK)
+                    .strength(2f)
+                    .mapColor(MapColor.METAL)
+            ));
+    public static final DeferredBlock<Block> DEBUG_LIGHT_BLOCK = registerBlock("debug_light_block",
+            () -> new DebugLightBlock(BlockBehaviour.Properties.of().lightLevel(state -> state.getValue(DebugLightBlock.WORKING) ? 15: 0)));
 
     private static boolean never(BlockState blockState, BlockGetter blockGetter, BlockPos pos) {
         return false;

@@ -1,9 +1,9 @@
-// 1.21	2024-11-04T17:52:42.4600965	Tags for minecraft:block mod id nch
+// 1.21	2024-11-10T18:37:55.7171622	Tags for minecraft:block mod id nch
 ddccbb16fbb1766ea39edb7209a36239ef44d3a2 data/minecraft/tags/block/base_stone_overworld.json
 4ff567d8fea0ec9d68c9535f62714ecae4cd2d04 data/minecraft/tags/block/climbable.json
 2117ba4d1740fba3e988d22b84b47813c26fdbf8 data/minecraft/tags/block/dirt.json
 59c1ffec7ea6e7662cdb3601cb87192b98d072dc data/minecraft/tags/block/mineable/axe.json
-1deeff6a99855eb5dec92a79f56ce09080dad20c data/minecraft/tags/block/mineable/pickaxe.json
+f3547e9ca75ca9e3ae1b693c755770b6b60f82c1 data/minecraft/tags/block/mineable/pickaxe.json
 5d373c8336991b60c3d18a97e54f45fc61a8a269 data/minecraft/tags/block/mineable/shovel.json
 d2caf4560ea6be366158eb1d9673ddeae1b3daab data/minecraft/tags/block/sand.json
 a95c666031ca069a8adda5c64002dc7ef6f0be0c data/minecraft/tags/block/slabs.json

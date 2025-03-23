@@ -24,7 +24,9 @@ public class ModItemTags extends ItemTagsProvider {
                        ExistingFileHelper existingFileHelper) {
         super(output, lookupProvider, blockTagProvider, NebulaChronicles.MODID, existingFileHelper);
     }
+    public static final TagKey<Item> SCREWDRIVER = TagKey.create(Registries.ITEM, getRL("smelts_to_nickel"));
     public static final TagKey<Item> METAL_SCAFFOLDING = TagKey.create(Registries.ITEM, getRL("metal_scaffolding"));
+
     public static final TagKey<Item> SMELTS_TO_NICKEL = TagKey.create(Registries.ITEM, getRL("smelts_to_nickel"));
 
     private static ResourceLocation getRL(String name) {
@@ -33,11 +35,14 @@ public class ModItemTags extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(SCREWDRIVER)
+                .add(ModItems.SCREWDRIVER.asItem());
         tag(METAL_SCAFFOLDING)
                 .add(ModBlocks.IRON_SCAFFOLDING.asItem())
                 .add(ModBlocks.NICKELSTEEL_PLASTIC_SCAFFOLDING.asItem());
+
         tag(SMELTS_TO_NICKEL)
-                .add(ModItems.RAW_NICKEL.get())
+                .add(ModItems.RAW_NICKEL.asItem())
                 .add(ModBlocks.NICKEL_ORE.asItem())
                 .add(ModBlocks.DEEPSLATE_NICKEL_ORE.asItem())
                 .add(ModBlocks.SILVERBLANC_NICKEL_ORE.asItem());

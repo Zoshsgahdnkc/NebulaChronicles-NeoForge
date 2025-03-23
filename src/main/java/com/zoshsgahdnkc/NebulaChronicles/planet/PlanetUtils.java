@@ -10,12 +10,18 @@ import net.minecraft.world.entity.ai.attributes.AttributeModifier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.level.Level;
 
+import javax.annotation.Nullable;
 import java.util.HashMap;
 import java.util.Map;
 
 public class PlanetUtils {
     public static final double BASE_GRAVITY = 0.08D;
-    private static final Planet SILVERBLANC = new Planet(0.15F, 7, 0.6f);
+    private static final Planet SILVERBLANC = new Planet(0.15f,
+            7,
+            0.6f,
+            1.2f,
+            0.1f,
+            0.1f);
     private static final Map<ResourceLocation, Planet> planets = new HashMap<>(Map.of(
             ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, "silverblanc"), SILVERBLANC
     ));
@@ -64,13 +70,21 @@ public class PlanetUtils {
 //        return 1;
         return ySpeed < 0 ? 1.4 * (1 - Mth.sqrt((float) ((ySpeed / -3.4) + 0.08))) : 1;
     }
+    @Nullable
     public static Planet getPlanet(Level level) {
         return planets.getOrDefault(level.dimension().location(), null);
     }
 
+    @Nullable
     public static Planet getPlanet(Entity entity) {
         return getPlanet(entity.level());
     }
-    public record Planet(float gravityRatio, int additionalSafeFallDistance, float additionalStepHeight) {
+
+    public record Planet(float gravityRatio,
+                         int additionalSafeFallDistance,
+                         float additionalStepHeight,
+                         float solarPowerStrength,
+                         float darkMatterDensity,
+                         float darkMatterAmplitude) {
     }
 }

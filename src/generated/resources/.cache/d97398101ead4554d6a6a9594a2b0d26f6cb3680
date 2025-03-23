@@ -1,4 +1,4 @@
-// 1.21	2024-11-03T12:22:57.2983501	Block States: nch
+// 1.21	2024-11-11T12:30:33.279608	Block States: nch
 179e1bf8f6f1720f71757fa950620e9bd9281015 assets/nch/blockstates/aether_root.json
 21d1420df0778f55a457e0c4ad240c721fe99877 assets/nch/blockstates/aether_root_hair.json
 ea89adf252e5c890202a896169461df0b2fc1a12 assets/nch/blockstates/archeova_stone.json
@@ -18,6 +18,7 @@ cde214bf968f72b1124b114d83eb65fa63d88ae6 assets/nch/blockstates/cosmic_sandstone
 a19c332d584b9baaacf86c760e9b6182ec5e0610 assets/nch/blockstates/cryosol.json
 c9666d187ee0396466f227f8b33d2ab05948e41f assets/nch/blockstates/dark_matter_render_panel.json
 c600cfd7acd4f006a52b807ee78badb4f132c4d7 assets/nch/blockstates/dark_tile.json
+894268786947c4ec4912f7e8f1808a4734d33800 assets/nch/blockstates/debug_light_block.json
 f8ae134f3c064fa08f0bc56b0c60a45e80e23ede assets/nch/blockstates/deepslate_nickel_ore.json
 88d7c52a38aa30fe81adc45bdcb87fd5068125b3 assets/nch/blockstates/deepspace_stone.json
 6d9d9a81f2c21771b47f2b7a7b6f08dfda8c5385 assets/nch/blockstates/eroded_dark_tile.json
@@ -66,6 +67,7 @@ cd2a2d362393d057635991d9e56ba607d47153c5 assets/nch/blockstates/silverblanc_ston
 675db2bf5927a9ca9537fb3a279fdef89e5b248a assets/nch/blockstates/silverblanc_stone_wall.json
 7559c6a54b611db19d23005e8d68cd75a0e3d1d4 assets/nch/blockstates/simple_vault_stairs.json
 268393af334bd9730637c6a391d40202042b6f2e assets/nch/blockstates/solar_panel.json
+3673094c84fc02a36ef8f10e99fbd358448c886f assets/nch/blockstates/solar_power_generator.json
 71208d3749fbc38b975d8df1ae01b6f2d46b2734 assets/nch/blockstates/spiked_verdhelm_beetle_skull.json
 84eeebe7a4e3a456178ccf834a763913d42add90 assets/nch/blockstates/strange_fern.json
 8bbb99b22145fb1ab35d8fda498920ceab703779 assets/nch/blockstates/tachyon_projection_panel.json
@@ -112,6 +114,8 @@ c5274082a3c3e5475ea061a02d9efe5792436341 assets/nch/models/block/cosmic_sandston
 95a6dd95a04a6c519ac93835a41ebaa475f73fda assets/nch/models/block/cryosol_1.json
 a0662c414af1cb828b6b408c20682b969ee4bebd assets/nch/models/block/cryosol_2.json
 873d315db6716a1fa527b5ca5bd90f1f86ffeacc assets/nch/models/block/dark_tile.json
+9af5c71a8a9cec9bccf4c682478d592e72e01b17 assets/nch/models/block/debug_light_block_off.json
+4ec9eb73423e777f7b9b7736a54c953e5540f426 assets/nch/models/block/debug_light_block_on.json
 672ffe7023c10e9263aa833f0614b8326cf1e171 assets/nch/models/block/deepslate_nickel_ore.json
 445ca0f9fb9dd301e0dafd11cae0d1f8663ea909 assets/nch/models/block/deepspace_stone.json
 c829e0e96ff3ed2a7efa2fef0399fc75053b6456 assets/nch/models/block/eroded_dark_tile.json
@@ -181,6 +185,7 @@ b99e4b81548d5ec7d2f1ea90b6bf97ee85705b4c assets/nch/models/block/silverblanc_sto
 72ca0ee6ce89a192e9e3c3a4e68921e0b77d6e88 assets/nch/models/block/silverblanc_stone_wall_post.json
 6656d7e80acfa649020ae0cc1f7f3a52920d1bbc assets/nch/models/block/silverblanc_stone_wall_side.json
 a75bbd1b360a86b868078cea7369a6ed4798a9b3 assets/nch/models/block/silverblanc_stone_wall_side_tall.json
+0d3b7dd00063b41ae71bf5187c6a553a44fff43d assets/nch/models/block/solar_power_generator.json
 ab50c58f1bc83cefe0d73c5a32e5b8ecd2ffb08b assets/nch/models/block/strange_fern.json
 218c84ed750c1dfed18fcf16ba2a23ad2b52f520 assets/nch/models/block/tech_tile.json
 99f18069d798267a3dd3f027255c41676c4757eb assets/nch/models/block/tech_tile_with_sign.json
@@ -256,6 +261,7 @@ b254131d98484a7a5681494f119d49977d19b31a assets/nch/models/item/silverblanc_ston
 2ad5a8637c2e7671d89ef62adc4a5e29a6b50f5b assets/nch/models/item/silverblanc_stone_wall.json
 4191d3860d86a3c0131b94164a9cec582577efd5 assets/nch/models/item/simple_vault_stairs.json
 fba908be7ae6e9f5a777f8fe9fe25685dd677f58 assets/nch/models/item/solar_panel.json
+34c3a1a3545e4a489177477eee727109cf26b8ad assets/nch/models/item/solar_power_generator.json
 5c7efbbc33e6a490963d3b795133abe9c6f47709 assets/nch/models/item/spiked_verdhelm_beetle_skull.json
 feed4167209b92aec1ed3ceddf7d9b838bbc0ced assets/nch/models/item/strange_fern.json
 da7f438c037d3631e489269e07c49c842d8b2b92 assets/nch/models/item/tachyon_projection_panel.json

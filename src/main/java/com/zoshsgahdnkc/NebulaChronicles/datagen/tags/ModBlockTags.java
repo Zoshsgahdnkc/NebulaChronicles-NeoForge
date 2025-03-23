@@ -126,7 +126,8 @@ public class ModBlockTags extends BlockTagsProvider {
                 .add(ModBlocks.SILVERBLANC_LAPIS_ORE.get())
                 .add(ModBlocks.SILVERBLANC_DIAMOND_ORE.get())
                 .add(ModBlocks.IRON_SCAFFOLDING.get())
-                .add(ModBlocks.NICKELSTEEL_PLASTIC_SCAFFOLDING.get());
+                .add(ModBlocks.NICKELSTEEL_PLASTIC_SCAFFOLDING.get())
+                .add(ModBlocks.SOLAR_POWER_GENERATOR.get());
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .replace(false)
                 .add(ModBlocks.COARSE_CACTUS.get())

@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "working=false": {
+      "model": "nch:block/debug_light_block_off"
+    },
+    "working=true": {
+      "model": "nch:block/debug_light_block_on"
+    }
+  }
+}

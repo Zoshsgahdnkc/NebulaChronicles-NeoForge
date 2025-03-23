@@ -1,4 +1,4 @@
-// 1.21	2024-11-03T12:22:57.3063232	Loot Tables
+// 1.21	2024-11-11T12:20:28.6625625	Loot Tables
 a8e7e0a33d7236c2f9e1431bf1259ad5d28a999d data/nch/loot_table/blocks/aether_root.json
 2d3540f2033c4471a1e1a5d4774344062ac6caae data/nch/loot_table/blocks/aether_root_hair.json
 b47f7d5a81ea8d2ca318632f87863280ba3a0cd2 data/nch/loot_table/blocks/archeova_stone.json
@@ -18,6 +18,7 @@ d92c47b0859bb440f169e62f78889550a8012db3 data/nch/loot_table/blocks/cosmic_sand.
 821bf04d4df7c0cfd3dca64a4cc930b68353e021 data/nch/loot_table/blocks/cryosol.json
 3331212390908432791488c2cbe6ec05a560c405 data/nch/loot_table/blocks/dark_matter_render_panel.json
 3af6dbeca703d8752ee0ff31f26b4a03450fe00d data/nch/loot_table/blocks/dark_tile.json
+a95cd86a272fa68137ff3224d49434c1abb7e9fe data/nch/loot_table/blocks/debug_light_block.json
 914a8da0efe76243b456a0317bda33b91f10c5df data/nch/loot_table/blocks/deepslate_nickel_ore.json
 b8cb887bc4ed818c3bb73ff23cee6d5cbb262bb2 data/nch/loot_table/blocks/deepspace_stone.json
 a501cb44001464ecc96a7d79944f8618a990b7e5 data/nch/loot_table/blocks/eroded_dark_tile.json
@@ -66,6 +67,7 @@ f8a41b422abad8632c41b96e03158f0561609aac data/nch/loot_table/blocks/silverblanc_
 75f185fd2225b1bacad61e2abbdf6b97afa2cf7e data/nch/loot_table/blocks/silverblanc_stone_wall.json
 04002049f7e8e60b3e38a3691d0a8007d8a3aef4 data/nch/loot_table/blocks/simple_vault_stairs.json
 a9b4eb97f74ac318555ef16934c3e801cc5879fa data/nch/loot_table/blocks/solar_panel.json
+a6278cff6bba18ce1d6ce33afce0900f2d2446bb data/nch/loot_table/blocks/solar_power_generator.json
 c95c207c9dea743659258edbe5f24e790d9e78f9 data/nch/loot_table/blocks/spiked_verdhelm_beetle_skull.json
 12013e1789df6bc1bb301769195c714aa8e861d7 data/nch/loot_table/blocks/strange_fern.json
 c1a8408693eb98d99412f9122ed11abffdd938de data/nch/loot_table/blocks/tachyon_projection_panel.json

@@ -38,4 +38,15 @@ public class BlockTraverse {
         }
         return posSet;
     }
+
+    public static Set<BlockPos> traverseAroundSix(BlockPos startPos) {
+        Set<BlockPos> posSet = new HashSet<>(Set.of());
+        posSet.add(new BlockPos(startPos.getX() + 1, startPos.getY(), startPos.getZ()));
+        posSet.add(new BlockPos(startPos.getX() - 1, startPos.getY(), startPos.getZ()));
+        posSet.add(new BlockPos(startPos.getX(), startPos.getY() + 1, startPos.getZ()));
+        posSet.add(new BlockPos(startPos.getX(), startPos.getY() - 1, startPos.getZ()));
+        posSet.add(new BlockPos(startPos.getX(), startPos.getY(), startPos.getZ() + 1));
+        posSet.add(new BlockPos(startPos.getX(), startPos.getY(), startPos.getZ() - 1));
+        return posSet;
+    }
 }

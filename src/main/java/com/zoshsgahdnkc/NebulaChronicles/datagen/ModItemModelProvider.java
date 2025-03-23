@@ -26,11 +26,15 @@ public class ModItemModelProvider extends ItemModelProvider {
             ModItems.VERDHELM_BEETLE_SPAWN_EGG,
             ModItems.SPIKED_VERDHELM_BEETLE_SPAWN_EGG
     );
+    public static final ImmutableSet<DeferredHolder<Item, ? extends Item>> TOOLS = ImmutableSet.of(
+            ModItems.SCREWDRIVER
+    );
 
     private static boolean predicateItemEntry(DeferredHolder<Item, ? extends Item> entry) {
         return !(entry.get() instanceof BlockItem) &&
                 !(IGNORES.contains(entry)) &&
-                !(SPAWN_EGGS.contains(entry));
+                !(SPAWN_EGGS.contains(entry)) &&
+                !(TOOLS.contains(entry));
     }
 
     @Override
@@ -39,6 +43,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         itemStream.filter(ModItemModelProvider::predicateItemEntry).map(DeferredHolder::get).forEach(this::basicItem);
         for (var item: SPAWN_EGGS) {
             spawnEgg(item);
+        }
+        for (var item: TOOLS) {
+            tool(item);
         }
 
         blockWithTexture(ModBlocks.FORTRESS_DOOR);
@@ -61,5 +68,11 @@ public class ModItemModelProvider extends ItemModelProvider {
 
     private ItemModelBuilder spawnEgg(DeferredHolder<Item, ? extends Item> spawnEgg) {
         return withExistingParent(spawnEgg.getId().getPath(), mcLoc("item/template_spawn_egg"));
+    }
+
+    private ItemModelBuilder tool(DeferredHolder<Item, ? extends Item> tool) {
+        return withExistingParent(tool.getId().getPath(),
+                ResourceLocation.withDefaultNamespace("item/handheld")).texture("layer0",
+                ResourceLocation.fromNamespaceAndPath(NebulaChronicles.MODID, ITEM_FOLDER + "/" + tool.getId().getPath()));
     }
 }

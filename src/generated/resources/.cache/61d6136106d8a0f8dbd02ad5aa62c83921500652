@@ -1,4 +1,4 @@
-// 1.21	2024-11-02T22:54:18.5614333	Item Models: nch
+// 1.21	2024-11-10T19:55:57.2681579	Item Models: nch
 c1cc65e2e489f3a25ec0203ecebe385d75f29a50 assets/nch/models/item/aether_root_spore.json
 6d1d415fa845640c1fb1a21b73c2aa583a01eaed assets/nch/models/item/battery_waste.json
 ce923db57497475a0641edeaf32ff0bdd76a557f assets/nch/models/item/biomass_battery.json
@@ -30,6 +30,7 @@ e85b2bfe23f78cd7240be03433767bade754ad1c assets/nch/models/item/pebble_berries.j
 07725caf0bc90e571a07b8fb74023ca668dd80bc assets/nch/models/item/redstone_battery.json
 875b4d9121f1977ddd08fc8dea742375d3a85540 assets/nch/models/item/redstone_power_panel.json
 4fa4c10b14644954efed030eaa5d05cd4753423d assets/nch/models/item/rocket_fuel.json
+ceb77ab22bd461c861f826fe7a2630390c30f8f1 assets/nch/models/item/screwdriver.json
 87ad5916be6d076910bd4f30269d640b51e99568 assets/nch/models/item/solar_panel.json
 63ec6c618a3a23eab4cab9c52d7d3250de9b516e assets/nch/models/item/spiked_verdhelm_beetle_spawn_egg.json
 44838d5307d632b689e3aadab72c4276371de208 assets/nch/models/item/tachyon_projection_panel.json
